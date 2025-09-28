@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var ul = document.createElement("ul");
   headings.forEach(function(heading, i) {
-    if (!heading.id) heading.id = "toc_" + i;
+    if (!heading.id) heading.id = "section_" + heading.textContent.toLowerCase().replace(/\s+/g, "_").replace(/[^\w\-]+/g, "");
     var li = document.createElement("li");
     var a = document.createElement("a");
     a.href = "#" + heading.id;
