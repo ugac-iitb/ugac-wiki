@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - UGAC Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">UGAC Wiki</a></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="registration.html">Registration</a>
+      <a href="courses.html">Courses</a>
+      <a href="programs.html">Special Programs</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Resources</h1>
+    <ul>
+      <li><a href="https://resobin.gymkhana.iitb.ac.in/login">ResoBin</a></li>
+      <li><a href="https://asc.iitb.ac.in/">Internal ASC</a></li>
+      <li><a href="https://portal.iitb.ac.in/asc/Login">External ASC</a></li>
+      <li><a href="https://www.iitb.ac.in/newacadhome/ugrulebook.pdf">UG Rulebook</a></li>
+      <li>Course Info Booklets and Guides (2020–2025)</li>
+    </ul>
+    
+  </main>
+  <footer>
+    <p>© 2025 <a href="https://ugac.gymkhana.iitb.ac.in/">UGAC, IIT Bombay</a> | Last Updated Sept. 28, 2025 </p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+</body>
+</html>

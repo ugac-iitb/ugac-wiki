@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - UGAC Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">UGAC Wiki</a></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="registration.html">Registration</a>
+      <a href="courses.html">Courses</a>
+      <a href="programs.html">Special Programs</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Courses and Their Categories</h1>
+    <h2>Theory and Lab Course Systems (LTPC)</h2>
+    <p>Courses classified as Theory or Lab. Credits: C = 2×L + 2×T + P</p>
+    <h2>Core Courses</h2>
+    <p>Mandatory for your degree. Count in CPI. Must be completed within program duration.</p>
+    
+  </main>
+  <footer>
+    <p>© 2025 <a href="https://ugac.gymkhana.iitb.ac.in/">UGAC, IIT Bombay</a> | Last Updated Sept. 28, 2025 </p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+</body>
+</html>

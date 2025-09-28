@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index - UGAC Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">UGAC Wiki</a></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="registration.html">Registration</a>
+      <a href="courses.html">Courses</a>
+      <a href="programs.html">Special Programs</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Welcome to<br/>the UGAC Wiki</h1>
+    <p>This wiki is a comprehensive guide for IIT Bombay undergraduates, consolidating essential academic policies, 
+    registration procedures, course categories, research opportunities, and programs.</p>
+    <ul>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="courses.html">Courses & Categories</a></li>
+      <li><a href="programs.html">Special Programs</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+    
+  </main>
+  <footer>
+    <p>© 2025 <a href="https://ugac.gymkhana.iitb.ac.in/">UGAC, IIT Bombay</a> | Last Updated Sept. 28, 2025 </p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+</body>
+</html>

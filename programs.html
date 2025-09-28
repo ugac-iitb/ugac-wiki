@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs - UGAC Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">UGAC Wiki</a></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="registration.html">Registration</a>
+      <a href="courses.html">Courses</a>
+      <a href="programs.html">Special Programs</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Special Programs</h1>
+    <h2>Why Should One Take Up a Minor</h2>
+    <p>Minor courses allow you to officially explore a department other than yours...</p>
+    <h2>Why Should One Take Up Honors</h2>
+    <p>Honor courses are either advanced-level courses in your department...</p>
+    <h2>Tagging Rules</h2>
+    <p>Every course you do in the institute falls under one of the categories...</p>
+    <h2>Research</h2>
+    <p>SLP, B.Tech. Project, URA descriptions...</p>
+    <h2>IDDDP</h2>
+    <p>The Interdisciplinary Dual Degree Program...</p>
+    <h2>Semester Exchange</h2>
+    <p>The Semester Exchange Program at IIT Bombay is a chance to study abroad...</p>
+    
+  </main>
+  <footer>
+    <p>© 2025 <a href="https://ugac.gymkhana.iitb.ac.in/">UGAC, IIT Bombay</a> | Last Updated Sept. 28, 2025 </p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+</body>
+</html>
