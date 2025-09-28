@@ -147,3 +147,10 @@ footer {
 #toc li { line-height: 1.5; }
 #toc a { text-decoration: none; color: #2653ad; }
 #toc a:hover { text-decoration: underline; }
+
+.bottom-nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}

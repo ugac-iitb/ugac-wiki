@@ -10,13 +10,13 @@
 
 <body>
   <header>
-    <div class="logo"><a href="index.html">UGAC Wiki</a></div>
+    <div class="logo"><a href="index.html"><img src="assets/ugac.png" style="display: inline;  width:50px; margin:0;" alt="UGAC"/> Wiki</a></div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav id="menu">
       <a href="index.html">Home</a>
       <a href="registration.html">Registration</a>
       <a href="courses.html">Courses</a>
-      <a href="programs.html">Special Programs</a>
+      <a href="research-idddp-semex.html">Research, IDDDP, &amp; SemEx</a>
       <a href="faq.html">FAQ</a>
       <a href="resources.html">Resources</a>
     </nav>
@@ -106,7 +106,7 @@
     <h2>1.4. Dropping &amp; Withdrawal of Courses</h2>
     <p>
       If the workload is too heavy after adjustment, you can drop courses
-      while maintaining a minimum <strong>18 credits</strong>, with FacAd’s permission.
+      while maintaining a minimum <strong>18 credits</strong>, with FacAd's permission.
     </p>
     <ul>
       <li><strong>Autumn 2025:</strong></li>
@@ -131,18 +131,16 @@
       <li>Curriculum available on ASC: <strong>Academic → All about courses → Curriculum</strong></li>
       <li>From 3rd semester onwards, registration depends on <strong>Academic Standing</strong>.</li>
     </ul>
-
+    <div class="bottom-nav">
+      <a href="index.html">Back to Home </a>
+      <a href="courses.html">Read Next >>></a>
+    </div>
   </main>
   <footer>
     <p>© 2025 <a href="https://ugac.gymkhana.iitb.ac.in/">UGAC, IIT Bombay</a> | Last Updated Sept. 28, 2025 </p>
   </footer>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-    }
-  </script>
-  <script src="toc.js"></script>
+
+  <script src="scripts.js"></script>
 </body>
 
 </html>

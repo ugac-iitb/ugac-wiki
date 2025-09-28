@@ -8,39 +8,42 @@
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html">UGAC Wiki</a></div>
+    <div class="logo"><a href="index.html"><img src="assets/ugac.png" style="display: inline;  width:50px; margin:0;" alt="UGAC"/> Wiki</a></div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav id="menu">
       <a href="index.html">Home</a>
       <a href="registration.html">Registration</a>
       <a href="courses.html">Courses</a>
-      <a href="programs.html">Special Programs</a>
+      <a href="research-idddp-semex.html">Research, IDDDP, &amp; SemEx</a>
       <a href="faq.html">FAQ</a>
       <a href="resources.html">Resources</a>
     </nav>
   </header>
   <main>
 
-    <h1>Welcome to<br/>the UGAC Wiki</h1>
+    <strong>Welcome to</strong>
+    <h1 style="margin-top: 0; padding-top:0;">the UGAC Wiki</h1>
     <p>This wiki is a comprehensive guide for IIT Bombay undergraduates, consolidating essential academic policies, 
-    registration procedures, course categories, research opportunities, and programs.</p>
+    registration procedures, course categories, research opportunities, and programs. The <strong>Table of Contents</strong> is provided below for easy navigation.</p>
+    <div id="toc" class="no-auto-fill">
+      <h2>Table of Contents</h2>
     <ul>
-      <li><a href="registration.html">Registration</a></li>
-      <li><a href="courses.html">Courses & Categories</a></li>
-      <li><a href="programs.html">Special Programs</a></li>
-      <li><a href="faq.html">FAQs</a></li>
-      <li><a href="resources.html">Resources</a></li>
+      <li><a href="registration.html">1. Registration</a></li>
+      <li><a href="courses.html#section_2_courses_and_their_categories">2. Courses and Their Categories</a></li>
+      <li><a href="courses.html#section_3_why_should_one_take_up_a_minor">3. Why Should One Take Up a Minor</a></li>
+      <li><a href="courses.html#section_4_why_should_one_take_up_honors">4. Why Should One Take Up Honors</a></li>
+      <li><a href="courses.html#section_5_tagging_rules">5. Tagging Rules</a></li>
+      <li><a href="research-idddp-semex.html#section_6_research">6. Research</a></li>
+      <li><a href="research-idddp-semex.html#section_7_idddp">7. IDDDP</a></li>
+      <li><a href="research-idddp-semex.html#section_8_semester_exchange">8. Semester Exchange</a></li>
+      <li><a href="faq.html#section_9_faqs">9. FAQs</a></li>
+      <li><a href="resources.html#section_10_resources">10. Resources</a></li>
     </ul>
-    
+    </div>
   </main>
   <footer>
     <p>© 2025 <a href="https://ugac.gymkhana.iitb.ac.in/">UGAC, IIT Bombay</a> | Last Updated Sept. 28, 2025 </p>
   </footer>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-    }
-  </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
