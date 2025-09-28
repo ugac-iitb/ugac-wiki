@@ -140,3 +140,10 @@ footer {
   border-top: 1px solid #a2a9b1;
   background: #f8f9fa;
 }
+
+/* Table of Contents */
+#toc { background: #f7f7f7; padding: 1em; border: 1px solid #ccc; }
+#toc ul { list-style-type: none; margin-left: 1em; }
+#toc li { line-height: 1.5; }
+#toc a { text-decoration: none; color: #2653ad; }
+#toc a:hover { text-decoration: underline; }
