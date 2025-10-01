@@ -154,3 +154,18 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+
+#disclaimer {
+  background: #fff3cd;  /* light yellow */
+  border: 1px solid #ffeeba;  /* matching yellow border */
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #856404;  /* dark yellow/brown text */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
