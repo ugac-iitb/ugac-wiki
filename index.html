@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="UG Wiki by the Undergraduate Academic Council, IIT Bombay — your comprehensive guide to courses, registration, research, and FAQs for undergraduate students." />
+<meta name="keywords" content="UG Wiki, IIT Bombay, Undergraduate Academic Council, courses, registration, research, academics" />
+<meta name="author" content="Undergraduate Academic Council, IIT Bombay" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://ugac.gymkhana.iitb.ac.in/UG-Wiki/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="UG Wiki - Undergraduate Academic Council, IIT Bombay" />
+<meta property="og:description" content="UG Wiki by the Undergraduate Academic Council, IIT Bombay — your comprehensive guide to courses, registration, research, and FAQs for undergraduate students." />
+<meta property="og:url" content="https://ugac.gymkhana.iitb.ac.in/UG-Wiki/" />
+<meta property="og:site_name" content="UG Wiki, IIT Bombay" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="UG Wiki - Undergraduate Academic Council, IIT Bombay" />
+<meta name="twitter:description" content="UG Wiki by the Undergraduate Academic Council, IIT Bombay — your comprehensive guide to courses, registration, research, and FAQs for undergraduate students." />
+<title>UG Wiki - Undergraduate Academic Council, IIT Bombay</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "UG Wiki, IIT Bombay",
+  "url": "https://ugac.gymkhana.iitb.ac.in/UG-Wiki/",
+  "description": "UG Wiki by the Undergraduate Academic Council, IIT Bombay — your comprehensive guide to courses, registration, research, and FAQs for undergraduate students.",
+  "author": {
+    "@type": "Organization",
+    "name": "Undergraduate Academic Council, IIT Bombay"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#eef3fb;
+    --surface:#ffffff;
+    --ink:#13233d;
+    --muted:#5a6a86;
+    --line:#d9e2f0;
+    --brand:#13233d;
+    --brand-2:#26466f;
+    --accent:#26466f;
+    --accent-soft:#e3ecfa;
+    --hover:#e8eefb;
+    --chip:#e3ecfa;
+    --th:#e9f1fc;
+    --row:#f5f9fe;
+    --nav-bg:rgba(255,255,255,.92);
+    --hero-glow:#d6e6fb;
+    --doc-ink:#27344a;
+    --note-bg:#e7f1fc;
+    --note-border:#b9d4f1;
+    --note-ink:#0b3c70;
+    --caution-bg:#fdf4e2;
+    --caution-border:#e6ba5c;
+    --caution-ink:#7a5a07;
+    --shadow:0 1px 2px rgba(0,40,90,.06),0 8px 24px rgba(0,40,90,.07);
+    --radius:14px;
+  }
+  :root[data-theme="dark"]{
+    --bg:#0c1626;
+    --surface:#14223c;
+    --ink:#e7ecf7;
+    --muted:#9aa8c4;
+    --line:#243657;
+    --brand:#6fb0ff;
+    --brand-2:#8fc2ff;
+    --accent:#6fb0ff;
+    --accent-soft:#102747;
+    --hover:#1a2b49;
+    --chip:#1a2b49;
+    --th:#16263f;
+    --row:#101d33;
+    --nav-bg:rgba(10,18,32,.9);
+    --hero-glow:#13294d;
+    --doc-ink:#cdd5ea;
+    --note-bg:#11243d;
+    --note-border:#244a73;
+    --note-ink:#bcd9ff;
+    --caution-bg:#1f1a0e;
+    --caution-border:#7d631f;
+    --caution-ink:#e8c86a;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.65;
+    font-size:16px;
+  }
+  a{color:var(--brand-2);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* ---------- Top nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--nav-bg);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1320px;margin:0 auto;padding:0 22px;
+    height:66px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;cursor:pointer;}
+  .brand .logo{height:46px;width:auto;flex:none;display:block;}
+  :root[data-theme="dark"] .brand .logo{background:#fff;border-radius:9px;padding:3px;}
+  .brand .divider{width:1px;height:34px;background:var(--line);flex:none;}
+  .brand b{font-family:"Cinzel",serif;font-weight:600;font-size:21px;letter-spacing:1px;text-transform:uppercase;color:var(--ink);line-height:1;}
+  .nav-right{display:flex;align-items:center;gap:10px;}
+  nav.links{display:flex;align-items:center;gap:6px;}
+  nav.links a{
+    color:var(--ink);font-weight:600;font-size:14.5px;
+    padding:9px 14px;border-radius:9px;transition:.15s;
+  }
+  nav.links a:hover{background:var(--hover);text-decoration:none;}
+  nav.links a.active{color:#fff;background:var(--brand);}
+  :root[data-theme="dark"] nav.links a.active{color:var(--brand);background:var(--accent-soft);}
+  .icon-btn{background:none;border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:16px;cursor:pointer;color:var(--ink);line-height:1;}
+  .icon-btn:hover{background:var(--hover);}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:18px;cursor:pointer;color:var(--ink);}
+
+  /* ---------- Search ---------- */
+  .search{position:relative;display:flex;align-items:center;gap:8px;
+    background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:7px 12px;min-width:230px;transition:.15s;}
+  .search:focus-within{border-color:var(--brand-2);box-shadow:0 0 0 3px var(--accent-soft);}
+  .search .search-ic{color:var(--muted);flex:none;}
+  .search input{border:none;outline:none;background:none;color:var(--ink);font-size:14px;width:100%;font-family:inherit;}
+  .search input::placeholder{color:var(--muted);}
+  .search-results{position:absolute;top:calc(100% + 8px);left:0;right:0;min-width:320px;
+    background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
+    padding:6px;max-height:60vh;overflow:auto;display:none;z-index:60;}
+  .search-results.open{display:block;}
+  .search-results a{display:block;padding:9px 11px;border-radius:8px;color:var(--ink);text-decoration:none;}
+  .search-results a:hover,.search-results a.hl{background:var(--hover);}
+  .search-results a .sr-t{font-weight:700;font-size:14px;}
+  .search-results a .sr-t mark{background:var(--accent-soft);color:var(--brand);padding:0 2px;border-radius:3px;}
+  .search-results a .sr-c{color:var(--muted);font-size:12.5px;font-weight:600;margin-top:1px;}
+  .search-results a .sr-s{color:var(--muted);font-size:12.5px;margin-top:2px;}
+  .search-empty{padding:14px 12px;color:var(--muted);font-size:13.5px;}
+
+  /* ---------- Layout ---------- */
+  main{max-width:1320px;margin:0 auto;padding:34px 22px 80px;}
+  .page{display:none;animation:fade .25s ease;}
+  .page.active{display:block;}
+  @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+  /* Scroll reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1!important;transform:none!important;transition:none;} }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    text-align:center;padding:40px 22px 30px;
+    border-radius:22px;margin-bottom:8px;
+  }
+  .hero .eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;
+    color:var(--brand);background:var(--accent-soft);padding:6px 14px;border-radius:999px;margin-bottom:16px;}
+  .hero h1{font-size:clamp(30px,4.8vw,46px);line-height:1.08;margin:0 0 6px;font-weight:800;letter-spacing:-.5px;}
+  .hero h1 .accent{color:var(--brand-2);}
+  .hero p{max-width:640px;margin:12px auto 0;color:var(--muted);font-size:16px;}
+  .hero .happy{font-style:italic;color:var(--brand);font-weight:600;margin-top:14px;}
+  .quick{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px;}
+  .quick a{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;
+    padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--surface);
+    color:var(--ink);box-shadow:var(--shadow);transition:.15s;}
+  .quick a:hover{border-color:var(--brand-2);color:var(--brand-2);transform:translateY(-2px);text-decoration:none;}
+  .quick a.primary{background:var(--brand);color:#fff;border-color:var(--brand);}
+  .quick a.primary:hover{color:#fff;filter:brightness(1.1);}
+
+  /* ---------- TOC / Index ---------- */
+  .section-title{font-size:13px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--brand-2);margin:38px 0 16px;}
+  .toc-grid{display:flex;flex-direction:column;gap:12px;}
+  .toc-divider{height:1px;background:var(--line);margin:8px 6px;opacity:.7;}
+  .toc-card{
+    display:flex;flex-direction:row;align-items:center;gap:16px;
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 22px;box-shadow:var(--shadow);transition:.18s;color:var(--ink);
+  }
+  .toc-card:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,40,90,.12);border-color:var(--brand-2);text-decoration:none;}
+  .toc-card .num{
+    flex:none;width:36px;height:36px;border-radius:10px;background:var(--chip);color:var(--brand);
+    font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;
+  }
+  .toc-card .ic{flex:none;display:flex;align-items:center;justify-content:center;color:var(--brand-2);}
+  .toc-card .t{font-weight:700;font-size:18px;line-height:1.25;color:var(--ink);flex:1;min-width:0;}
+  .toc-card .meta{margin:0;color:var(--muted);font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:6px;white-space:nowrap;}
+  .toc-card:hover .t{color:var(--brand-2);}
+  .toc-card:hover .ic{color:var(--brand);}
+  @media (max-width:600px){ .toc-card .ic{display:none;} .toc-card{padding:14px 16px;gap:12px;} .toc-card .meta{font-size:12px;} }
+
+  /* ---------- Content (booklet) ---------- */
+  .layout{display:grid;grid-template-columns:262px 1fr;gap:34px;align-items:start;}
+  aside.side{position:sticky;top:90px;align-self:start;max-height:calc(100vh - 110px);overflow:auto;
+    border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:14px;box-shadow:var(--shadow);}
+  aside.side h4{margin:6px 8px 8px;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);}
+  aside.side a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:13.7px;font-weight:600;cursor:pointer;
+    border-left:2px solid transparent;}
+  aside.side a:hover{background:var(--hover);text-decoration:none;}
+  aside.side a.sub{padding-left:20px;font-weight:500;color:var(--muted);font-size:13px;}
+  aside.side a.active{background:var(--accent-soft);color:var(--brand);font-weight:700;border-left-color:var(--brand);}
+  aside.side a.sub.active{color:var(--brand);}
+
+  article.doc{min-width:0;}
+  .block{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 30px;box-shadow:var(--shadow);margin-bottom:22px;scroll-margin-top:88px;}
+  .block h2{font-size:26px;margin:0 0 4px;font-weight:800;letter-spacing:-.3px;}
+  .block h2 .badge{font-size:12px;font-weight:800;color:var(--brand);background:var(--chip);padding:3px 9px;border-radius:7px;margin-right:10px;vertical-align:middle;}
+  .block h3{font-size:18.5px;margin:24px 0 8px;font-weight:700;color:var(--brand);scroll-margin-top:90px;}
+  .block h3:first-child{margin-top:4px;}
+  .block p{margin:10px 0;color:var(--doc-ink);}
+  .block ul{margin:10px 0;padding-left:22px;}
+  .block ol{margin:10px 0;padding-left:24px;}
+  .block ul li,.block ol li{margin:7px 0;}
+  .review-list li{font-weight:600;}
+  .block .lead{color:var(--doc-ink);}
+  .block a{text-decoration:underline;}
+  .note{background:var(--note-bg);border:1px solid var(--note-border);border-left:4px solid var(--accent);
+    border-radius:10px;padding:12px 16px;margin:16px 0;color:var(--note-ink);font-size:15px;}
+  .kv{margin:9px 0;}
+  .kv b{color:var(--ink);}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--th);font-weight:700;color:var(--brand);}
+  tbody tr:nth-child(even){background:var(--row);}
+
+  /* FAQ */
+  details.faq{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:4px 18px;box-shadow:var(--shadow);}
+  details.faq summary{cursor:pointer;font-weight:700;padding:12px 0;list-style:none;color:var(--ink);}
+  details.faq summary::-webkit-details-marker{display:none;}
+  details.faq summary::before{content:"+";display:inline-block;width:20px;color:var(--brand-2);font-weight:800;}
+  details.faq[open] summary::before{content:"–";}
+  details.faq p{margin:0 0 14px;color:var(--doc-ink);}
+
+  /* Resources */
+  .res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
+  .res-grid a{display:flex;align-items:center;min-height:60px;background:var(--surface);border:1px solid var(--line);
+    border-left:3px solid var(--brand);border-radius:12px;padding:16px 20px;font-weight:600;font-size:15px;
+    color:var(--ink);box-shadow:var(--shadow);transition:.16s;}
+  .res-grid a:hover{transform:translateY(-2px);border-color:var(--brand-2);border-left-color:var(--brand-2);
+    text-decoration:none;color:var(--brand-2);box-shadow:0 10px 26px rgba(0,40,90,.10);}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+  .contact-isaa{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+  .contact-lead{display:flex;justify-content:center;margin-bottom:16px;}
+  .contact-lead .card-person{width:100%;max-width:320px;text-align:center;}
+  .contact-lead .card-person .meta{align-items:center;}
+  .card-person{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);}
+  .card-person .name{font-weight:800;font-size:17px;}
+  .card-person .role{color:var(--brand);font-weight:600;font-size:14px;margin-top:2px;}
+  .card-person .extra{color:var(--muted);font-size:14px;margin-top:2px;}
+  .card-person .meta{margin-top:10px;font-size:14px;display:flex;flex-direction:column;gap:3px;}
+  .card-person .avatar,.card-person .avatar-fallback{width:96px;height:96px;border-radius:50%;margin:0 auto 12px;border:3px solid var(--line);}
+  .card-person .avatar{object-fit:cover;object-position:center;display:block;background:var(--accent-soft);}
+  .card-person .avatar-fallback{display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:var(--brand);background:var(--accent-soft);}
+  .contact-isaa .card-person{text-align:center;}
+  .contact-isaa .card-person .meta{align-items:center;}
+
+  /* Our Team */
+  .team-section-title{font-size:20px;font-weight:800;margin:34px 0 16px;letter-spacing:-.2px;}
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+  .team-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;box-shadow:var(--shadow);text-align:center;}
+  .team-card .avatar,.team-card .avatar-fallback{width:112px;height:112px;border-radius:50%;margin:0 auto 14px;border:3px solid var(--line);}
+  .team-card .avatar{object-fit:cover;object-position:center;display:block;background:var(--accent-soft);}
+  .team-card .avatar-fallback{display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;color:var(--brand);background:var(--accent-soft);}
+  .team-card .name{font-weight:800;font-size:17px;}
+  .team-card .role{color:var(--brand);font-weight:600;font-size:13.5px;margin-top:4px;line-height:1.35;}
+  .team-card .meta{color:var(--muted);font-size:14px;margin-top:8px;}
+  .team-note{color:var(--muted);font-size:15px;padding:18px 2px;}
+  .team-lead{display:flex;justify-content:center;margin-bottom:16px;}
+  .team-lead .team-card{width:100%;max-width:300px;}
+
+  .pagehead{margin-bottom:22px;}
+  .pagehead h1{font-size:34px;margin:0 0 6px;font-weight:800;letter-spacing:-.4px;}
+  .pagehead p{color:var(--muted);margin:0;max-width:760px;}
+
+  footer{border-top:1px solid var(--line);background:var(--surface);}
+  .foot-inner{max-width:1320px;margin:0 auto;padding:26px 22px;color:var(--muted);font-size:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .foot-brand{display:flex;align-items:center;gap:14px;}
+  .foot-brand img{height:40px;width:auto;flex:none;}
+  :root[data-theme="dark"] .foot-brand img{background:#fff;border-radius:6px;padding:3px;}
+
+  @media (max-width:1040px){ .search{min-width:170px;} .brand .logo-sss{display:none;} }
+  @media (max-width:880px){
+    .layout{grid-template-columns:1fr;}
+    aside.side{position:static;max-height:none;}
+    nav.links{position:absolute;top:66px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--line);
+      flex-direction:column;align-items:stretch;padding:8px 14px;gap:2px;display:none;}
+    nav.links.open{display:flex;}
+    nav.links a{padding:12px 14px;}
+    .menu-btn{display:block;}
+  }
+  @media (max-width:640px){ .search{display:none;} .brand b{display:none;} }
+
+  /* ============ Review feedback: typography & simplification ============ */
+  /* Arial for body content, Times New Roman (thinner) for headings */
+  body{font-family:Arial,Helvetica,sans-serif;}
+  .hero h1,.pagehead h1,.block h2,.block h3,.team-section-title{
+    font-family:"Times New Roman",Times,serif;font-weight:600;letter-spacing:0;}
+  /* Headings: just a number, no square badge */
+  .block h2 .badge{background:none;padding:0;margin-right:10px;color:var(--brand);font-weight:600;
+    font-size:inherit;vertical-align:baseline;}
+  /* Remove decorative icons + dividers on the home index */
+  .toc-card .ic{display:none;}
+  .toc-divider{display:none;}
+  /* Notes: bold & simple */
+  .note{background:transparent;border:none;border-left:3px solid var(--brand);border-radius:0;
+    padding:4px 0 4px 16px;color:var(--ink);font-weight:600;}
+  .disc-btn{position:fixed;top:80px;right:24px;z-index:100;width:44px;height:44px;border-radius:50%;
+    border:1px solid var(--caution-border);background:var(--caution-bg);color:var(--caution-border);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--shadow);
+    transition:.2s;padding:0;}
+  .disc-btn:hover{transform:scale(1.1);background:var(--caution-border);color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.2);}
+  .disc-btn svg{width:20px;height:20px;}
+  .disc-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);
+    display:none;align-items:center;justify-content:center;animation:fade .2s ease;}
+  .disc-overlay.open{display:flex;}
+  .disc-modal{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    max-width:560px;width:90vw;max-height:80vh;overflow:auto;padding:28px 30px;box-shadow:0 20px 60px rgba(0,0,0,.25);
+    position:relative;animation:fade .25s ease;}
+  .disc-modal .disc-close{position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;
+    color:var(--muted);font-size:22px;line-height:1;padding:4px 8px;border-radius:6px;}
+  .disc-modal .disc-close:hover{background:var(--hover);color:var(--ink);}
+  .disc-modal .disc-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+  .disc-modal .disc-head svg{flex:none;color:var(--caution-border);width:22px;height:22px;}
+  .disc-modal .disc-head span{font-weight:800;font-size:17px;color:var(--ink);}
+  .disc-modal p{margin:10px 0;color:var(--doc-ink);font-size:14.5px;line-height:1.65;}
+  /* Tables: clean & simple */
+  table{border:none;}
+  th,td{border:none;border-bottom:1px solid var(--line);}
+  th{background:transparent;color:var(--ink);font-weight:700;border-bottom:2px solid var(--brand);}
+  tbody tr:nth-child(even){background:transparent;}
+  /* Keep email/phone compact so the longest address fits on one line */
+  .card-person .meta{font-size:13px;}
+  /* Tighter role text so it fits on one line */
+  .card-person .role{font-size:13px;}
+  /* Names in Times New Roman (Arial bold looked too thick) */
+  .card-person .name,.team-card .name,.foot-contact .name{
+    font-family:"Times New Roman",Times,serif;font-weight:700;}
+  /* Safety net: break very long addresses instead of overflowing the card */
+  .card-person .meta a,.foot-contact .meta a{word-break:break-all;}
+  /* Footer */
+  .foot-inner{align-items:flex-start;}
+  .foot-cols{display:flex;flex-wrap:wrap;gap:40px;width:100%;justify-content:space-between;}
+  .foot-logos{display:flex;align-items:center;gap:16px;}
+  .foot-logos img{height:78px;width:auto;}
+  :root[data-theme="dark"] .foot-logos img{background:#fff;border-radius:6px;padding:3px;}
+  .foot-social{display:flex;gap:16px;margin-top:16px;}
+  .foot-social a{display:inline-flex;align-items:center;justify-content:center;color:var(--ink);transition:.15s;}
+  .foot-social a svg{width:22px;height:22px;}
+  .foot-social a:hover{color:var(--brand);text-decoration:none;}
+  .foot-contact .name{font-weight:800;color:var(--ink);font-size:15px;}
+  .foot-contact .role{color:var(--muted);font-size:13.5px;margin-top:2px;}
+  .foot-contact .meta{font-size:13.5px;margin-top:8px;display:flex;flex-direction:column;gap:5px;}
+  .foot-contact .meta span{display:flex;align-items:center;gap:8px;}
+  .foot-contact .meta svg{flex:none;color:var(--brand);}
+  :root[data-theme="dark"] .foot-contact .meta svg{color:var(--brand);}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand" onclick="go('home')" title="UG Wiki - Home">
+      <img class="logo" src="assets/ug-wiki-logo.png" alt="UG Wiki" />
+      <span class="divider"></span>
+      <div><b>UG Wiki</b></div>
+    </div>
+    <div class="nav-right">
+      <div class="search" id="search">
+        <svg class="search-ic" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="searchInput" type="text" placeholder="Search the wiki…" autocomplete="off"
+               oninput="runSearch(this.value)" onfocus="runSearch(this.value)" onkeydown="searchKey(event)" />
+        <div class="search-results" id="searchResults" role="listbox"></div>
+      </div>
+      <nav class="links" id="navlinks">
+        <a href="#home" data-nav="home" onclick="go('home',event)">Home</a>
+        <a href="#resources" data-nav="resources" onclick="go('resources',event)">Resources</a>
+        <a href="#idddp" data-nav="idddp" onclick="go('idddp',event)">The IDDDP Corner</a>
+        <a href="#contact" data-nav="contact" onclick="go('contact',event)">Our Team</a>
+      </nav>
+      <button class="icon-btn" id="themeBtn" title="Toggle dark / light mode" onclick="toggleTheme()">🌙</button>
+      <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ HOME ============================ -->
+<section class="page" id="page-home">
+  <div class="hero">
+    <h1>Welcome to <span class="accent">UG Wiki</span></h1>
+    <p>Finding the right courses, minors, and academic opportunities can be challenging. UG Wiki brings together information, resources, and student experiences to help you explore the options available at IIT Bombay and make informed academic decisions.</p>
+    <p>Whether you're planning your next semester, exploring a new field, or looking for insights from students who have taken a course before, we hope this serves as a useful starting point.</p>
+    <p class="happy">Happy exploring!</p>
+    <div class="quick">
+      <a href="https://www.iitb.ac.in/newacadhome/ugrulebook.pdf" target="_blank" rel="noopener">UG Rulebook</a>
+      <a href="https://landing.iitb.ac.in/?url=https://asc.iitb.ac.in/" target="_blank" rel="noopener">Internal ASC</a>
+      <a href="https://portal.iitb.ac.in/asc/Login" target="_blank" rel="noopener">External ASC</a>
+      <a href="https://drive.google.com/file/d/1_7uOBxBIdRibI0K0rbvfrSqBI-VyDGdu/view?usp=drivesdk" target="_blank" rel="noopener">Academic Calendar</a>
+    </div>
+  </div>
+
+  <div class="section-title">Table of Contents</div>
+  <div class="toc-grid">
+
+    <a class="toc-card" href="#content" onclick="go('content','registration',event)">
+      <span class="num">1</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"></rect><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"></path><path d="M9 14l2 2 4-4"></path></svg></span>
+      <span class="t">Registration</span>
+      <span class="meta">5 sub-topics →</span>
+    </a>
+
+    <a class="toc-card" href="#content" onclick="go('content','courses',event)">
+      <span class="num">2</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+      <span class="t">Courses and their Categories</span>
+      <span class="meta">14 sub-topics →</span>
+    </a>
+
+    <a class="toc-card" href="#content" onclick="go('content','why-minor',event)">
+      <span class="num">3</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></span>
+      <span class="t">Why Should One Take Up a Minor</span>
+      <span class="meta">Read more →</span>
+    </a>
+
+    <a class="toc-card" href="#content" onclick="go('content','why-Honours',event)">
+      <span class="num">4</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg></span>
+      <span class="t">Why Should One Take Up an Honours</span>
+      <span class="meta">Read more →</span>
+    </a>
+
+    <a class="toc-card" href="#content" onclick="go('content','tagging',event)">
+      <span class="num">5</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></span>
+      <span class="t">Tagging Rules</span>
+      <span class="meta">Read more →</span>
+    </a>
+
+    <a class="toc-card" href="#content" onclick="go('content','research',event)">
+      <span class="num">6</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"></path><path d="M10 3v6.5L4.5 19a1.5 1.5 0 0 0 1.3 2.25h12.4A1.5 1.5 0 0 0 19.5 19L14 9.5V3"></path><path d="M7.5 15h9"></path></svg></span>
+      <span class="t">Research</span>
+      <span class="meta">3 sub-topics →</span>
+    </a>
+
+    <a class="toc-card" href="#content" onclick="go('content','semester-exchange',event)">
+      <span class="num">7</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"></path></svg></span>
+      <span class="t">Intro to Semester Exchange</span>
+      <span class="meta">Read more →</span>
+    </a>
+
+    <a class="toc-card" href="#content" onclick="go('content','reviews',event)">
+      <span class="num">8</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+      <span class="t">Reviews</span>
+      <span class="meta">Read more →</span>
+    </a>
+
+    <a class="toc-card" href="#content" onclick="go('content','faqs',event)">
+      <span class="num">9</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>
+      <span class="t">FAQs</span>
+      <span class="meta">Read more →</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ============================ CONTENT (BOOKLET) ============================ -->
+<section class="page" id="page-content">
+  <div class="layout">
+    <aside class="side">
+      <h4>Contents</h4>
+      <a data-target="registration" onclick="scrollTo2('registration')">1. Registration</a>
+      <a class="sub" data-target="sec-pre-registration" onclick="scrollTo2('sec-pre-registration')">1.1 Pre-Registration</a>
+      <a class="sub" data-target="sec-registration" onclick="scrollTo2('sec-registration')">1.2 Registration</a>
+      <a class="sub" data-target="sec-course-adjustment" onclick="scrollTo2('sec-course-adjustment')">1.3 Course Adjustment</a>
+      <a class="sub" data-target="sec-dropping" onclick="scrollTo2('sec-dropping')">1.4 Dropping of Courses</a>
+      <a class="sub" data-target="sec-sem-wise" onclick="scrollTo2('sec-sem-wise')">1.5 Semester Wise Courses</a>
+      <a data-target="courses" onclick="scrollTo2('courses')">2. Courses &amp; their Categories</a>
+      <a class="sub" data-target="sec-ltpc" onclick="scrollTo2('sec-ltpc')">2.0 LTPC</a>
+      <a class="sub" data-target="sec-core" onclick="scrollTo2('sec-core')">2.1 Core Courses</a>
+      <a class="sub" data-target="sec-minor" onclick="scrollTo2('sec-minor')">2.2 Minor Courses</a>
+      <a class="sub" data-target="sec-Honours" onclick="scrollTo2('sec-Honours')">2.3 Honours Courses</a>
+      <a class="sub" data-target="sec-electives" onclick="scrollTo2('sec-electives')">2.4 Electives</a>
+      <a class="sub" data-target="sec-alc" onclick="scrollTo2('sec-alc')">2.5 ALC</a>
+      <a class="sub" data-target="sec-audit" onclick="scrollTo2('sec-audit')">2.6 Audit Courses</a>
+      <a class="sub" data-target="sec-sit" onclick="scrollTo2('sec-sit')">2.7 Sit Through</a>
+      <a class="sub" data-target="sec-selfstudy" onclick="scrollTo2('sec-selfstudy')">2.8 Self Study</a>
+      <a class="sub" data-target="sec-guided" onclick="scrollTo2('sec-guided')">2.9 Guided Study</a>
+      <a class="sub" data-target="sec-summer" onclick="scrollTo2('sec-summer')">2.10 Summer Courses</a>
+      <a class="sub" data-target="sec-nptel" onclick="scrollTo2('sec-nptel')">2.11 NPTEL/SWAYAM</a>
+      <a class="sub" data-target="sec-seminars" onclick="scrollTo2('sec-seminars')">2.12 Seminars</a>
+      <a class="sub" data-target="sec-ir" onclick="scrollTo2('sec-ir')">2.13 IR Language</a>
+      <a data-target="why-minor" onclick="scrollTo2('why-minor')">3. Why Take Up A Minor</a>
+      <a data-target="why-Honours" onclick="scrollTo2('why-Honours')">4. Why Take Up An Honours</a>
+      <a data-target="tagging" onclick="scrollTo2('tagging')">5. Tagging Rules</a>
+      <a data-target="research" onclick="scrollTo2('research')">6. Research</a>
+      <a class="sub" data-target="sec-slp" onclick="scrollTo2('sec-slp')">6.1 SLP</a>
+      <a class="sub" data-target="sec-btp" onclick="scrollTo2('sec-btp')">6.2 B.Tech. Project</a>
+      <a class="sub" data-target="sec-ura" onclick="scrollTo2('sec-ura')">6.3 URA</a>
+      <a data-target="idddp-intro" onclick="scrollTo2('idddp-intro')">7. Intro to IDDDP</a>
+      <a data-target="semester-exchange" onclick="scrollTo2('semester-exchange')">8. Semester Exchange</a>
+      <a data-target="reviews" onclick="scrollTo2('reviews')">9. Reviews</a>
+      <a class="sub" data-target="sec-minor-reviews" onclick="scrollTo2('sec-minor-reviews')">9.1 Minor Reviews</a>
+      <a class="sub" data-target="sec-Honours-reviews" onclick="scrollTo2('sec-Honours-reviews')">9.2 Honours Reviews</a>
+      <a class="sub" data-target="sec-unconventional-reviews" onclick="scrollTo2('sec-unconventional-reviews')">9.3 Unconventional Courses</a>
+      <a class="sub" data-target="sec-slp-reviews" onclick="scrollTo2('sec-slp-reviews')">9.4 SLP/RnD Reviews</a>
+      <a class="sub" data-target="sec-language-reviews" onclick="scrollTo2('sec-language-reviews')">9.5 Language Courses</a>
+      <a data-target="faqs" onclick="scrollTo2('faqs')">10. FAQs</a>
+    </aside>
+
+    <article class="doc">
+
+      <!-- 1. REGISTRATION -->
+      <div class="block" id="registration">
+        <h2><span class="badge">1</span>Registration</h2>
+        <p class="lead">IIT Bombay follows a specialized credit-based semester system, therefore registration at the beginning of each semester is mandatory for you till you complete your program (lookout for the dates in the <a href="https://drive.google.com/file/d/1_7uOBxBIdRibI0K0rbvfrSqBI-VyDGdu/view?usp=drivesdk" target="_blank" rel="noopener">Academic Calendar</a>). Without registration, any academic activity (course/seminar/project, etc.) that you undergo will not be counted towards the requirements of your degree.</p>
+
+        <h3 id="sec-pre-registration">1.1 &nbsp;Pre-Registration</h3>
+        <p class="kv"><b>When:</b> Usually held about a week before the official course registration begins. This year's dates are 10th July, 2026 - 14th July, 2026 for the Autumn Semester and 12th December, 2026 - 16th December, 2026 for the Spring Semester. Note that Pre-registration is NOT FCFS (First-Come-First-Serve).</p>
+        <p class="kv"><b>What it covers:</b> Minor Courses, Popular and high-demand electives (e.g., Entrepreneurship electives) and certain specific department electives.</p>
+        <p class="kv"><b>How allocation works:</b> Most minor courses are generally allocated based on CPI, and some others are allotted on the professor's selection criteria.</p>
+        <p class="kv"><b>Where to pre-register:</b> Through the External ASC portal under the Forms/Requests section. Click <a href="https://youtu.be/_LlTFtnz6ZU?si=DAe7nDU7GTMkxKSE" target="_blank" rel="noopener">here</a> for a guide video for the same.</p>
+        <p class="kv"><b>Prerequisites:</b> Semester fees must be paid and at least the first SMA instalment should be cleared via External ASC.</p>
+
+        <h3 id="sec-registration">1.2 &nbsp;Registration</h3>
+        <p class="kv"><b>When:</b> Happens before the start of each semester, at the end of December for the Spring Semester and end of July for the Autumn Semester.</p>
+        <p class="kv">Autumn Semester: 21st July, 2026 - 24th July, 2026</p>
+        <p class="kv">Spring Semester: 29th December, 2026 - 1st January, 2027</p>
+        <p class="kv"><b>Where to register:</b> Use the Internal ASC portal → go to Academics → Registration → Registration/Adjustments. Click <a href="https://youtu.be/ecPmluuRV4E?si=OpBwTd7ZhH8y_t6p" target="_blank" rel="noopener">here</a> for a guide video for the same.</p>
+        <p class="kv"><b>How it works:</b></p>
+        <ul>
+          <li>Courses you’ve already pre-registered for (like electives and minors) will be automatically added.</li>
+          <li>You can also register for additional courses (not part of pre-registration) or any pre-reg courses that still have open slots.</li>
+          <li>These open courses are allotted on a First-Come-First-Serve (FCFS) basis, so early action is advised.</li>
+        </ul>
+        <p class="kv"><b>Important Reminders:</b></p>
+        <ul>
+          <li>You must register for the semester on internal ASC before the final deadline mentioned in the Academic Calendar.</li>
+          <li>Once submitted successfully, you’ll receive a confirmation email.</li>
+          <li>Missing the registration submission can result in your registration not being processed, so don’t wait till the last moment!</li>
+        </ul>
+
+        <h3 id="sec-course-adjustment">1.3 &nbsp;Course Adjustment</h3>
+        <p class="kv"><b>Duration:</b> Typically open for around 7-10 days after the course registration period ends. The last date for course adjustment this year is:</p>
+        <p class="kv">Autumn Semester: 3rd August 2026</p>
+        <p class="kv">Spring Semester: 11th January 2027</p>
+        <p class="kv"><b>What you can do:</b> Add or remove courses (generally electives, for core courses - you need the permission of your FacAd). You can make multiple changes during this phase, but must re-submit the updated course registration form each time you make the changes.</p>
+        <p class="kv"><b>Conditions:</b> Your total credits should not fall below 18 or exceed the overload limit as per your category.</p>
+
+        <h3 id="sec-dropping">1.4 &nbsp;Dropping of Courses</h3>
+        <p>If a student finds their academic load too heavy, even after the date for course adjustment has passed, they may drop some courses out of the registered ones provided the minimum credit limit for a semester (18 credits) holds. Dropping core courses requires prior consultation with your Faculty Advisor.
+</p>
+        <p>This year the dates are for the</p>
+        <p class="kv"><b>Autumn Semester:</b></p>
+        <ul>
+          <li>First half-semester courses: 4th August, 2026 - 17th August, 2026</li>
+          <li>Second half-semester courses: 21st September, 2026 - 12th October, 2026</li>
+          <li>Full-semester courses: 4th August, 2026 - 17th August, 2026</li>
+        </ul>
+        <p class="kv"><b>Spring Semester:</b></p>
+        <ul>
+          <li>First half-semester courses: 12th January, 2027 - 25th January, 2027</li>
+          <li>Second half-semester courses: 1st March, 2027 - 22nd March, 2027</li>
+          <li>Full-semester courses: 12th January, 2027 - 25th January, 2027</li>
+        </ul>
+
+        <h3 id="sec-sem-wise">1.5 &nbsp;Semester Wise Courses Offered</h3>
+        <p>You can check a particular semester’s curriculum on ASC. Follow the path: Academic --&gt; All about courses --&gt; Curriculum.</p>
+        <p>Kindly note: From the third semester onwards, registration is dependent on the Academic Standing of the student</p>
+      </div>
+
+      <!-- 2. COURSES -->
+      <div class="block" id="courses">
+        <h2><span class="badge">2</span>Courses and their Categories</h2>
+
+        <h3 id="sec-ltpc">2.0 &nbsp;Theory and Lab Course Systems (LTPC)</h3>
+        <p>Courses are broadly classified as Theory Courses and Laboratory Courses. Theory courses consist of lecture (L) and tutorial (T) hours, but may have attached practical (P) hours in special cases. Laboratory courses consist of practical hours, but may have attached tutorial hours in special cases. Credit (C) for a course is obtained by multiplying the number of hours of instruction per week in that course, by two (2) for lecture and tutorial hours, and by one (1) for laboratory hours i.e. C = 2xL + 2xT + P. A student is expected to spend, on average, one hour every week outside class for every lecture/ tutorial held that week.</p>
+
+        <h3 id="sec-core">2.1 &nbsp;Core Courses</h3>
+        <p>Core courses are those courses which you have to do compulsorily for obtaining your degree.</p>
+        <p>These courses count towards your final degree in all respects and count in your CPI (Cumulative Performance Index).</p>
+        <p>They are NOT optional and have to be completed within the stipulated duration of your coursework (4 or 5 years).</p>
+        <p>The courses give you a lot of exposure to your own departmental subjects and research.</p>
+        <p>They also have an elective component, details regarding which are explained in the section on electives.</p>
+
+        <h3 id="sec-minor">2.2 &nbsp;Minor Courses</h3>
+        <p>A Minor is an additional credential a student will earn if they do a minimum of 30 credits (5 courses in most cases) worth of additional learning in a discipline other than their major discipline.</p>
+        <p>Many academic units in the Institute offer minors in their disciplines and prescribe a specific set of courses and/ or other activities like projects for earning a minor in that discipline.</p>
+        <p>Note that courses equivalent in content to any of these specified courses from the same department can be taken as a minor course with the approval of the concerned HOD.</p>
+        <p>After the completion of credits under the stipulated time period, a minor degree is awarded to the student. It is mentioned in the Degree Certificate "Bachelor of Technology in xxx with Minor in yyy.” The fact will also be reflected in the transcript, along with the list of courses taken.</p>
+        <p>Students are eligible to pursue a Minor starting from the 3rd semester.</p>
+        <p>Minor courses are allocated to students only through a <a href="https://youtu.be/_LlTFtnz6ZU?si=iiWkF1XCXhS5J4zY" target="_blank" rel="noopener">pre-registration process</a> before the start of every semester and the allocation for every minor course is done on the basis of the CPI of the student as the seats are limited in every minor course.</p>
+        <p>You can opt for as many courses of your choice during the process of pre-registration (in particular preference order). You will be allotted the minor course based on your (major) CPI and preference order after the pre-registration window closes.</p>
+        <p>The waitlist that is maintained for the minor courses (for students who have missed out on the course of their choice) is also sorted on the basis of the CPI of the students, such that if any student who has got the minor course drops it during the process of registration, the next student in the waitlist will get the minor course.</p>
+        <p>If a student doesn’t complete the full 30 credits required for a Minor, they won’t be awarded the Minor. However, any courses completed as part of the Minor will still appear on the transcript individually.</p>
+        <div class="note">Note - The only way to get a minor is through the pre-registration window. It would not be possible to register for a minor on the main registration window.</div>
+        <p>Please refer to the <a href="https://www.iitb.ac.in/newacadhome/ugrulebook.pdf" target="_blank" rel="noopener">UG Rulebook</a> to check the eligibility criteria to register for minor courses.</p>
+
+        <h3 id="sec-Honours">2.3 &nbsp;Honours Courses</h3>
+        <p>Honours is an additional credential a student will earn if they opt for the extra 24 credits (in some cases, 30) needed for this in their own discipline.</p>
+        <p>In certain departments, there are some core Honours courses that are compulsory to earn an Honours degree and some Honours elective. It is best to consult your DGSec for details on the same.</p>
+        <p>Honours courses are either advanced-level courses in your discipline or are courses designed to give you more exposure to different areas of your discipline.</p>
+        <p>This will be mentioned in the Degree Certificate as “Bachelor of Technology in xxx, with Honours” on the successful accumulation of credits at the end of the program. The fact will also be reflected in the transcript, along with the list of courses, etc., taken.</p>
+        <p>For B.Tech / B.S. students, the CPI for Honours courses is calculated separately from your Major CPI. Your grades in Honours courses will not impact your Major CPI.</p>
+        <p>There's no separate registration process for Honours. The courses you intend to count towards Honours are registered along with your regular courses on the Internal ASC portal (but ensure that you register for them as an O tag).</p>
+        <p>Dual Degree students have to do the Honours courses by default. They are considered as their core courses. Honours courses do not count in your CPI other than for dual degree students</p>
+
+        <h3 id="sec-electives">2.4 &nbsp;Electives</h3>
+        <p>Every program (B.Tech/Dual degree/BS) in IIT Bombay will have its own curriculum defined, which will define your core courses and the total credit requirement for the award degree. According to your curriculum, your course completion may require doing courses of your own choice, wish and interest from</p>
+        <p><b>Department Electives:</b> Students choose advanced-level courses (e.g., 4xx or 5xx) from their department. In some cases, courses from other departments may be tagged as department electives with approval from the concerned department.</p>
+        <p><b>Interdisciplinary STEM Elective:</b> These courses do not have core prerequisites and can be taken as STEM electives by students from other disciplines.</p>
+        <p><b>Interdisciplinary HASMED Elective:</b> Offered by departments under the HASMED umbrella (Humanities, Arts, Social Sciences, Management, and Design), these courses typically have no core prerequisites and focus on interdisciplinary themes.</p>
+        <div class="note">Note: Electives are part of the curriculum and count towards the CPI. These do not come by default on your course registration form unlike core courses, you need to add these by yourself during registration.</div>
+
+        <h3 id="sec-alc">2.5 &nbsp;Additional Learning Courses (ALC)</h3>
+        <p>Apart from core courses, a student can take some extra courses. These Additional Learning Courses (ALCs) don’t constitute the core CPI/SPI of a student.</p>
+        <p>The tag of such a course can be changed during the retagging period, which is explained later.</p>
+        <div class="note">Note: Exceeding any of the criteria for credits is NOT admissible under any circumstances.</div>
+
+        <h3 id="sec-audit">2.6 &nbsp;Audit Courses</h3>
+        <ul>
+          <li>Audit courses are taken purely for learning purposes, with no credits or grade points.</li>
+          <li>Registration for audit courses is done alongside main course registration, but requires prior permission from the instructor.</li>
+          <li>Only Category I and II students are allowed to audit courses during regular semesters and summer terms.</li>
+          <li>A student may audit a maximum of two courses during their entire program.</li>
+          <li>If completed successfully, the course will be reflected on the transcript with an ‘AU’ grade.</li>
+          <li>The ‘AU’ grade is awarded only if attendance is satisfactory and additional requirements set by the instructor are met.</li>
+          <li>If attendance or performance is unsatisfactory, no grade will be awarded, and the student will be deregistered from the course.</li>
+          <li>The ‘AU’ grade does not carry any grade point and is not included in SPI/CPI calculations.</li>
+          <li>Audit courses cannot be retagged under any other category.</li>
+        </ul>
+
+        <h3 id="sec-sit">2.7 &nbsp;Sit Through</h3>
+        <ul>
+          <li>Sit-through is an option for students interested in a course but unable to register due to constraints (commonly happens with popular minor courses).</li>
+          <li>In such cases, you may seek permission from the course instructor to attend the classes without official registration.</li>
+          <li>Sit-through courses do NOT appear on your transcript.</li>
+          <li>Credits from sit-through courses are not counted toward your degree requirements.</li>
+          <li>No formal registration is required or done for sit-through courses.</li>
+        </ul>
+
+        <table>
+          <thead><tr><th>Type of Course</th><th>Description</th><th>Effect on CPI</th></tr></thead>
+          <tbody>
+            <tr><td>Minors</td><td>30 credits worth of additional learning in a discipline other than your own major.</td><td>Don’t count towards major CPI</td></tr>
+            <tr><td>Honours</td><td>24 (in some cases 30) credits worth of additional learning in your own discipline</td><td>Don’t count towards major CPI</td></tr>
+            <tr><td>STEM Electives</td><td>Science, Technology, Engineering &amp; Mathematics related courses which are mandatory to be done but are chosen based on interest</td><td>Count towards CPI</td></tr>
+            <tr><td>HASMED Electives</td><td>Humanities, Arts, Sociology, Management, Entrepreneurship and Design related courses</td><td>Count towards CPI</td></tr>
+            <tr><td>Flexible Electives</td><td>All electives including STEM, HASMED and Department electives come under this superset</td><td>Count towards CPI</td></tr>
+            <tr><td>Department Electives</td><td>Advanced-level courses from your department</td><td>Count towards CPI</td></tr>
+            <tr><td>Additional Learning Courses (ALCs)</td><td>Any extra course, in any department, by your choice, taken up for extra learning.</td><td>Don’t count towards CPI</td></tr>
+            <tr><td>Audit Courses</td><td>Wanting just an exposure to a course - without having to obtain a good grade - maximum of 2 audit courses in the entire period of study</td><td>Don’t count towards CPI</td></tr>
+            <tr><td>Sit through</td><td>Sitting through a course only for exposure without registering for it</td><td>Don’t count towards CPI</td></tr>
+          </tbody>
+        </table>
+        <div class="note">NOTE: All courses which count towards major CPI are compulsory to complete the minimum requirement for a degree.</div>
+
+        <h3 id="sec-selfstudy">2.8 &nbsp;Self Study Courses</h3>
+        <p class="kv"><b>Purpose:</b> Primarily for final-year students (after 8th semester or after expiry of program duration) who need to complete mandatory credits for graduation.</p>
+        <p class="kv"><b>Course Limit:</b> A student can take a maximum of two courses in self-study mode.</p>
+        <p class="kv"><b>Support:</b></p>
+        <ul>
+          <li>Professors provide study materials.</li>
+          <li>Doubt-clearing sessions are conducted.</li>
+          <li>Exams are held and normal grading policies apply, same as regular courses.</li>
+        </ul>
+        <p class="kv"><b>Registration Process:</b></p>
+        <ul>
+          <li>Submit the <a href="https://drive.google.com/file/d/1aOvevYq-xVsf0XZtbhnd8f5I6J887uCl/view?usp=sharing" target="_blank" rel="noopener">Self-Study Form</a> to the respective department office.</li>
+          <li>After submission, you will receive an email from the Academic Office with payment instructions.</li>
+          <li>Visit the Academic Office (Main Building, 2nd floor) to generate a payment request.</li>
+          <li>Make an offline payment at the Cash Section by showing the payment request.</li>
+          <li>Submit the payment receipt back to the Academic Office.</li>
+          <li>Once processed, the course will appear on the ASC portal.</li>
+        </ul>
+        <p class="kv"><b>Fees:</b></p>
+        <ul>
+          <li>₹2000 per course for General/OBC/EWS students.</li>
+          <li>₹1000 per course for SC/ST students.</li>
+        </ul>
+        <p class="kv"><b>Duration:</b> Typically runs from the second week of May to the second week of July.</p>
+        <p class="kv"><b>Evaluation:</b> Aligned with the academic calendar and treated at par with regular semester courses (whether in summer or normal terms).</p>
+
+        <h3 id="sec-guided">2.9 &nbsp;Guided Study Courses</h3>
+        <p class="kv"><b>Purpose:</b> Primarily for final-year students (after 8th semester or after expiry of program duration) who need to complete mandatory credits for graduation.</p>
+        <p class="kv"><b>Course Limit:</b> A student can take a maximum of two courses in self-study mode.</p>
+        <p class="kv"><b>Support:</b></p>
+        <ul>
+          <li>Professors provide study materials.</li>
+          <li>Doubt-clearing sessions are conducted.</li>
+          <li>Exams are held and normal grading policies apply, same as regular courses.</li>
+        </ul>
+        <p class="kv"><b>Registration Process:</b></p>
+        <ul>
+          <li>Submit the <a href="https://drive.google.com/file/d/1aOvevYq-xVsf0XZtbhnd8f5I6J887uCl/view?usp=sharing" target="_blank" rel="noopener">Self-Study Form</a> to the respective department office.</li>
+          <li>After submission, you will receive an email from the Academic Office with payment instructions.</li>
+          <li>Visit the Academic Office (Main Building, 2nd floor) to generate a payment request.</li>
+          <li>Make an offline payment at the Cash Section by showing the payment request.</li>
+          <li>Submit the payment receipt back to the Academic Office.</li>
+          <li>Once processed, the course will appear on the ASC portal.</li>
+        </ul>
+        <p class="kv"><b>Fees:</b></p>
+        <ul>
+          <li>₹2000 per course for General/OBC/EWS students.</li>
+          <li>₹1000 per course for SC/ST students.</li>
+        </ul>
+        <p class="kv"><b>Duration:</b> Typically runs from the second week of May to the second week of July.</p>
+        <p class="kv"><b>Evaluation:</b> Aligned with the academic calendar and treated at par with regular semester courses (whether in summer or normal terms).</p>
+
+        <h3 id="sec-summer">2.10 &nbsp;Summer Courses</h3>
+        <p>Students with backlogs can register for summer courses. If registering for 2+ backlog courses, they may also take 1 course in advance. A maximum of 24 credits (typically 4 courses) is allowed, except for extension students who can take more if available.</p>
+        <p>Minimum 80% attendance is mandatory; falling short results in an FR grade. Courses can be dropped within 7 days of the first lecture.</p>
+        <p>Register via Internal ASC under “Registration/Adjustments.” Pay ₹9000 per course through External ASC under “Payments.” No offline process is needed.</p>
+        <p>Check Internal ASC (select semester) for available courses. All relevant dates and procedures are listed in the academic calendar.</p>
+
+        <h3 id="sec-nptel">2.11 &nbsp;NPTEL / SWAYAM Courses</h3>
+        <p class="kv"><b>Credit Limit:</b> Students can complete up to 2 elective courses (max 12 credits) via <a href="https://nptel.ac.in/" target="_blank" rel="noopener">NPTEL</a>. Extension/ARP students may take up to 24 credits (core and elective) with DUGC recommendation.</p>
+        <p class="kv"><b>Credits &amp; Grading:</b> A 12-week course equals 6 credits, while 8-week courses equal to 3-4 credits. Grades for NPTEL courses are awarded out of 100 and are not included in CPI calculations.</p>
+        <p class="kv"><b>Enrollment Process:</b> Submit an NPTEL Course Mapping Request Form signed by Faculty Advisor and course instructor to the DUGC via the General Secretary (GSec) for approval.</p>
+        <p class="kv"><b>Registration &amp; Fee:</b> After approval, register and pay ₹1000 on the <a href="https://swayam.gov.in/about" target="_blank" rel="noopener">SWAYAM</a> portal for the course exam.</p>
+        <p class="kv"><b>Completion Formalities:</b> On passing the exam, submit the printed certificate and the signed NPTEL form to DUGC via GSec. It will then be forwarded to the Academic Office for ASC entry under course code O-IITB.</p>
+        <p class="kv"><b>Timelines:</b> Refer to the SWAYAM portal for all deadlines and follow them strictly.</p>
+        <p>Here are some <a href="https://docs.google.com/document/d/10FmHbdOdeEKnzE00Qc90zKLxgYGAtNHD/edit?usp=sharing&amp;ouid=106989683938248810409&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">FAQs</a> for detailed guidance.</p>
+
+        <h3 id="sec-seminars">2.12 &nbsp;Seminars</h3>
+        <p>A Seminar is a 3-credit course where, under the supervision of a faculty member, the student conducts an in-depth study on a specialized topic.</p>
+        <p>This involves surveying relevant technical literature, gaining an understanding of various aspects of the problem, and synthesizing the findings.</p>
+        <p>The student is expected to compile the insights into a written report and deliver an oral presentation before a designated committee of faculty members.</p>
+
+
+        <h3 id="sec-ir">2.13 &nbsp;IR Language Courses</h3>
+        <p>International Relations (IR) language courses are the courses that are offered for the benefit of students as well as staff of IIT Bombay.</p>
+        <p>These courses are offered in many languages such as Japanese, French, Spanish and Chinese.</p>
+        <p>These courses are separately run and have no relation to credits/grades.</p>
+        <p>You can contact the Institute Secretary International Relations (ISIR - UG) for more details about the IR language courses. Reviews for these courses can be found <a href="https://drive.google.com/drive/folders/13Hn728qx0PUhIP5KdX6KnT9t6lD1vcqc?usp=sharing" target="_blank" rel="noopener">here</a>.</p>
+      </div>
+
+      <!-- 3. WHY MINOR -->
+      <div class="block" id="why-minor">
+        <h2><span class="badge">3</span>Why Should One Take Up a Minor</h2>
+        <p>Minor courses allow you to officially explore a department other than yours while at the same time getting credit for it. It adds value to your major degree and can be a gateway to get opportunities in the field you have completed your minor in.</p>
+        <p>Your minor degree can give you sufficient knowledge to enable you to take part in interdisciplinary research and even pursue your higher studies in such fields.</p>
+        <p>Though a minor degree can be pursued simply out of genuine and deep interest in a particular department without any specific end goal in view, for the general majority, you should select it in such a way that it either suits your major degree in a research-oriented interdisciplinary manner or in a generic way to any engineer or scientist.</p>
+        <p>You should also look at how all the minor courses fit in with each other for a more holistic approach; some departments draw up a suggested schedule of when each minor course must be taken to reap the full benefits out of the curriculum.</p>
+        <p>Minor courses don’t count in your CPI, so you should select a minor based on your interest.</p>
+      </div>
+
+      <!-- 4. WHY Honours -->
+      <div class="block" id="why-Honours">
+        <h2><span class="badge">4</span>Why Should One Take Up an Honours</h2>
+        <p>Honours courses are either advanced-level courses in your department or are courses designed to give you more exposure to different areas in your department. It is like a specialization in your own discipline..</p>
+        <p>Honours research topics are varied and negotiable - if you are really interested in a topic and want to learn more about it, you’ll be encouraged and supported.</p>
+        <p>From a potential employer’s perspective, whatever your department, it appears laudable to have demonstrated the ability to achieve a complex and demanding goal and have in-depth knowledge in your department.</p>
+        <p>It helps you prepare for higher studies or to take a job in a particular specialized area so that you can compete with, say, an M.Tech who has specialized in the same area; there are also higher chances that your profile will get noticed by universities for their MS/Ph.D. programs..</p>
+      </div>
+
+      <!-- 5. TAGGING -->
+      <div class="block" id="tagging">
+        <h2><span class="badge">5</span>Tagging Rules</h2>
+        <p>Every course you do in the institute falls under one of the categories of courses as described in section 1. Tags are given to courses to classify them. The tags of electives can be changed as per the rules that follow.</p>
+        <p>This facility allows students to do additional courses and finally make select courses count towards 'Core CPI' (the CPI of prescribed curriculum credits)</p>
+        <p><b>Rules:</b></p>
+        <p>Re-tagging will be available to students ONLY TWICE in their entire program duration, the first time before placements (Second Last Semester Starting) and second time post curriculum completion (Last Semester).</p>
+        <div class="note"><b>Note:</b>
+          <ul>
+            <li>For students who convert to the IDDDP/Dual Degree Programme after the 6th semester, eligibility for retagging depends on whether they avail the retagging window available after their 6th semester. If they do not use this opportunity, they will remain eligible to retag after their 8th and 10th semesters. However, if they avail the retagging window after the 6th semester (prior to conversion), they will have only one retagging opportunity remaining, which will be after their 10th semester.</li>
+            <li>For students enrolled in the Dual Degree Programme from the beginning, retagging is available only after their 8th and 10th semesters. They are not eligible to avail the retagging window after their 6th semester.</li>
+          </ul>
+        </div>
+        <p><b>Tags of courses:</b></p>
+        <ul>
+          <li>Core Course - C</li>
+          <li>Department Elective - D</li>
+          <li>Interdisciplinary STEM Elective - SE</li>
+          <li>Interdisciplinary HASMED Elective - HE</li>
+          <li>Minor Course - M</li>
+          <li>Additional Learning Courses - T</li>
+          <li>Honours Course - O</li>
+        </ul>
+        <p>An approved change of tag will result in fresh calculation of SPI/ CPI from the semester. The tag change has been made effective due to the fact that additional learning course(s) do NOT constitute the core SPI/ CPI of a student.</p>
+        <p>Following is a table specifying the current rules about the changing of tags from one to another and the restrictions put on the same:</p>
+        <table>
+          <thead><tr><th>TAG CODE</th><th>TAG DESCRIPTION</th><th>CHANGEABLE INTO</th></tr></thead>
+          <tbody>
+            <tr><td>T</td><td>Additional Learning Course(ALC)</td><td>SE, HE, O, M</td></tr>
+            <tr><td>C</td><td>Core Course</td><td>C</td></tr>
+            <tr><td>D</td><td>Department Electives</td><td>T,O</td></tr>
+            <tr><td>SE</td><td>Interdisciplinary Stem Electives</td><td>T,M</td></tr>
+            <tr><td>HE</td><td>Interdisciplinary Hasmed Electives</td><td>T,M</td></tr>
+            <tr><td>O</td><td>Honours Course</td><td>T, D</td></tr>
+            <tr><td>M</td><td>Minor Course</td><td>T, SE, HE</td></tr>
+          </tbody>
+        </table>
+        <p>Please check for the updated retagging rules here before making any decision as these are subject to change.</p>
+        <div class="note"><b>NOTE:</b>
+          <ul>
+            <li>These retagging rules are not applicable for all courses. It is advised to talk to the course instructor or a senior before you take up a course. For a lot of courses, the instructors do not allow retagging.</li>
+            <li>The Institute Elective (I) tag has been discontinued. Do not tag any course as "I" during registration, as it may create issues with your graduation requirements.</li>
+            <li>For any special requests i.e. a change, which cannot be implemented on the tagging interface, the student has to get approval from the HOD of the concerned department (other department in case of minors).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 6. RESEARCH -->
+      <div class="block" id="research">
+        <h2><span class="badge">6</span>Research</h2>
+
+        <h3 id="sec-slp">6.1 &nbsp;Supervised Learning Project (SLP)</h3>
+        <p>Supervised Learning Project (SLP), also known as RnD in some departments, is a project-based course - generally for 6 credits, where a student can work for one entire semester on a project under a professor.</p>
+        <p>It is not always necessary to do a project under a professor in your department.</p>
+        <p>The professor you choose can be from a different department, but it is subject to rules and conditions laid down by your department.</p>
+
+        <h3 id="sec-btp">6.2 &nbsp;B.Tech. Project</h3>
+        <p>B.Tech. projects (BTPs) may be offered as a single unit of 12 credits (BTP) or as 6 credits of BTP-I followed by BTP-II of 6 credits or 12 credits.</p>
+        <p>Wherever it is split into two units, BTP - I becomes a pre-requisite for BTP - II.</p>
+        <p>Departments may prescribe a minimum performance in BTP - I (which may be higher than the pass grade ‘DD’) for being eligible for BTP - II.</p>
+        <p>BTP - I and BTP - II are separately graded, at the end of the respective semesters.</p>
+        <p>These projects are supervised, and need regular interaction (at least once a week) with the supervisor.</p>
+        <p>Students have to submit a project report and present it in front of a panel of examiners.</p>
+        <p>The dates for submission of reports, the dates for presentations, and details of mode of assessment are decided by the individual departments.</p>
+        <p>Both BTPs are counted in CPI calculation.</p>
+
+        <h3 id="sec-ura">6.3 &nbsp;Undergraduate Research Awards (URA)</h3>
+        <p>The Undergraduate Research Awards (URA) is a program designed for students with a strong inclination toward research. It aims to recognize and document their research and developmental efforts at three levels: URA01, URA02, and URA03. Each award is independent and reflects the student's contributions and achievements. These awards are listed in the Transcript.</p>
+        <p><b>URA 01</b></p>
+        <ul>
+          <li>For preliminary research/ developmental experience for any 1st/2nd /3rd year UG students.</li>
+          <li>You need to take prior approval from DUGC with a signed application by the guide.</li>
+          <li>Upon completion of the project (4-6 months including summer/winter vacations) you need to fill the URA 01 form and submit it to DUGC via GSec.</li>
+          <li>Form link: <a href="https://drive.google.com/file/d/1W0ynVEfdYmn3fj6y9OMZBismTXGEuffn/view?usp=sharing" target="_blank" rel="noopener">URA 01</a></li>
+          <li>No credits are given for this, it just appears on the transcript with a PP grade in the immediate next semester.</li>
+        </ul>
+        <p><b>URA 02</b></p>
+        <ul>
+          <li>Recognition of truly exceptional work, both in quality and in extent, done in the BTP, is only for B.Tech students, not for DD students.</li>
+          <li>Additional 6 credits with an AA is given for URA 02. Hence, it will improve your CPI.</li>
+          <li>You compulsorily need to do two BTPs one in 7th and another in 8th semester.</li>
+          <li>Your work will be evaluated by a committee formed by the DUGC and then the recommendation is sent to the UGAPEC.</li>
+          <li>After BTP 2 you can apply for URA 02 by filling the form and submitting it to the DUGC via GSec.</li>
+          <li>Form link: <a href="https://drive.google.com/file/d/1KytmWnbrFKe90qp0Bb6PhsMM49KTHSWN/view?usp=sharing" target="_blank" rel="noopener">URA 02</a></li>
+        </ul>
+        <p><b>URA 03</b></p>
+        <ul>
+          <li>Recognition of truly exceptional work, both in quality and in extent, done in the DDP.</li>
+          <li>Only for DD students.</li>
+          <li>You compulsorily need to do two DDPs one in 9th and another in 10th semester as DD requirements.</li>
+          <li>Additional 6 credits with an AA is given for URA 03. Hence, it will improve your CPI.</li>
+          <li>Your work will be evaluated by a committee formed by the DUGC and then the recommendation is sent to the UGAPEC.</li>
+          <li>After DDP 2 you can apply for URA 03 by filling the form and submitting it to the DUGC via GSec.</li>
+          <li>Form link: <a href="https://drive.google.com/file/d/1YsRpdcQArO5_Ullab3883cY9OFmr6EqC/view?usp=sharing" target="_blank" rel="noopener">URA 03</a></li>
+        </ul>
+      </div>
+
+      <!-- 7. IDDDP -->
+      <div class="block" id="idddp-intro">
+        <h2><span class="badge">7</span>Intro to IDDDP</h2>
+        <p>The Interdisciplinary Dual Degree Program (IDDDP) is an academic initiative that allows undergraduate students to pursue an additional master's degree in a specialized interdisciplinary area by extending their studies by one year. This program enables students to combine their core undergraduate discipline with advanced knowledge in an emerging or allied field.</p>
+        <p>For the full guide, including who it suits, its benefits and the IDDDP Booklet, head to <a href="#idddp" onclick="go('idddp',event)">The IDDDP Corner</a>.</p>
+      </div>
+
+      <!-- 8. SEMESTER EXCHANGE -->
+      <div class="block" id="semester-exchange">
+        <h2><span class="badge">8</span>Intro to Semester Exchange</h2>
+        <p>The Semester Exchange Program at IIT Bombay is a chance to study abroad for one semester at one of IIT Bombay’s partner universities. IIT Bombay signs Memoranda of Understanding (MoUs) with various institutions worldwide, many of which facilitate academic exchanges. MoUs lay the groundwork for how these will work - student eligibility, departments/schools and so on.</p>
+        <p>Spending a semester abroad has several advantages:</p>
+        <ul>
+          <li>Study at top international universities</li>
+          <li>Take unique courses not offered at IITB</li>
+          <li>Exposure to different cultures and perspectives</li>
+          <li>Build a global network of friends and contacts</li>
+          <li>Improve soft skills like adaptability, independence, communication</li>
+          <li>Learn how academics and research work in other countries</li>
+          <li>Students who go on to tertiary studies find themselves more comfortable in ‘foreign’ environments.</li>
+          <li>Prospective employers in almost every field look favorably upon experience gained while living overseas and knowledge obtained of another language and culture.</li>
+          <li>Increased pressure to communicate and relate to others develops an awareness of group dynamics and personal sensitivity towards others.</li>
+          <li>Successful program completion represents an excellent measure of personal flexibility, encompassing an ability to reach compromise, focus and succeed through challenging times.</li>
+        </ul>
+        <p>For more info about the Semester Exchange Program (Eligibility, timeline, list of universities etc.) please visit the official <a href="https://www.ir.iitb.ac.in/" target="_blank" rel="noopener">IITB International Relations Website</a>.</p>
+      </div>
+
+      <!-- 9. REVIEWS -->
+      <div class="block" id="reviews">
+        <h2><span class="badge">9</span>Reviews</h2>
+        <p>Reviews are written by students to help you decide which minors and courses to take. The reviews are individual opinions of the respective students and are shared only as a basis for your decision. Click a department below to open its minor reviews.</p>
+
+        <h3 id="sec-minor-reviews">Minor Reviews</h3>
+        <ol class="review-list">
+          <li><a href="https://drive.google.com/drive/folders/1U6TsnsOVuwMtWX84unCakCy71DLiQHfP" target="_blank" rel="noopener">Aerospace Engineering</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1N-RONCYKyVFVW9VNvJaKKOccFuU84JaA" target="_blank" rel="noopener">Biosciences &amp; Bioengineering</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1a1hpQmT3Je_pE7oSPb4T8wRyBa7_fyZF" target="_blank" rel="noopener">Centre for Digital Health (KCDH)</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1EFRJwZgmbJMH5uEyu_MpMs05hM2pPZVJ" target="_blank" rel="noopener">Centre for Machine Intelligence and Data Science (C-MInDS)</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1fig61iBtmtMbyNBDmaTDVDR9m8jvD5HN" target="_blank" rel="noopener">Chemistry</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1YtqksB98kUTOc5WbTituJHaYXf_P05m6" target="_blank" rel="noopener">Computer Science and Engineering</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1Y8oRzSGM8f5z1gsOVqLh-yHmGRwGPgL3" target="_blank" rel="noopener">Economics</a></li>
+          <li><a href="https://drive.google.com/drive/folders/19Cf2QG7PDNbrkX8CuidJ9xVsAevbJK4j" target="_blank" rel="noopener">Electrical Engineering</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1qiefyZaEA2V7j4GVTnAXFn6Sxi1OpGl_" target="_blank" rel="noopener">Energy Science and Engineering</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1MsxosmA_8sL26V3aBOEI2Zqk2RoxEDbe" target="_blank" rel="noopener">Engineering Physics</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1nOrMjJooxseQSAjYM9JiJum8SPWQuGbf" target="_blank" rel="noopener">Entrepreneurship</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1gapjsERcwPgZuIckzMX_7v2bowb0YbQr" target="_blank" rel="noopener">Industrial Design (IDC)</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1w9VLIcdtN2ixNkSRtXR-uJAI4oqPKYU8" target="_blank" rel="noopener">Mathematics</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1xCHm1e4hrWiKtE9LihqpfZ9aGWBnw7hh" target="_blank" rel="noopener">Management</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1FMZdA_DnQCrwarTRyfuAIeWRK0fxauz9" target="_blank" rel="noopener">Robotics</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1FkwXfJb-527qVj6N5o7ERkTATU9P8grK" target="_blank" rel="noopener">Statistics</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1YAbJFww1lU3ZRuERRtJGTWeQfScm9515" target="_blank" rel="noopener">Systems and Control Engineering</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1DF2pUVCcurRUzm5ZZv-Klm156Vok3R6n" target="_blank" rel="noopener">MEMS</a></li>
+        </ol>
+
+        <h3 id="sec-Honours-reviews">Honours Reviews</h3>
+        <p><a href="https://drive.google.com/drive/folders/1pImpInJn19ecC-MSVhM9YsOg_p5T6l1W" target="_blank" rel="noopener">Open the Honours Reviews folder ↗</a></p>
+
+        <h3 id="sec-unconventional-reviews">Unconventional Course Reviews</h3>
+        <ol class="review-list">
+          <li><a href="https://drive.google.com/file/d/1SNJUqOstvJr-TBbi9xa9aRYgfq3SZ_N4/view" target="_blank" rel="noopener">BB405 - Molecular Biology</a></li>
+          <li><a href="https://drive.google.com/file/d/1v4n087pT6jbX5WOqCvXvBWGyFe9Mqvhl/view" target="_blank" rel="noopener">CH442 - Molecular Spectroscopy</a></li>
+          <li><a href="https://drive.google.com/file/d/1Iy_21clFqqIs7RxqBpYulr-CX6Eb3MFz/view" target="_blank" rel="noopener">CH806 - Molecular Photochemistry</a></li>
+          <li><a href="https://drive.google.com/file/d/1YGLoMWgEQTtnQ-VNzH1nFwi5byJzgXPB/view" target="_blank" rel="noopener">CH818 - Single Molecule Fluorescence Spectroscopy</a></li>
+          <li><a href="https://drive.google.com/file/d/1RpOE-hjxqnnV1UjixwC1hLHSyW_BY2Dm/view" target="_blank" rel="noopener">BB400 - Molecular Biophysics</a></li>
+          <li><a href="https://drive.google.com/file/d/1AQbqrE2Xws90r2ANpLKSwjnikmb8lm3T/view" target="_blank" rel="noopener">MM6002 - Principles and Applications of Piezoelectric and Ferroelectric Materials</a></li>
+          <li><a href="https://drive.google.com/file/d/1afwmKy3k10iwTuQ8Lzse7HCVbJcf3KYa/view" target="_blank" rel="noopener">CL726 - Introduction to Genomics</a></li>
+          <li><a href="https://drive.google.com/file/d/1BDSWL1LjMr7ez0WtftbVldNWnL3ZN-XR/view" target="_blank" rel="noopener">DH803 - Wearable Health Technologies</a></li>
+          <li><a href="https://drive.google.com/file/d/1uUnCv2IQm_SM8vRJuMq9AaFpSEFcKupl/view" target="_blank" rel="noopener">GNR649 - Planetary Sciences: Earth and Beyond</a></li>
+          <li><a href="https://drive.google.com/file/d/1_q7jc3kYGfEOFQqOeshCH1gytnzSxhRe/view" target="_blank" rel="noopener">HS618 - Introduction to Indian Astronomy</a></li>
+          <li><a href="https://drive.google.com/file/d/19DM43OMz1xBlUQJnJpKTX463fyXX4bGC/view" target="_blank" rel="noopener">CM801 - Introduction to Risk Analysis</a></li>
+          <li><a href="https://drive.google.com/file/d/1zFSH9TonxZUPzPCQDqBDDdXAWjCdukwv/view" target="_blank" rel="noopener">CS406 - Modern Cryptography</a></li>
+          <li><a href="https://drive.google.com/file/d/1MjRY7mDbTEzuhCrKpj0dM6nunBmRaVRB/view" target="_blank" rel="noopener">GNR607 - Principles of Satellite Image Processing</a></li>
+          <li><a href="https://drive.google.com/file/d/1kV_roHqfmuS6S1FbfZiJ0OfOxFnJ5nIK/view" target="_blank" rel="noopener">IE616 - Decision Analysis and Game Theory</a></li>
+        </ol>
+
+        <h3 id="sec-slp-reviews">SLP/RnD Reviews</h3>
+        <p><a href="https://drive.google.com/drive/folders/18BbZt3jGud2yq9uiiq9uWaQsk9Zd1vCM" target="_blank" rel="noopener">Open the SLP/RnD Reviews folder ↗</a></p>
+
+        <h3 id="sec-language-reviews">Language Courses Review</h3>
+        <ol class="review-list">
+          <li><a href="https://drive.google.com/drive/folders/1FzWE5_LKgQJX5LUq6ETBAj2ZIHxsYL05" target="_blank" rel="noopener">French</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1d5oNnnV-802m-e7euVz8mpl3AkUY0V0s" target="_blank" rel="noopener">German</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1f6xEFF8kexC6QfKlqFhvnRXBow5cFxax" target="_blank" rel="noopener">Japanese</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1Y1GB9-dlWBXmP3LZ4EKRsNydchHqxGrO" target="_blank" rel="noopener">Chinese</a></li>
+        </ol>
+      </div>
+
+      <!-- 10. FAQs -->
+      <div class="block" id="faqs">
+        <h2><span class="badge">10</span>FAQs</h2>
+
+        <details class="faq"><summary>If I get an FR Grade in a minor course, do I need to repeat the course? And will it reflect in my final transcript?</summary>
+        <p>No, you do not need to repeat the course. However, an 'FR' grade will reflect on the course, under the additional courses done.</p></details>
+
+        <details class="faq"><summary>What's the difference between an ALC, Audit and sitting through a course?</summary>
+        <p>Additional Learning Courses (ALCs) do not count towards your CPI but are involved in tagging - if you tag it later as an elective, the grade you get then counts in your CPI. When you audit a course, you do it without obtaining a grade - you get an ‘AU’ on successful completion of the course, which does not carry grade points. Formal registration is required for both these, and they appear on your transcript. But for sitting through a course, you don’t need to register for it, nor does it appear on your transcript.</p></details>
+
+        <details class="faq"><summary>If one gets an FR in Elective HS *xxx*, do they need to repeat the same course or can they take up Elective HS *yyy* in its place?</summary>
+        <p>Yes, they can take *yyy* as their HSS elective by changing the tag of HS *xxx* to additional learning and registering for *yyy* in the next semester as HSS-Elective.</p></details>
+
+        <details class="faq"><summary>What about the credits when one does some Honours courses but not enough for an Honours degree?</summary>
+        <p>If one has completed some Honours courses but not enough to acquire an Honours degree, then those courses would be counted under Additional learning Courses. Some departments allow to tag these as Department/other electives as well.</p></details>
+
+        <details class="faq"><summary>Suppose I take up any other random subject course, but I don’t want to get a minor; will that course show up anywhere while passing out?</summary>
+        <p>The grade that you obtained in the course will show up in the transcript. All the courses taken up as a minor are converted to an ALC unless you have completed 30 prescribed minor credits in a particular department.</p></details>
+
+        <details class="faq"><summary>Can I take a minor course through the main registration window?</summary>
+        <p>One cannot take a minor course through a main registration window if the 'minor course tag' has been allotted through the pre registration window.</p></details>
+
+        <details class="faq"><summary>Can I take a course which is ONLY running as a minor course as an elective course?</summary>
+        <p>If a course is only running as a minor course [Way to check: ASC&gt;Academics&gt;All About Courses] - If there is no other entry of the course apart from the section 'M', then it means it is only running as a minor course. If the course is only running as a minor 'section' course, one cannot take it as an elective tag through the main registration. Example - MG courses last Autumn Semester. One can later, [during graduation/retagging] however tag them as minor courses with the permission of their [parent] department.</p></details>
+
+        <details class="faq"><summary>Where can I see the waitlist of a pre registered course?</summary>
+        <p>You are automatically enrolled into the waitlist of the higher preference courses once the minor allocation has been done. You will be automatically enrolled in a higher preference course in the main registration window if a seat is available in the course. A student cannot see their waitlist number or the waitlist of the pre registered course in the main registration window.</p></details>
+
+        <details class="faq"><summary>Can I go back to my lower preference if I got my higher preference and I didn't freeze my lower preference?</summary>
+        <p>No, not in any case will you be allowed to move to your lower preference if you have been allotted a higher preference. Hence, you are always advised to fill in your preferences carefully.</p></details>
+
+        <details class="faq"><summary>Can I register for a course in the FCFS waitlist in the main registration window of a minor course which is offered through pre registration?</summary>
+        <p>There is no FCFS waitlist for minor courses offered through pre registration. If the course is also running as an elective course, the course can be taken up from the main registration window.</p></details>
+
+        <details class="faq"><summary>A course has a prerequisite, but not mentioned on ASC.</summary>
+        <p>Please follow the information mentioned on the department website. You can also report it to the appropriate authority.</p></details>
+
+        <details class="faq"><summary>How many preferences can I fill in the pre registration window? Till when can I change it?</summary>
+        <p>Any student can fill in as many preferences in the pre registration interface. They can change it till the deadline of the closing of the interface. Important to note - Pre registration is NOT first come first serve basis.</p></details>
+
+        <details class="faq"><summary>How do I figure out which courses are allowed by my department as department or institute electives?</summary>
+        <p>You should do the registration in consultation with your faculty advisor. As such, there is a list approved by the DUGC/DPGC of the department for which the courses are approved as department electives. Please ask your faculty advisor or Department General Secretary to help. If you want to take up some course which you think needs approval, ask your faculty advisor!</p></details>
+
+        <details class="faq"><summary>How do I know which courses are running as minor courses?</summary>
+        <p>The courses running as minor courses are updated on running courses and on the IIT Bombay Academic Website.</p></details>
+
+        <details class="faq"><summary>One of the minor courses is available but I am still not able to register for it through the main registration.</summary>
+        <p>Please check the running courses, if the course isn't running as a normal course [without the 'M' section], it won't be allowed to be registered in the main reg window.</p></details>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+<!-- ============================ RESOURCES ============================ -->
+<section class="page" id="page-resources">
+  <div class="pagehead">
+    <h1>Quick Links</h1>
+  </div>
+
+  <div class="res-grid">
+    <a href="https://resobin.gymkhana.iitb.ac.in/login" target="_blank" rel="noopener">ResoBin</a>
+    <a href="https://landing.iitb.ac.in/?url=https://asc.iitb.ac.in/" target="_blank" rel="noopener">Internal ASC</a>
+    <a href="https://portal.iitb.ac.in/asc/Login" target="_blank" rel="noopener">External ASC</a>
+    <a href="https://drive.google.com/file/d/19XaGo0VUTs7jcQJciYNhMIgSxk7pC6Gz/view?usp=sharing" target="_blank" rel="noopener">Course info booklet 2025-26</a>
+    <a href="https://reach.gymkhana.iitb.ac.in/" target="_blank" rel="noopener">ReaCH</a>
+    <a href="https://youtu.be/_LlTFtnz6ZU?si=AFZo8GLghnEyykDN" target="_blank" rel="noopener">Pre-registration video</a>
+    <a href="https://drive.google.com/file/d/16I4QIEBNni7X5Zcyec5tnqhkifhmuC46/view?usp=sharing" target="_blank" rel="noopener">IDDDP Booklet 2025-26</a>
+    <a href="https://www.iitb.ac.in/newacadhome/ugrulebook.pdf" target="_blank" rel="noopener">UG Rulebook</a>
+    <a href="https://drive.google.com/file/d/1iyRDzS9ynF_xjZnRL1AvQorR_iC5iJFg/view?usp=drive_link" target="_blank" rel="noopener">ChEA Handbook</a>
+    <a href="https://drive.google.com/file/d/1FNzj2swVgrZinDd9mNDuDV02phvh7IfM/view?usp=sharing" target="_blank" rel="noopener">BSBE Guide Part 1</a>
+    <a href="https://drive.google.com/file/d/1nvO-_bhNOH9U3UtzTykNFA-Di0npH4Id/view" target="_blank" rel="noopener">Fast Track Degree Guide</a>
+    <a href="https://docs.google.com/document/d/1Iy9YatdaMXZ3ayhpVH97oPUySGUdSI6s/edit?usp=drive_link&ouid=105543690281433978748&rtpof=true&sd=true" target="_blank" rel="noopener">Policy Newsletter</a>
+    <a href="https://drive.google.com/file/d/1gzrdJRcMpG_OVlIME8wYqQcMao2Lq1Et/view?usp=sharing" target="_blank" rel="noopener">The Library Spotlight</a>
+    <a href="https://drive.google.com/file/d/1Pc9YHuCSBl-7GTXK0eevszH24b8jXEYF/view?usp=sharing" target="_blank" rel="noopener">Procedures for rejoining after being inactive for a semester</a>
+    <a href="https://drive.google.com/file/d/1x5F7_hZYn3EbyXA4PMwXVYwXZ2lquUGX/view?usp=sharing" target="_blank" rel="noopener">Dues Document</a>
+  </div>
+
+  <h2 class="team-section-title" style="font-size:34px;margin-top:44px;">Contact Information</h2>
+  <div class="contact-grid contact-lead">
+    <div class="card-person">
+      <img class="avatar" src="assets/team/siddhant.jpg" alt="Siddhant Sumit Gupta" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">SG</div>
+      <div class="name">Siddhant Sumit Gupta</div>
+      <div class="role">General Secretary, Academic Affairs (UG)</div>
+      <div class="meta"><span>Email: <a href="mailto:gsecaaug@iitb.ac.in">gsecaaug@iitb.ac.in</a></span></div>
+    </div>
+  </div>
+  <div class="contact-grid contact-isaa">
+    <div class="card-person">
+      <img class="avatar" src="assets/team/ananya.jpg" alt="Ananya Gedela" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">AG</div>
+      <div class="name">Ananya Gedela</div>
+      <div class="role">Institute Secretary, Academic&nbsp;Affairs</div>
+      <div class="extra">Head, Student Support Services</div>
+      <div class="meta"><span>Ph: 6362901001</span><span>Email: <a href="mailto:isaa.sss.iitb@gmail.com">isaa.sss.iitb@gmail.com</a></span></div>
+    </div>
+    <div class="card-person">
+      <img class="avatar" src="assets/team/preisha.jpeg" alt="Preisha Desai" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">PD</div>
+      <div class="name">Preisha Desai</div>
+      <div class="role">Institute Secretary, Academic&nbsp;Affairs</div>
+      <div class="extra">Head, Career Cell</div>
+      <div class="meta"><span>Ph: 9769623937</span><span>Email: <a href="mailto:isaa.careercell.iitb@gmail.com">isaa.careercell.iitb@gmail.com</a></span></div>
+    </div>
+    <div class="card-person">
+      <img class="avatar" src="assets/team/anant.jpeg" alt="Anant Bartaria" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">AB</div>
+      <div class="name">Anant Bartaria</div>
+      <div class="role">Institute Secretary, Academic&nbsp;Affairs</div>
+      <div class="extra">Head, EnPoWER</div>
+      <div class="meta"><span>Ph: 6263702299</span><span>Email: <a href="mailto:isaa.enpower.iitb@gmail.com">isaa.enpower.iitb@gmail.com</a></span></div>
+    </div>
+    <div class="card-person">
+      <img class="avatar" src="assets/team/niti.jpeg" alt="Niti Mundra" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">NM</div>
+      <div class="name">Niti Mundra</div>
+      <div class="role">Institute Secretary, Academic&nbsp;Affairs</div>
+      <div class="extra">Head, EnPoWER</div>
+      <div class="meta"><span>Ph: 7588138711</span><span>Email: <a href="mailto:isaa.enpower.iitb@gmail.com">isaa.enpower.iitb@gmail.com</a></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IDDDP ============================ -->
+<section class="page" id="page-idddp">
+  <div class="pagehead">
+    <h1>The IDDDP Corner</h1>
+  </div>
+  <div class="block" style="margin-top:0">
+    <p>The Interdisciplinary Dual Degree Program(IDDDP) is an academic initiative that allows undergraduate students to pursue an additional master's degree in a specialized interdisciplinary area by extending their studies by one year. This program is designed to enable students to combine their core undergraduate discipline with advanced knowledge in an emerging or allied field.</p>
+    <p>This program can prove to be beneficial for many students due to the following reasons :</p>
+    <ul>
+      <li>It's great for students who’ve discovered a new interest in another field through courses, projects, or self-study.</li>
+      <li>It helps you complete a masters degree in an additional 1 year instead of 2.</li>
+      <li>It helps students who chose a branch based on popular opinion but now want to follow their true passion.</li>
+      <li>It encourages deeper learning and better research because students are more motivated.</li>
+      <li>It also matches the growing need for multi-skilled people in industries.</li>
+    </ul>
+    <p>For more info about the IDDD Program, please refer to the <a href="https://drive.google.com/file/d/16I4QIEBNni7X5Zcyec5tnqhkifhmuC46/view?usp=sharing" target="_blank" rel="noopener">IDDDP Booklet</a></p>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="page" id="page-contact">
+  <div class="pagehead">
+    <h1>Our Team</h1>
+    <p>Made with ❤️ by the UGAC Web Team in collaboration with Student Support Services</p>
+  </div>
+
+  <h2 class="team-section-title">Student Support Services</h2>
+  <div class="team-grid team-lead">
+    <div class="team-card">
+      <img class="avatar" src="assets/team/ananya.jpg" alt="Ananya Gedela" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">AG</div>
+      <div class="name">Ananya Gedela</div>
+      <div class="role">Institute Secretary, Academic Affairs<br>Head, SSS</div>
+      <div class="meta">Ph: 6362901001</div>
+    </div>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <img class="avatar" src="assets/team/sanjana.jpg" alt="Sanjana P S" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">SP</div>
+      <div class="name">Sanjana P S</div>
+      <div class="role">Academic Coordinator, SSS</div>
+      <div class="meta">Ph: 9361792261</div>
+    </div>
+    <div class="team-card">
+      <img class="avatar" src="assets/team/devashree.jpg" alt="Devashree Patil" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">DP</div>
+      <div class="name">Devashree Patil</div>
+      <div class="role">Academic Coordinator, SSS</div>
+      <div class="meta">Ph: 8355949477</div>
+    </div>
+    <div class="team-card">
+      <img class="avatar" src="assets/team/raunak.png" alt="Raunak Kumar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">RK</div>
+      <div class="name">Raunak Kumar</div>
+      <div class="role">Academic Coordinator, SSS</div>
+      <div class="meta">Ph: 8828378994</div>
+    </div>
+    <div class="team-card">
+      <img class="avatar" src="assets/team/suresh.jpg" alt="M Suresh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">MS</div>
+      <div class="name">M Suresh</div>
+      <div class="role">Academic Coordinator, SSS</div>
+      <div class="meta">Ph: 7648922250</div>
+    </div>
+  </div>
+
+  <h2 class="team-section-title">Web Team</h2>
+  <div class="team-grid team-lead">
+    <div class="team-card">
+      <img class="avatar" src="assets/team/ansh.jpg" alt="Ansh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">AO</div>
+      <div class="name">Ansh Oswal</div>
+      <div class="role">Web Team Head, UGAC</div>
+      <div class="meta">Ph: 7757968925</div>
+    </div>
+    <div class="team-card">
+      <img class="avatar" src="assets/team/surhud.png" alt="Surhud Naik" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">SN</div>
+      <div class="name">Surhud Naik</div>
+      <div class="role">Web Team Head, UGAC</div>
+      <div class="meta">Ph: 9619364473</div>
+    </div>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <img class="avatar" src="assets/team/arjun.jpeg" alt="Arjun" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">A</div>
+      <div class="name">Arjun</div>
+      <div class="role">Web Convener, UGAC</div>
+      <div class="meta">Ph: 8088891157</div>
+    </div>
+    <div class="team-card">
+      <img class="avatar" src="assets/team/Nisarg.jpeg" alt="Nisarg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">N</div>
+      <div class="name">Nisarg</div>
+      <div class="role">Web Convener, UGAC</div>
+      <div class="meta">Ph: 8980013739</div>
+    </div>
+    <div class="team-card">
+      <img class="avatar" src="assets/team/Saral.jpeg" alt="Saral" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">S</div>
+      <div class="name">Saral</div>
+      <div class="role">Web Convener, UGAC</div>
+      <div class="meta">Ph: 6393613681</div>
+    </div>
+    <div class="team-card">
+      <img class="avatar" src="assets/team/Sarbjeet.jpeg" alt="Sarbjeet" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="avatar-fallback" style="display:none">S</div>
+      <div class="name">Sarbjeet</div>
+      <div class="role">Web Convener, UGAC</div>
+      <div class="meta">Ph: 7827560910</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-cols">
+      <div>
+        <div class="foot-logos">
+          <img src="assets/ugac-logo.png" alt="Undergraduate Academic Council" />
+          <img src="assets/sss-logo.png" alt="Student Support Services" />
+        </div>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/studentsupportservices_iitb?igsh=aWJrbmd6eGtmaHVo" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.facebook.com/sss.iitb/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="mailto:sss1.iitb@gmail.com" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-contact">
+        <div class="name">Contact Us</div>
+        <div class="role">Ananya Gedela<br>Institute Secretary, Academic Affairs<br>Head, Student Support Services</div>
+        <div class="meta">
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+            <a href="mailto:isaa.sss.iitb@gmail.com">isaa.sss.iitb@gmail.com</a>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>6362901001</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="disc-btn" id="discBtn" title="Disclaimer" aria-label="Disclaimer">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+    <line x1="12" y1="9" x2="12" y2="13"></line>
+    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+  </svg>
+</button>
+
+<div class="disc-overlay" id="discOver">
+  <div class="disc-modal">
+    <button class="disc-close">&times;</button>
+    <div class="disc-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+        <line x1="12" y1="9" x2="12" y2="13"></line>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      <span>Disclaimer</span>
+    </div>
+    <p>Information on this website is only a guideline for the students to help them with the choices they make and also in the various important features of the Institute academic system.</p>
+    <p>It may happen that the actual details of courses or rules mentioned on this website may face an amendment over time. Please confirm the rules/details from relevant authorities before making any decisions.</p>
+  </div>
+</div>
+
+<script>
+  var pages = ['home','content','resources','idddp','contact'];
+  var pendingAnchor = null;
+
+  // ---------- Theme (defaults to dark) ----------
+  function applyTheme(t){
+    document.documentElement.setAttribute('data-theme', t);
+    var btn = document.getElementById('themeBtn');
+    if(btn){ btn.textContent = (t==='dark' ? '☀️' : '🌙'); btn.title = (t==='dark' ? 'Switch to light mode' : 'Switch to dark mode'); }
+  }
+  function toggleTheme(){
+    var cur = document.documentElement.getAttribute('data-theme')==='dark' ? 'dark' : 'light';
+    var next = cur==='dark' ? 'light' : 'dark';
+    try{ localStorage.setItem('ugwiki-theme', next); }catch(e){}
+    applyTheme(next);
+  }
+  (function(){
+    var saved = 'light';
+    try{ saved = localStorage.getItem('ugwiki-theme') || 'light'; }catch(e){}
+    applyTheme(saved);
+  })();
+
+  function setActiveNav(page){
+    document.querySelectorAll('nav.links a').forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('data-nav')===page);
+    });
+  }
+
+  function show(page){
+    if(pages.indexOf(page)<0) page='home';
+    pages.forEach(function(p){
+      document.getElementById('page-'+p).classList.toggle('active', p===page);
+    });
+    setActiveNav(page);
+    document.getElementById('navlinks').classList.remove('open');
+  }
+
+  // go(page, [section], [subAnchor], event)  -- flexible args
+  function go(page){
+    var args = Array.prototype.slice.call(arguments,1);
+    var evt = null, anchor = null;
+    args.forEach(function(a){
+      if(a && a.preventDefault) evt = a;
+      else if(typeof a === 'string') anchor = a; // last string wins = deepest target
+    });
+    if(evt) evt.preventDefault();
+    show(page);
+    if(page==='home') window.scrollTo({top:0,behavior:'auto'});
+    if(anchor){
+      pendingAnchor = anchor;
+      requestAnimationFrame(function(){ scrollTo2(anchor); pendingAnchor=null; });
+    } else {
+      window.scrollTo({top:0,behavior:'auto'});
+    }
+    if(history && history.replaceState){ history.replaceState(null,'','#'+page); }
+    return false;
+  }
+
+  function scrollTo2(id){
+    var el = document.getElementById(id);
+    if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  }
+
+  /* ---------- Search ---------- */
+  var SEARCH_INDEX = [], SEARCH_RESULTS = [], searchHL = -1;
+
+  function buildSearchIndex(){
+    var items = [];
+    document.querySelectorAll('#page-content .block').forEach(function(block){
+      var h2 = block.querySelector('h2');
+      var secTitle = h2 ? h2.textContent.replace(/^[\s\d]+/, '').trim() : '';
+      if(block.id){ items.push({id:block.id, page:'content', title:secTitle, crumb:'Course Booklet', text:block.textContent}); }
+      block.querySelectorAll('h3[id]').forEach(function(h3){
+        var n = h3.nextElementSibling, buf = '';
+        while(n && n.tagName!=='H3'){ buf += ' ' + n.textContent; n = n.nextElementSibling; }
+        items.push({id:h3.id, page:'content', title:h3.textContent.replace(/^[\d.\s ]+/, '').trim(), crumb:secTitle, text:buf});
+      });
+    });
+    document.querySelectorAll('#faqs details.faq').forEach(function(d){
+      var s = d.querySelector('summary');
+      if(s){ items.push({id:'faqs', page:'content', title:s.textContent.trim(), crumb:'FAQs', text:d.textContent}); }
+    });
+    items.push({id:null, page:'resources', title:'Quick Links', crumb:'Page', text:'resources resobin asc internal external rulebook booklet academic calendar pre-registration registration video idddp chea bsbe handbook guide slides'});
+    items.push({id:null, page:'idddp', title:'The IDDDP Corner', crumb:'Page', text:'interdisciplinary dual degree masters program one extra year'});
+    items.push({id:null, page:'contact', title:'Our Team', crumb:'Page', text:'our team ananya gedela sanjana devashree patil raunak kumar suresh student support services sss academic coordinator web team ansh oswal surhud naik contact phone'});
+    return items;
+  }
+
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function escapeReg(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+  function highlight(text, terms){
+    var out = escapeHtml(text);
+    var valid = terms.filter(function(t){ return t; }).sort(function(a,b){ return b.length - a.length; });
+    if(!valid.length) return out;
+    var re = new RegExp('(' + valid.map(escapeReg).join('|') + ')', 'ig');
+    return out.replace(re, '<mark>$1</mark>');
+  }
+  function makeSnippet(text, terms){
+    if(!text) return '';
+    var low = text.toLowerCase(), pos = -1;
+    terms.forEach(function(t){ var p = low.indexOf(t); if(p>=0 && (pos<0 || p<pos)) pos = p; });
+    if(pos<0) return '';
+    var start = Math.max(0, pos-30), snip = text.slice(start, start+120).replace(/\s+/g,' ').trim();
+    if(start>0) snip = '… ' + snip;
+    if(start+120 < text.length) snip = snip + ' …';
+    return highlight(snip, terms);
+  }
+
+  function runSearch(q){
+    var box = document.getElementById('searchResults');
+    q = (q||'').trim().toLowerCase();
+    if(q.length < 2){ closeSearch(false); return; }
+    var terms = q.split(/\s+/);
+    // Ignore common filler words so e.g. "what is a minor" matches on "minor"
+    var stop = {'a':1,'an':1,'the':1,'is':1,'are':1,'of':1,'to':1,'in':1,'on':1,'for':1,'and':1,'or':1,
+      'what':1,'why':1,'how':1,'do':1,'does':1,'i':1,'my':1,'me':1,'can':1,'should':1,'up':1,'take':1};
+    var keep = terms.filter(function(t){ return !stop[t]; });
+    if(keep.length) terms = keep;
+    var scored = [];
+    SEARCH_INDEX.forEach(function(it){
+      var titleL = it.title.toLowerCase(), hay = (it.title + ' ' + it.text).toLowerCase();
+      if(!terms.every(function(t){ return hay.indexOf(t) >= 0; })) return;
+      var score = 0;
+      terms.forEach(function(t){ if(titleL.indexOf(t) >= 0) score += 10; if(titleL.indexOf(t) === 0) score += 6; });
+      scored.push({it:it, score:score});
+    });
+    scored.sort(function(a,b){ return b.score - a.score; });
+    scored = scored.slice(0,8);
+    SEARCH_RESULTS = scored.map(function(s){ return s.it; });
+    searchHL = -1;
+    if(!scored.length){
+      box.innerHTML = '<div class="search-empty">No matches for &ldquo;' + escapeHtml(q) + '&rdquo;.</div>';
+      box.classList.add('open'); return;
+    }
+    box.innerHTML = scored.map(function(s, i){
+      var it = s.it, snip = makeSnippet(it.text, terms);
+      return '<a href="#" data-i="' + i + '" onmousedown="event.preventDefault()" onclick="searchPick(' + i + ',event)">'
+        + '<div class="sr-t">' + highlight(it.title, terms) + '</div>'
+        + '<div class="sr-c">' + escapeHtml(it.crumb) + '</div>'
+        + (snip ? '<div class="sr-s">' + snip + '</div>' : '')
+        + '</a>';
+    }).join('');
+    box.classList.add('open');
+  }
+
+  function searchPick(i, evt){
+    if(evt) evt.preventDefault();
+    var it = SEARCH_RESULTS[i];
+    if(!it) return;
+    var inp = document.getElementById('searchInput');
+    if(inp){ inp.value = ''; inp.blur(); }
+    closeSearch(false);
+    if(it.id) go(it.page, it.id); else go(it.page);
+  }
+
+  function searchKey(evt){
+    var box = document.getElementById('searchResults');
+    var items = box.querySelectorAll('a');
+    if(evt.key === 'Escape'){ closeSearch(true); return; }
+    if(!items.length) return;
+    if(evt.key === 'ArrowDown'){ evt.preventDefault(); searchHL = Math.min(items.length-1, searchHL+1); }
+    else if(evt.key === 'ArrowUp'){ evt.preventDefault(); searchHL = Math.max(0, searchHL-1); }
+    else if(evt.key === 'Enter'){ evt.preventDefault(); searchPick(searchHL >= 0 ? searchHL : 0); return; }
+    else return;
+    items.forEach(function(a, i){ a.classList.toggle('hl', i === searchHL); if(i === searchHL) a.scrollIntoView({block:'nearest'}); });
+  }
+
+  function closeSearch(clearInput){
+    var box = document.getElementById('searchResults');
+    if(box){ box.classList.remove('open'); box.innerHTML = ''; }
+    searchHL = -1;
+    if(clearInput){ var inp = document.getElementById('searchInput'); if(inp){ inp.value = ''; inp.blur(); } }
+  }
+
+  document.addEventListener('click', function(e){
+    var s = document.getElementById('search');
+    if(s && !s.contains(e.target)) closeSearch(false);
+  });
+
+  /* ---------- Scroll-spy for the booklet sidebar ---------- */
+  function initScrollSpy(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('aside.side a[data-target]'));
+    if(!links.length || !('IntersectionObserver' in window)) return;
+    var targets = links.map(function(a){ return document.getElementById(a.getAttribute('data-target')); }).filter(Boolean);
+    var visible = {};
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting) visible[e.target.id] = true; else delete visible[e.target.id]; });
+      var current = null;
+      targets.forEach(function(t){ if(visible[t.id] && !current) current = t.id; });
+      if(!current) return;
+      links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('data-target') === current); });
+    }, {rootMargin:'-90px 0px -65% 0px', threshold:0});
+    targets.forEach(function(t){ obs.observe(t); });
+  }
+
+  /* ---------- Scroll reveal (fade-in) ---------- */
+  function initReveal(){
+    if(!('IntersectionObserver' in window)) return;
+    var els = Array.prototype.slice.call(document.querySelectorAll('.block, .toc-card, .res-grid a, .card-person'));
+    var ro = new IntersectionObserver(function(entries, o){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); o.unobserve(e.target); } });
+    }, {threshold:0.06, rootMargin:'0px 0px -30px 0px'});
+    els.forEach(function(el){
+      el.classList.add('reveal');
+      var r = el.getBoundingClientRect();
+      var visibleNow = el.offsetParent !== null && r.top < (window.innerHeight || 800) && r.bottom > 0;
+      if(visibleNow){ el.classList.add('in'); }   // synchronous: no flash for above-the-fold
+      else { ro.observe(el); }
+    });
+  }
+
+  // initial route from hash
+  (function(){
+    var h = (location.hash||'').replace('#','');
+    show(pages.indexOf(h)>=0 ? h : 'home');
+  })();
+
+  // build interactive features after the correct page is shown
+  SEARCH_INDEX = buildSearchIndex();
+  initScrollSpy();
+  initReveal();
+
+  /* ---------- Disclaimer ---------- */
+  var discBtn = document.getElementById('discBtn');
+  var discOver = document.getElementById('discOver');
+  if(discBtn && discOver){
+    discBtn.addEventListener('click', function(){ discOver.classList.add('open'); });
+    discOver.addEventListener('click', function(e){ if(e.target === discOver) discOver.classList.remove('open'); });
+    discOver.querySelector('.disc-close').addEventListener('click', function(){ discOver.classList.remove('open'); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') discOver.classList.remove('open'); });
+    setTimeout(function(){ discOver.classList.add('open'); }, 400);
+  }
+</script>
+
+</body>
+</html>
