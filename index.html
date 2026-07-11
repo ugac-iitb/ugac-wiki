@@ -1,3 +1,6 @@
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -97,7 +100,7 @@
   }
   a{color:var(--brand-2);text-decoration:none;}
   a:hover{text-decoration:underline;}
-
+ 
   /* ---------- Top nav ---------- */
   header.nav{
     position:sticky;top:0;z-index:50;
@@ -126,7 +129,7 @@
   .icon-btn{background:none;border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:16px;cursor:pointer;color:var(--ink);line-height:1;}
   .icon-btn:hover{background:var(--hover);}
   .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:18px;cursor:pointer;color:var(--ink);}
-
+ 
   /* ---------- Search ---------- */
   .search{position:relative;display:flex;align-items:center;gap:8px;
     background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:7px 12px;min-width:230px;transition:.15s;}
@@ -145,18 +148,18 @@
   .search-results a .sr-c{color:var(--muted);font-size:12.5px;font-weight:600;margin-top:1px;}
   .search-results a .sr-s{color:var(--muted);font-size:12.5px;margin-top:2px;}
   .search-empty{padding:14px 12px;color:var(--muted);font-size:13.5px;}
-
+ 
   /* ---------- Layout ---------- */
   main{max-width:1320px;margin:0 auto;padding:34px 22px 80px;}
   .page{display:none;animation:fade .25s ease;}
   .page.active{display:block;}
   @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
-
+ 
   /* Scroll reveal */
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease;}
   .reveal.in{opacity:1;transform:none;}
   @media (prefers-reduced-motion:reduce){ .reveal{opacity:1!important;transform:none!important;transition:none;} }
-
+ 
   /* ---------- Hero ---------- */
   .hero{
     text-align:center;padding:40px 22px 30px;
@@ -175,7 +178,7 @@
   .quick a:hover{border-color:var(--brand-2);color:var(--brand-2);transform:translateY(-2px);text-decoration:none;}
   .quick a.primary{background:var(--brand);color:#fff;border-color:var(--brand);}
   .quick a.primary:hover{color:#fff;filter:brightness(1.1);}
-
+ 
   /* ---------- TOC / Index ---------- */
   .section-title{font-size:13px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--brand-2);margin:38px 0 16px;}
   .toc-grid{display:flex;flex-direction:column;gap:12px;}
@@ -196,7 +199,7 @@
   .toc-card:hover .t{color:var(--brand-2);}
   .toc-card:hover .ic{color:var(--brand);}
   @media (max-width:600px){ .toc-card .ic{display:none;} .toc-card{padding:14px 16px;gap:12px;} .toc-card .meta{font-size:12px;} }
-
+ 
   /* ---------- Content (booklet) ---------- */
   .layout{display:grid;grid-template-columns:262px 1fr;gap:34px;align-items:start;}
   aside.side{position:sticky;top:90px;align-self:start;max-height:calc(100vh - 110px);overflow:auto;
@@ -208,7 +211,7 @@
   aside.side a.sub{padding-left:20px;font-weight:500;color:var(--muted);font-size:13px;}
   aside.side a.active{background:var(--accent-soft);color:var(--brand);font-weight:700;border-left-color:var(--brand);}
   aside.side a.sub.active{color:var(--brand);}
-
+ 
   article.doc{min-width:0;}
   .block{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
     padding:26px 30px;box-shadow:var(--shadow);margin-bottom:22px;scroll-margin-top:88px;}
@@ -231,7 +234,7 @@
   th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;}
   th{background:var(--th);font-weight:700;color:var(--brand);}
   tbody tr:nth-child(even){background:var(--row);}
-
+ 
   /* FAQ */
   details.faq{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:4px 18px;box-shadow:var(--shadow);}
   details.faq summary{cursor:pointer;font-weight:700;padding:12px 0;list-style:none;color:var(--ink);}
@@ -239,7 +242,7 @@
   details.faq summary::before{content:"+";display:inline-block;width:20px;color:var(--brand-2);font-weight:800;}
   details.faq[open] summary::before{content:"–";}
   details.faq p{margin:0 0 14px;color:var(--doc-ink);}
-
+ 
   /* Resources */
   .res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
   .res-grid a{display:flex;align-items:center;min-height:60px;background:var(--surface);border:1px solid var(--line);
@@ -247,7 +250,7 @@
     color:var(--ink);box-shadow:var(--shadow);transition:.16s;}
   .res-grid a:hover{transform:translateY(-2px);border-color:var(--brand-2);border-left-color:var(--brand-2);
     text-decoration:none;color:var(--brand-2);box-shadow:0 10px 26px rgba(0,40,90,.10);}
-
+ 
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
   .contact-isaa{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
@@ -264,7 +267,7 @@
   .card-person .avatar-fallback{display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:var(--brand);background:var(--accent-soft);}
   .contact-isaa .card-person{text-align:center;}
   .contact-isaa .card-person .meta{align-items:center;}
-
+ 
   /* Our Team */
   .team-section-title{font-size:20px;font-weight:800;margin:34px 0 16px;letter-spacing:-.2px;}
   .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
@@ -278,17 +281,17 @@
   .team-note{color:var(--muted);font-size:15px;padding:18px 2px;}
   .team-lead{display:flex;justify-content:center;margin-bottom:16px;}
   .team-lead .team-card{width:100%;max-width:300px;}
-
+ 
   .pagehead{margin-bottom:22px;}
   .pagehead h1{font-size:34px;margin:0 0 6px;font-weight:800;letter-spacing:-.4px;}
   .pagehead p{color:var(--muted);margin:0;max-width:760px;}
-
+ 
   footer{border-top:1px solid var(--line);background:var(--surface);}
   .foot-inner{max-width:1320px;margin:0 auto;padding:26px 22px;color:var(--muted);font-size:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
   .foot-brand{display:flex;align-items:center;gap:14px;}
   .foot-brand img{height:40px;width:auto;flex:none;}
   :root[data-theme="dark"] .foot-brand img{background:#fff;border-radius:6px;padding:3px;}
-
+ 
   @media (max-width:1040px){ .search{min-width:170px;} .brand .logo-sss{display:none;} }
   @media (max-width:880px){
     .layout{grid-template-columns:1fr;}
@@ -300,7 +303,7 @@
     .menu-btn{display:block;}
   }
   @media (max-width:640px){ .search{display:none;} .brand b{display:none;} }
-
+ 
   /* ============ Review feedback: typography & simplification ============ */
   /* Arial for body content, Times New Roman (thinner) for headings */
   body{font-family:Arial,Helvetica,sans-serif;}
@@ -367,7 +370,7 @@
 </style>
 </head>
 <body>
-
+ 
 <header class="nav">
   <div class="nav-inner">
     <div class="brand" onclick="go('home')" title="UG Wiki - Home">
@@ -393,9 +396,9 @@
     </div>
   </div>
 </header>
-
+ 
 <main>
-
+ 
 <!-- ============================ HOME ============================ -->
 <section class="page" id="page-home">
   <div class="hero">
@@ -410,76 +413,83 @@
       <a href="https://drive.google.com/file/d/1_7uOBxBIdRibI0K0rbvfrSqBI-VyDGdu/view?usp=drivesdk" target="_blank" rel="noopener">Academic Calendar</a>
     </div>
   </div>
-
+ 
   <div class="section-title">Table of Contents</div>
   <div class="toc-grid">
-
+ 
     <a class="toc-card" href="#content" onclick="go('content','registration',event)">
       <span class="num">1</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"></rect><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"></path><path d="M9 14l2 2 4-4"></path></svg></span>
       <span class="t">Registration</span>
       <span class="meta">5 sub-topics →</span>
     </a>
-
-    <a class="toc-card" href="#content" onclick="go('content','courses',event)">
+       
+    <a class="toc-card" href="#content" onclick="go('content','academic-standing',event)">
       <span class="num">2</span>
+      <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"></rect><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"></path><path d="M9 14l2 2 4-4"></path></svg></span>
+      <span class="t">Academic Standing</span>
+      <span class="meta">Read more →</span>
+    </a>
+ 
+    <a class="toc-card" href="#content" onclick="go('content','courses',event)">
+      <span class="num">3</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
       <span class="t">Courses and their Categories</span>
       <span class="meta">14 sub-topics →</span>
     </a>
-
+ 
     <a class="toc-card" href="#content" onclick="go('content','sec-minor-reviews',event)">
-      <span class="num">3</span>
+      <span class="num">4</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></span>
       <span class="t">Why Should One Take Up a Minor</span>
       <span class="meta">Read more →</span>
     </a>
-
+ 
     <a class="toc-card" href="#content" onclick="go('content','sec-Honours-reviews',event)">
-      <span class="num">4</span>
+      <span class="num">5</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg></span>
       <span class="t">Why Should One Take Up an Honours</span>
       <span class="meta">Read more →</span>
     </a>
-
+ 
     <a class="toc-card" href="#content" onclick="go('content','tagging',event)">
-      <span class="num">5</span>
+      <span class="num">6</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></span>
       <span class="t">Tagging Rules</span>
       <span class="meta">Read more →</span>
     </a>
-
+ 
     <a class="toc-card" href="#content" onclick="go('content','research',event)">
-      <span class="num">6</span>
+      <span class="num">7</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"></path><path d="M10 3v6.5L4.5 19a1.5 1.5 0 0 0 1.3 2.25h12.4A1.5 1.5 0 0 0 19.5 19L14 9.5V3"></path><path d="M7.5 15h9"></path></svg></span>
       <span class="t">Research</span>
       <span class="meta">3 sub-topics →</span>
     </a>
-
+ 
     <a class="toc-card" href="#content" onclick="go('content','semester-exchange',event)">
-      <span class="num">7</span>
+      <span class="num">8</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"></path></svg></span>
       <span class="t">Intro to Semester Exchange</span>
       <span class="meta">Read more →</span>
     </a>
-
+ 
     <a class="toc-card" href="#content" onclick="go('content','reviews',event)">
-      <span class="num">8</span>
+      <span class="num">9</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
       <span class="t">Reviews</span>
       <span class="meta">Read more →</span>
     </a>
-
+ 
     <a class="toc-card" href="#content" onclick="go('content','faqs',event)">
-      <span class="num">9</span>
+      <span class="num">10</span>
       <span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>
       <span class="t">FAQs</span>
       <span class="meta">Read more →</span>
     </a>
-
+ 
   </div>
 </section>
-
+ 
 <!-- ============================ CONTENT (BOOKLET) ============================ -->
 <section class="page" id="page-content">
   <div class="layout">
@@ -491,46 +501,47 @@
       <a class="sub" data-target="sec-course-adjustment" onclick="scrollTo2('sec-course-adjustment')">1.3 Course Adjustment</a>
       <a class="sub" data-target="sec-dropping" onclick="scrollTo2('sec-dropping')">1.4 Dropping of Courses</a>
       <a class="sub" data-target="sec-sem-wise" onclick="scrollTo2('sec-sem-wise')">1.5 Semester Wise Courses</a>
-      <a data-target="courses" onclick="scrollTo2('courses')">2. Courses &amp; their Categories</a>
-      <a class="sub" data-target="sec-ltpc" onclick="scrollTo2('sec-ltpc')">2.0 LTPC</a>
-      <a class="sub" data-target="sec-core" onclick="scrollTo2('sec-core')">2.1 Core Courses</a>
-      <a class="sub" data-target="sec-minor" onclick="scrollTo2('sec-minor')">2.2 Minor Courses</a>
-      <a class="sub" data-target="sec-Honours" onclick="scrollTo2('sec-Honours')">2.3 Honours Courses</a>
-      <a class="sub" data-target="sec-electives" onclick="scrollTo2('sec-electives')">2.4 Electives</a>
-      <a class="sub" data-target="sec-alc" onclick="scrollTo2('sec-alc')">2.5 ALC</a>
-      <a class="sub" data-target="sec-audit" onclick="scrollTo2('sec-audit')">2.6 Audit Courses</a>
-      <a class="sub" data-target="sec-sit" onclick="scrollTo2('sec-sit')">2.7 Sit Through</a>
-      <a class="sub" data-target="sec-selfstudy" onclick="scrollTo2('sec-selfstudy')">2.8 Self Study</a>
-      <a class="sub" data-target="sec-guided" onclick="scrollTo2('sec-guided')">2.9 Guided Study</a>
-      <a class="sub" data-target="sec-summer" onclick="scrollTo2('sec-summer')">2.10 Summer Courses</a>
-      <a class="sub" data-target="sec-nptel" onclick="scrollTo2('sec-nptel')">2.11 NPTEL/SWAYAM</a>
-      <a class="sub" data-target="sec-seminars" onclick="scrollTo2('sec-seminars')">2.12 Seminars</a>
-      <a class="sub" data-target="sec-ir" onclick="scrollTo2('sec-ir')">2.13 IR Language</a>
-      <a data-target="why-minor" onclick="scrollTo2('why-minor')">3. Why Take Up A Minor</a>
-      <a data-target="why-Honours" onclick="scrollTo2('why-Honours')">4. Why Take Up An Honours</a>
-      <a data-target="tagging" onclick="scrollTo2('tagging')">5. Tagging Rules</a>
-      <a data-target="research" onclick="scrollTo2('research')">6. Research</a>
-      <a class="sub" data-target="sec-slp" onclick="scrollTo2('sec-slp-reviews')">6.1 SLP</a>
-      <a class="sub" data-target="sec-btp" onclick="scrollTo2('sec-btp')">6.2 B.Tech. Project</a>
-      <a class="sub" data-target="sec-ura" onclick="scrollTo2('sec-ura')">6.3 URA</a>
-      <a data-target="idddp-intro" onclick="scrollTo2('idddp-intro')">7. Intro to IDDDP</a>
-      <a data-target="semester-exchange" onclick="scrollTo2('semester-exchange')">8. Semester Exchange</a>
-      <a data-target="reviews" onclick="scrollTo2('reviews')">9. Reviews</a>
-      <a class="sub" data-target="sec-minor-reviews" onclick="scrollTo2('sec-minor-reviews')">9.1 Minor Reviews</a>
-      <a class="sub" data-target="sec-Honours-reviews" onclick="scrollTo2('sec-Honours-reviews')">9.2 Honours Reviews</a>
-      <a class="sub" data-target="sec-unconventional-reviews" onclick="scrollTo2('sec-unconventional-reviews')">9.3 Unconventional Courses</a>
-      <a class="sub" data-target="sec-slp-reviews" onclick="scrollTo2('sec-slp-reviews')">9.4 SLP/RnD Reviews</a>
-      <a class="sub" data-target="sec-language-reviews" onclick="scrollTo2('sec-language-reviews')">9.5 Language Courses</a>
-      <a data-target="faqs" onclick="scrollTo2('faqs')">10. FAQs</a>
+      <a data-target="academic-standing" onclick="scrollTo2('academic-standing')">2. Academic Standing</a>
+      <a data-target="courses" onclick="scrollTo2('courses')">3. Courses &amp; their Categories</a>
+      <a class="sub" data-target="sec-ltpc" onclick="scrollTo2('sec-ltpc')">3.0 LTPC</a>
+      <a class="sub" data-target="sec-core" onclick="scrollTo2('sec-core')">3.1 Core Courses</a>
+      <a class="sub" data-target="sec-minor" onclick="scrollTo2('sec-minor')">3.2 Minor Courses</a>
+      <a class="sub" data-target="sec-Honours" onclick="scrollTo2('sec-Honours')">3.3 Honours Courses</a>
+      <a class="sub" data-target="sec-electives" onclick="scrollTo2('sec-electives')">3.4 Electives</a>
+      <a class="sub" data-target="sec-alc" onclick="scrollTo2('sec-alc')">3.5 ALC</a>
+      <a class="sub" data-target="sec-audit" onclick="scrollTo2('sec-audit')">3.6 Audit Courses</a>
+      <a class="sub" data-target="sec-sit" onclick="scrollTo2('sec-sit')">3.7 Sit Through</a>
+      <a class="sub" data-target="sec-selfstudy" onclick="scrollTo2('sec-selfstudy')">3.8 Self Study</a>
+      <a class="sub" data-target="sec-guided" onclick="scrollTo2('sec-guided')">3.9 Guided Study</a>
+      <a class="sub" data-target="sec-summer" onclick="scrollTo2('sec-summer')">3.10 Summer Courses</a>
+      <a class="sub" data-target="sec-nptel" onclick="scrollTo2('sec-nptel')">3.11 NPTEL/SWAYAM</a>
+      <a class="sub" data-target="sec-seminars" onclick="scrollTo2('sec-seminars')">3.12 Seminars</a>
+      <a class="sub" data-target="sec-ir" onclick="scrollTo2('sec-ir')">3.13 IR Language</a>
+      <a data-target="why-minor" onclick="scrollTo2('why-minor')">4. Why Take Up A Minor</a>
+      <a data-target="why-Honours" onclick="scrollTo2('why-Honours')">5. Why Take Up An Honours</a>
+      <a data-target="tagging" onclick="scrollTo2('tagging')">6. Tagging Rules</a>
+      <a data-target="research" onclick="scrollTo2('research')">7. Research</a>
+      <a class="sub" data-target="sec-slp" onclick="scrollTo2('sec-slp-reviews')">7.1 SLP</a>
+      <a class="sub" data-target="sec-btp" onclick="scrollTo2('sec-btp')">7.2 B.Tech. Project</a>
+      <a class="sub" data-target="sec-ura" onclick="scrollTo2('sec-ura')">7.3 URA</a>
+      <a data-target="idddp-intro" onclick="scrollTo2('idddp-intro')">8. Intro to IDDDP</a>
+      <a data-target="semester-exchange" onclick="scrollTo2('semester-exchange')">9. Semester Exchange</a>
+      <a data-target="reviews" onclick="scrollTo2('reviews')">10. Reviews</a>
+      <a class="sub" data-target="sec-minor-reviews" onclick="scrollTo2('sec-minor-reviews')">10.1 Minor Reviews</a>
+      <a class="sub" data-target="sec-Honours-reviews" onclick="scrollTo2('sec-Honours-reviews')">10.2 Honours Reviews</a>
+      <a class="sub" data-target="sec-unconventional-reviews" onclick="scrollTo2('sec-unconventional-reviews')">10.3 Unconventional Courses</a>
+      <a class="sub" data-target="sec-slp-reviews" onclick="scrollTo2('sec-slp-reviews')">10.4 SLP/RnD Reviews</a>
+      <a class="sub" data-target="sec-language-reviews" onclick="scrollTo2('sec-language-reviews')">10.5 Language Courses</a>
+      <a data-target="faqs" onclick="scrollTo2('faqs')">11. FAQs</a>
     </aside>
-
+ 
     <article class="doc">
-
+ 
       <!-- 1. REGISTRATION -->
       <div class="block" id="registration">
         <h2><span class="badge">1</span>Registration</h2>
         <p class="lead">IIT Bombay follows a specialized credit-based semester system, therefore registration at the beginning of each semester is mandatory for you till you complete your program (lookout for the dates in the <a href="https://drive.google.com/file/d/1_7uOBxBIdRibI0K0rbvfrSqBI-VyDGdu/view?usp=drivesdk" target="_blank" rel="noopener">Academic Calendar</a>). Without registration, any academic activity (course/seminar/project, etc.) that you undergo will not be counted towards the requirements of your degree.</p>
-
+ 
         <h3 id="sec-pre-registration">1.1 &nbsp;Pre-Registration</h3>
         <p class="kv"><b>When:</b> Usually held about a week before the official course registration begins. This year's dates are 10th July, 2026 - 14th July, 2026 for the Autumn Semester and 12th December, 2026 - 16th December, 2026 for the Spring Semester. Note that Pre-registration is NOT FCFS (First-Come-First-Serve).</p>
         <p class="kv"><b>What it covers:</b> Minor Courses, Popular and high-demand electives (e.g., Entrepreneurship electives) and certain specific department electives.</p>
@@ -538,7 +549,7 @@
         <p class="kv"><b>How allocation works:</b> Most minor courses are generally allocated based on CPI, and some others are allotted on the professor's selection criteria.</p>
         <p class="kv"><b>Where to pre-register:</b> Through the External ASC portal under the Forms/Requests section. Click <a href="https://youtu.be/_LlTFtnz6ZU?si=DAe7nDU7GTMkxKSE" target="_blank" rel="noopener">here</a> for a guide video for the same.</p>
         <p class="kv"><b>Prerequisites:</b> Semester fees must be paid and at least the first SMA instalment should be cleared via External ASC.</p>
-
+ 
         <h3 id="sec-registration">1.2 &nbsp;Registration</h3>
         <p class="kv"><b>When:</b> Happens before the start of each semester, at the end of December for the Spring Semester and end of July for the Autumn Semester.</p>
         <p class="kv">Autumn Semester: 21st July, 2026 - 24th July, 2026</p>
@@ -556,14 +567,14 @@
           <li>Once submitted successfully, you’ll receive a confirmation email.</li>
           <li>Missing the registration submission can result in your registration not being processed, so don’t wait till the last moment!</li>
         </ul>
-
+ 
         <h3 id="sec-course-adjustment">1.3 &nbsp;Course Adjustment</h3>
         <p class="kv"><b>Duration:</b> Typically open for around 7-10 days after the course registration period ends. The last date for course adjustment this year is:</p>
         <p class="kv">Autumn Semester: 3rd August 2026</p>
         <p class="kv">Spring Semester: 11th January 2027</p>
         <p class="kv"><b>What you can do:</b> Add or remove courses (generally electives, for core courses - you need the permission of your FacAd). You can make multiple changes during this phase, but must re-submit the updated course registration form each time you make the changes.</p>
         <p class="kv"><b>Conditions:</b> Your total credits should not fall below 18 or exceed the overload limit as per your category.</p>
-
+ 
         <h3 id="sec-dropping">1.4 &nbsp;Dropping of Courses</h3>
         <p>If a student finds their academic load too heavy, even after the date for course adjustment has passed, they may drop some courses out of the registered ones provided the minimum credit limit for a semester (18 credits) holds. Dropping core courses requires prior consultation with your Faculty Advisor.
 </p>
@@ -580,26 +591,57 @@
           <li>Second half-semester courses: 1st March, 2027 - 22nd March, 2027</li>
           <li>Full-semester courses: 12th January, 2027 - 25th January, 2027</li>
         </ul>
-
+ 
         <h3 id="sec-sem-wise">1.5 &nbsp;Semester Wise Courses Offered</h3>
         <p>You can check a particular semester’s curriculum on ASC. Follow the path: Academic --&gt; All about courses --&gt; Curriculum.</p>
         <p>Kindly note: From the third semester onwards, registration is dependent on the Academic Standing of the student</p>
       </div>
-
-      <!-- 2. COURSES -->
+ 
+      <!-- 2. ACADEMIC STANDING -->
+      <div class="block" id="academic-standing">
+        <h2><span class="badge">2</span>Academic Standing</h2>
+        <p class="lead">At the end of every semester, every student is assigned an Academic Standing (Category I&ndash;VI) based on their academic performance over the previous two regular registered semesters. Your academic standing determines the maximum number of credits you can register for in the upcoming semester.</p>
+        <div class="note">Note: An NP (Not Passed) grade in a non-credited course is not treated as a failed course (FR/DX/DR/W) for determining academic standing.</div>
+ 
+        <h3>Categories of Academic Standing</h3>
+        <table>
+          <thead><tr><th>Category</th><th>Eligibility</th><th>Implication</th></tr></thead>
+          <tbody>
+            <tr><td>I</td><td>A student who has no FR/DX/DR/W in any of the core courses, and has a CPI equal to or greater than 8.0.</td><td>Upto 54 credits</td></tr>
+            <tr><td>II</td><td>CPI &lt; 8. Registered for at least 18 credits in each of the two preceding regular semesters and not failed in any course in these two semesters.</td><td>Upto 48 credits</td></tr>
+            <tr><td>III</td><td>Received at least 1 FR/DX/W/DR in core courses and at most 1 FR/DX in other courses in the previous two semesters.</td><td>Upto 48 credits</td></tr>
+            <tr><td>IV</td><td>Received at least 1 FR/DX/W/DR in core courses and more than one FR/DX in other courses in the previous two semesters.</td><td>Upto 48 credits</td></tr>
+            <tr><td>V</td><td>Not earned at least 18 credits in either one of the previous two regular registered semesters.</td><td>Upto 36 credits</td></tr>
+            <tr><td>VI</td><td>Accumulated at least 36 credits worth of FR/DX in core courses.</td><td>Upto 24 credits</td></tr>
+          </tbody>
+        </table>
+ 
+        <div class="note"><b>Note:</b>
+          <ul>
+            <li>Academic Standing is recalculated before every semester registration based on your performance in the previous two regular registered semesters.</li>
+            <li>Category VI supersedes all other categories. If you satisfy the conditions for Category VI, you will be placed in Category VI regardless of any other category.</li>
+            <li>Students in the 8th semester of B.Tech./B.S. and 10th semester of Dual Degree programmes may be permitted to register for up to 54 credits with the recommendation of their Faculty Advisor/PIC, subject to Institute rules.</li>
+            <li>If your grades from an exchange semester are not available before registration, your Academic Standing is determined using the last two completed semesters.</li>
+          </ul>
+        </div>
+ 
+        <p>For more details, please refer to the Institute Academic Rulebook.</p>
+      </div>
+ 
+      <!-- 3. COURSES -->
       <div class="block" id="courses">
-        <h2><span class="badge">2</span>Courses and their Categories</h2>
-
+        <h2><span class="badge">3</span>Courses and their Categories</h2>
+ 
         <h3 id="sec-ltpc">2.0 &nbsp;Theory and Lab Course Systems (LTPC)</h3>
         <p>Courses are broadly classified as Theory Courses and Laboratory Courses. Theory courses consist of lecture (L) and tutorial (T) hours, but may have attached practical (P) hours in special cases. Laboratory courses consist of practical hours, but may have attached tutorial hours in special cases. Credit (C) for a course is obtained by multiplying the number of hours of instruction per week in that course, by two (2) for lecture and tutorial hours, and by one (1) for laboratory hours i.e. C = 2xL + 2xT + P. A student is expected to spend, on average, one hour every week outside class for every lecture/ tutorial held that week.</p>
-
+ 
         <h3 id="sec-core">2.1 &nbsp;Core Courses</h3>
         <p>Core courses are those courses which you have to do compulsorily for obtaining your degree.</p>
         <p>These courses count towards your final degree in all respects and count in your CPI (Cumulative Performance Index).</p>
         <p>They are NOT optional and have to be completed within the stipulated duration of your coursework (4 or 5 years).</p>
         <p>The courses give you a lot of exposure to your own departmental subjects and research.</p>
         <p>They also have an elective component, details regarding which are explained in the section on electives.</p>
-
+ 
         <h3 id="sec-minor">2.2 &nbsp;Minor Courses</h3>
         <p>A Minor is an additional credential a student will earn if they do a minimum of 30 credits (5 courses in most cases) worth of additional learning in a discipline other than their major discipline.</p>
         <p>Many academic units in the Institute offer minors in their disciplines and prescribe a specific set of courses and/ or other activities like projects for earning a minor in that discipline.</p>
@@ -612,7 +654,7 @@
         <p>If a student doesn’t complete the full 30 credits required for a Minor, they won’t be awarded the Minor. However, any courses completed as part of the Minor will still appear on the transcript individually.</p>
         <div class="note">Note - The only way to get a minor is through the pre-registration window. It would not be possible to register for a minor on the main registration window.</div>
         <p>Please refer to the <a href="https://www.iitb.ac.in/newacadhome/ugrulebook.pdf" target="_blank" rel="noopener">UG Rulebook</a> to check the eligibility criteria to register for minor courses.</p>
-
+ 
         <h3 id="sec-Honours">2.3 &nbsp;Honours Courses</h3>
         <p>Honours is an additional credential a student will earn if they opt for the extra 24 credits (in some cases, 30) needed for this in their own discipline.</p>
         <p>In certain departments, there are some core Honours courses that are compulsory to earn an Honours degree and some Honours elective. It is best to consult your DGSec for details on the same.</p>
@@ -621,7 +663,7 @@
         <p>For B.Tech / B.S. students, the CPI for Honours courses is calculated separately from your Major CPI. Your grades in Honours courses will not impact your Major CPI.</p>
         <p>There's no separate registration process for Honours. The courses you intend to count towards Honours are registered along with your regular courses on the Internal ASC portal (but ensure that you register for them as an O tag).</p>
         <p>Dual Degree students have to do the Honours courses by default. They are considered as their core courses. Honours courses do not count in your CPI other than for dual degree students</p>
-
+ 
         <h3 id="sec-electives">2.4 &nbsp;Electives</h3>
         <p>Every program (B.Tech/Dual degree/BS) in IIT Bombay will have its own curriculum defined, which will define your core courses and the total credit requirement for the award degree. According to your curriculum, your course completion may require doing courses of your own choice, wish and interest from</p>
         <p><b>Department Electives:</b> Students choose advanced-level courses (e.g., 4xx or 5xx) from their department. In some cases, courses from other departments may be tagged as department electives with approval from the concerned department.</p>
@@ -636,13 +678,13 @@
           <li>Flexible Electives: 30 credits (should be from among Department, STEM, or HASMED electives)</li>
         </ul>
         <div class="note">Note: The Flexible Electives credit requirement is fulfilled through DE, SE, and HE courses only. The exact credit requirements and elective distribution may vary across departments and programs. Always refer to your department's latest curriculum for the most accurate requirements.</div>
-
-
+ 
+ 
         <h3 id="sec-alc">2.5 &nbsp;Additional Learning Courses (ALC)</h3>
         <p>Apart from core courses, a student can take some extra courses. These Additional Learning Courses (ALCs) don’t constitute the core CPI/SPI of a student.</p>
         <p>The tag of such a course can be changed during the retagging period, which is explained later.</p>
         <div class="note">Note: Exceeding any of the criteria for credits is NOT admissible under any circumstances.</div>
-
+ 
         <h3 id="sec-audit">2.6 &nbsp;Audit Courses</h3>
         <ul>
           <li>Audit courses are taken purely for learning purposes, with no credits or grade points.</li>
@@ -655,7 +697,7 @@
           <li>The ‘AU’ grade does not carry any grade point and is not included in SPI/CPI calculations.</li>
           <li>Audit courses cannot be retagged under any other category.</li>
         </ul>
-
+ 
         <h3 id="sec-sit">2.7 &nbsp;Sit Through</h3>
         <ul>
           <li>Sit-through is an option for students interested in a course but unable to register due to constraints (commonly happens with popular minor courses).</li>
@@ -664,7 +706,7 @@
           <li>Credits from sit-through courses are not counted toward your degree requirements.</li>
           <li>No formal registration is required or done for sit-through courses.</li>
         </ul>
-
+ 
         <table>
           <thead><tr><th>Type of Course</th><th>Description</th><th>Effect on CPI</th></tr></thead>
           <tbody>
@@ -680,7 +722,7 @@
           </tbody>
         </table>
         <div class="note">NOTE: All courses which count towards major CPI are compulsory to complete the minimum requirement for a degree.</div>
-
+ 
         <h3 id="sec-selfstudy">2.8 &nbsp;Self Study Courses</h3>
         <p class="kv"><b>Purpose:</b> Primarily for final-year students (after 8th semester or after expiry of program duration) who need to complete mandatory credits for graduation.</p>
         <p class="kv"><b>Course Limit:</b> A student can take a maximum of two courses in self-study mode.</p>
@@ -706,7 +748,7 @@
         </ul>
         <p class="kv"><b>Duration:</b> Typically runs from the second week of May to the second week of July.</p>
         <p class="kv"><b>Evaluation:</b> Aligned with the academic calendar and treated at par with regular semester courses (whether in summer or normal terms).</p>
-
+ 
         <h3 id="sec-guided">2.9 &nbsp;Guided Study Courses</h3>
         <p class="kv"><b>Purpose:</b> Designed for Category I students to pursue non-core courses in a self-study mode during regular semesters.</p>
         <p class="kv"><b>Approvals Required:</b> 
@@ -728,20 +770,20 @@
           <li>Standard credit load rules still apply.</li>
         </ul>
           <p class="kv"><b>Credit Tagging: </b>Credits may count towards a Minor or Honors if explicitly specified by the academic unit.</p>
-
+ 
         <p class="kv"><b>Registration & Evaluation:</b></p>
         <ul>
           <li>Follow the same process as regular courses. </li>
           <li>Students must fill out the <a href="https://drive.google.com/file/d/1T2denUneBi-7rywKo_GvW7wuXi54dXwb/view?usp=sharing">Guided Study Form</a> and submit it to the concerned professor before registration begins.</li>
         </ul>
-
-
+ 
+ 
         <h3 id="sec-summer">2.10 &nbsp;Summer Courses</h3>
         <p>Students with backlogs can register for summer courses. If registering for 2+ backlog courses, they may also take 1 course in advance. A maximum of 24 credits (typically 4 courses) is allowed, except for extension students who can take more if available.</p>
         <p>Minimum 80% attendance is mandatory; falling short results in an FR grade. Courses can be dropped within 7 days of the first lecture.</p>
         <p>Register via Internal ASC under “Registration/Adjustments.” Pay ₹9000 per course through External ASC under “Payments.” No offline process is needed.</p>
         <p>Check Internal ASC (select semester) for available courses. All relevant dates and procedures are listed in the academic calendar.</p>
-
+ 
         <h3 id="sec-nptel">2.11 &nbsp;NPTEL / SWAYAM Courses</h3>
         <p class="kv"><b>Credit Limit:</b> Students can complete up to 2 elective courses (max 12 credits) via <a href="https://nptel.ac.in/" target="_blank" rel="noopener">NPTEL</a>. Extension/ARP students may take up to 24 credits (core and elective) with DUGC recommendation.</p>
         <p class="kv"><b>Credits &amp; Grading:</b> A 12-week course equals 6 credits, while 8-week courses equal to 3-4 credits. Grades for NPTEL courses are awarded out of 100 and are not included in CPI calculations.</p>
@@ -750,42 +792,42 @@
         <p class="kv"><b>Completion Formalities:</b> On passing the exam, submit the printed certificate and the signed NPTEL form to DUGC via GSec. It will then be forwarded to the Academic Office for ASC entry under course code O-IITB.</p>
         <p class="kv"><b>Timelines:</b> Refer to the SWAYAM portal for all deadlines and follow them strictly.</p>
         <p>Here are some <a href="https://docs.google.com/document/d/10FmHbdOdeEKnzE00Qc90zKLxgYGAtNHD/edit?usp=sharing&amp;ouid=106989683938248810409&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">FAQs</a> for detailed guidance.</p>
-
+ 
         <h3 id="sec-seminars">2.12 &nbsp;Seminars</h3>
         <p>A Seminar is a 3-credit course where, under the supervision of a faculty member, the student conducts an in-depth study on a specialized topic.</p>
         <p>This involves surveying relevant technical literature, gaining an understanding of various aspects of the problem, and synthesizing the findings.</p>
         <p>The student is expected to compile the insights into a written report and deliver an oral presentation before a designated committee of faculty members.</p>
-
-
+ 
+ 
         <h3 id="sec-ir">2.13 &nbsp;IR Language Courses</h3>
         <p>International Relations (IR) language courses are the courses that are offered for the benefit of students as well as staff of IIT Bombay.</p>
         <p>These courses are offered in many languages such as Japanese, French, Spanish and Chinese.</p>
         <p>These courses are separately run and have no relation to credits/grades.</p>
         <p>You can contact the Institute Secretary International Relations (ISIR - UG) for more details about the IR language courses. Reviews for these courses can be found <a href="https://drive.google.com/drive/folders/13Hn728qx0PUhIP5KdX6KnT9t6lD1vcqc?usp=sharing" target="_blank" rel="noopener">here</a>.</p>
       </div>
-
+ 
       <!-- 3. WHY MINOR -->
       <div class="block" id="why-minor">
-        <h2><span class="badge">3</span>Why Should One Take Up a Minor</h2>
+        <h2><span class="badge">4</span>Why Should One Take Up a Minor</h2>
         <p>Minor courses allow you to officially explore a department other than yours while at the same time getting credit for it. It adds value to your major degree and can be a gateway to get opportunities in the field you have completed your minor in.</p>
         <p>Your minor degree can give you sufficient knowledge to enable you to take part in interdisciplinary research and even pursue your higher studies in such fields.</p>
         <p>Though a minor degree can be pursued simply out of genuine and deep interest in a particular department without any specific end goal in view, for the general majority, you should select it in such a way that it either suits your major degree in a research-oriented interdisciplinary manner or in a generic way to any engineer or scientist.</p>
         <p>You should also look at how all the minor courses fit in with each other for a more holistic approach; some departments draw up a suggested schedule of when each minor course must be taken to reap the full benefits out of the curriculum.</p>
         <p>Minor courses don’t count in your CPI, so you should select a minor based on your interest.</p>
       </div>
-
+ 
       <!-- 4. WHY Honours -->
       <div class="block" id="why-Honours">
-        <h2><span class="badge">4</span>Why Should One Take Up an Honours</h2>
+        <h2><span class="badge">5</span>Why Should One Take Up an Honours</h2>
         <p>Honours courses are either advanced-level courses in your department or are courses designed to give you more exposure to different areas in your department. It is like a specialization in your own discipline..</p>
         <p>Honours research topics are varied and negotiable - if you are really interested in a topic and want to learn more about it, you’ll be encouraged and supported.</p>
         <p>From a potential employer’s perspective, whatever your department, it appears laudable to have demonstrated the ability to achieve a complex and demanding goal and have in-depth knowledge in your department.</p>
         <p>It helps you prepare for higher studies or to take a job in a particular specialized area so that you can compete with, say, an M.Tech who has specialized in the same area; there are also higher chances that your profile will get noticed by universities for their MS/Ph.D. programs..</p>
       </div>
-
+ 
       <!-- 5. TAGGING -->
       <div class="block" id="tagging">
-        <h2><span class="badge">5</span>Tagging Rules</h2>
+        <h2><span class="badge">6</span>Tagging Rules</h2>
         <p>Every course you do in the institute falls under one of the categories of courses as described in section 1. Tags are given to courses to classify them. The tags of electives can be changed as per the rules that follow.</p>
         <p>This facility allows students to do additional courses and finally make select courses count towards 'Core CPI' (the CPI of prescribed curriculum credits)</p>
         <p><b>Rules:</b></p>
@@ -829,16 +871,16 @@
           </ul>
         </div>
       </div>
-
+ 
       <!-- 6. RESEARCH -->
       <div class="block" id="research">
-        <h2><span class="badge">6</span>Research</h2>
-
+        <h2><span class="badge">7</span>Research</h2>
+ 
         <h3 id="sec-slp">6.1 &nbsp;Supervised Learning Project (SLP)</h3>
         <p>Supervised Learning Project (SLP), also known as RnD in some departments, is a project-based course - generally for 6 credits, where a student can work for one entire semester on a project under a professor.</p>
         <p>It is not always necessary to do a project under a professor in your department.</p>
         <p>The professor you choose can be from a different department, but it is subject to rules and conditions laid down by your department.</p>
-
+ 
         <h3 id="sec-btp">6.2 &nbsp;B.Tech. Project</h3>
         <p>B.Tech. projects (BTPs) may be offered as a single unit of 12 credits (BTP) or as 6 credits of BTP-I followed by BTP-II of 6 credits or 12 credits.</p>
         <p>Wherever it is split into two units, BTP - I becomes a pre-requisite for BTP - II.</p>
@@ -848,7 +890,7 @@
         <p>Students have to submit a project report and present it in front of a panel of examiners.</p>
         <p>The dates for submission of reports, the dates for presentations, and details of mode of assessment are decided by the individual departments.</p>
         <p>Both BTPs are counted in CPI calculation.</p>
-
+ 
         <h3 id="sec-ura">6.3 &nbsp;Undergraduate Research Awards (URA)</h3>
         <p>The Undergraduate Research Awards (URA) is a program designed for students with a strong inclination toward research. It aims to recognize and document their research and developmental efforts at three levels: URA01, URA02, and URA03. Each award is independent and reflects the student's contributions and achievements. These awards are listed in the Transcript.</p>
         <p><b>URA 01</b></p>
@@ -879,17 +921,17 @@
           <li>Form link: <a href="https://drive.google.com/file/d/1YsRpdcQArO5_Ullab3883cY9OFmr6EqC/view?usp=sharing" target="_blank" rel="noopener">URA 03</a></li>
         </ul>
       </div>
-
+ 
       <!-- 7. IDDDP -->
       <div class="block" id="idddp-intro">
-        <h2><span class="badge">7</span>Intro to IDDDP</h2>
+        <h2><span class="badge">8</span>Intro to IDDDP</h2>
         <p>The Interdisciplinary Dual Degree Program (IDDDP) is an academic initiative that allows undergraduate students to pursue an additional master's degree in a specialized interdisciplinary area by extending their studies by one year. This program enables students to combine their core undergraduate discipline with advanced knowledge in an emerging or allied field.</p>
         <p>For the full guide, including who it suits, its benefits, head to <a href="#idddp" onclick="go('idddp',event)">The IDDDP Corner</a>.</p>
       </div>
-
+ 
       <!-- 8. SEMESTER EXCHANGE -->
       <div class="block" id="semester-exchange">
-        <h2><span class="badge">8</span>Intro to Semester Exchange</h2>
+        <h2><span class="badge">9</span>Intro to Semester Exchange</h2>
         <p>The Semester Exchange Program at IIT Bombay is a chance to study abroad for one semester at one of IIT Bombay’s partner universities. IIT Bombay signs Memoranda of Understanding (MoUs) with various institutions worldwide, many of which facilitate academic exchanges. MoUs lay the groundwork for how these will work - student eligibility, departments/schools and so on.</p>
         <p>Spending a semester abroad has several advantages:</p>
         <ul>
@@ -906,12 +948,12 @@
         </ul>
         <p>For more info about the Semester Exchange Program (Eligibility, timeline, list of universities etc.) please visit the official <a href="https://www.ir.iitb.ac.in/" target="_blank" rel="noopener">IITB International Relations Website</a>.</p>
       </div>
-
+ 
       <!-- 9. REVIEWS -->
       <div class="block" id="reviews">
-        <h2><span class="badge">9</span>Reviews</h2>
+        <h2><span class="badge">10</span>Reviews</h2>
         <p>Reviews are written by students to help you decide which minors and courses to take. The reviews are individual opinions of the respective students and are shared only as a basis for your decision. Click a department below to open its minor reviews.</p>
-
+ 
         <h3 id="sec-minor-reviews">Minor Reviews</h3>
         <ol class="review-list">
           <li><a href="https://drive.google.com/drive/folders/1U6TsnsOVuwMtWX84unCakCy71DLiQHfP" target="_blank" rel="noopener">Aerospace Engineering</a></li>
@@ -932,10 +974,10 @@
           <li><a href="https://drive.google.com/drive/folders/1YAbJFww1lU3ZRuERRtJGTWeQfScm9515" target="_blank" rel="noopener">Systems and Control Engineering</a></li>
           <li><a href="https://drive.google.com/drive/folders/1DF2pUVCcurRUzm5ZZv-Klm156Vok3R6n" target="_blank" rel="noopener">MEMS</a></li>
         </ol>
-
+ 
         <h3 id="sec-Honours-reviews">Honours Reviews</h3>
         <p><a href="https://drive.google.com/drive/folders/1pImpInJn19ecC-MSVhM9YsOg_p5T6l1W" target="_blank" rel="noopener">Open the Honours Reviews folder ↗</a></p>
-
+ 
         <h3 id="sec-unconventional-reviews">Unconventional Course Reviews</h3>
         <ol class="review-list">
           <li><a href="https://drive.google.com/file/d/1SNJUqOstvJr-TBbi9xa9aRYgfq3SZ_N4/view" target="_blank" rel="noopener">BB405 - Molecular Biology</a></li>
@@ -953,10 +995,10 @@
           <li><a href="https://drive.google.com/file/d/1MjRY7mDbTEzuhCrKpj0dM6nunBmRaVRB/view" target="_blank" rel="noopener">GNR607 - Principles of Satellite Image Processing</a></li>
           <li><a href="https://drive.google.com/file/d/1kV_roHqfmuS6S1FbfZiJ0OfOxFnJ5nIK/view" target="_blank" rel="noopener">IE616 - Decision Analysis and Game Theory</a></li>
         </ol>
-
+ 
         <h3 id="sec-slp-reviews">SLP/RnD Reviews</h3>
         <p><a href="https://drive.google.com/drive/folders/18BbZt3jGud2yq9uiiq9uWaQsk9Zd1vCM" target="_blank" rel="noopener">Open the SLP/RnD Reviews folder ↗</a></p>
-
+ 
         <h3 id="sec-language-reviews">Language Courses Review</h3>
         <ol class="review-list">
           <li><a href="https://drive.google.com/drive/folders/1FzWE5_LKgQJX5LUq6ETBAj2ZIHxsYL05" target="_blank" rel="noopener">French</a></li>
@@ -965,61 +1007,61 @@
           <li><a href="https://drive.google.com/drive/folders/1Y1GB9-dlWBXmP3LZ4EKRsNydchHqxGrO" target="_blank" rel="noopener">Chinese</a></li>
         </ol>
       </div>
-
+ 
       <!-- 10. FAQs -->
       <div class="block" id="faqs">
-        <h2><span class="badge">10</span>FAQs</h2>
-
+        <h2><span class="badge">11</span>FAQs</h2>
+ 
         <details class="faq"><summary>If I get an FR Grade in a minor course, do I need to repeat the course? And will it reflect in my final transcript?</summary>
         <p>No, you do not need to repeat the course. However, an 'FR' grade will reflect on the course, under the additional courses done.</p></details>
-
+ 
         <details class="faq"><summary>What's the difference between an ALC, Audit and sitting through a course?</summary>
         <p>Additional Learning Courses (ALCs) do not count towards your CPI but are involved in tagging - if you tag it later as an elective, the grade you get then counts in your CPI. When you audit a course, you do it without obtaining a grade - you get an ‘AU’ on successful completion of the course, which does not carry grade points. Formal registration is required for both these, and they appear on your transcript. But for sitting through a course, you don’t need to register for it, nor does it appear on your transcript.</p></details>
-
+ 
         <details class="faq"><summary>If one gets an FR in Elective HS *xxx*, do they need to repeat the same course or can they take up Elective HS *yyy* in its place?</summary>
         <p>Yes, they can take *yyy* as their HSS elective by changing the tag of HS *xxx* to additional learning and registering for *yyy* in the next semester as HSS-Elective.</p></details>
-
+ 
         <details class="faq"><summary>What about the credits when one does some Honours courses but not enough for an Honours degree?</summary>
         <p>If one has completed some Honours courses but not enough to acquire an Honours degree, then those courses would be counted under Additional learning Courses. Some departments allow to tag these as Department/other electives as well.</p></details>
-
+ 
         <details class="faq"><summary>Suppose I take up any other random subject course, but I don’t want to get a minor; will that course show up anywhere while passing out?</summary>
         <p>The grade that you obtained in the course will show up in the transcript. All the courses taken up as a minor are converted to an ALC unless you have completed 30 prescribed minor credits in a particular department.</p></details>
-
+ 
         <details class="faq"><summary>Can I take a minor course through the main registration window?</summary>
         <p>One cannot take a minor course through a main registration window if the 'minor course tag' has been allotted through the pre registration window.</p></details>
-
+ 
         <details class="faq"><summary>Can I take a course which is ONLY running as a minor course as an elective course?</summary>
         <p>If a course is only running as a minor course [Way to check: ASC&gt;Academics&gt;All About Courses] - If there is no other entry of the course apart from the section 'M', then it means it is only running as a minor course. If the course is only running as a minor 'section' course, one cannot take it as an elective tag through the main registration. Example - MG courses last Autumn Semester. One can later, [during graduation/retagging] however tag them as minor courses with the permission of their [parent] department.</p></details>
-
+ 
         <details class="faq"><summary>Where can I see the waitlist of a pre registered course?</summary>
         <p>You are automatically enrolled into the waitlist of the higher preference courses once the minor allocation has been done. You will be automatically enrolled in a higher preference course in the main registration window if a seat is available in the course. A student cannot see their waitlist number or the waitlist of the pre registered course in the main registration window.</p></details>
-
+ 
         <details class="faq"><summary>Can I go back to my lower preference if I got my higher preference and I didn't freeze my lower preference?</summary>
         <p>No, not in any case will you be allowed to move to your lower preference if you have been allotted a higher preference. Hence, you are always advised to fill in your preferences carefully.</p></details>
-
+ 
         <details class="faq"><summary>Can I register for a course in the FCFS waitlist in the main registration window of a minor course which is offered through pre registration?</summary>
         <p>There is no FCFS waitlist for minor courses offered through pre registration. If the course is also running as an elective course, the course can be taken up from the main registration window.</p></details>
-
+ 
         <details class="faq"><summary>A course has a prerequisite, but not mentioned on ASC.</summary>
         <p>Please follow the information mentioned on the department website. You can also report it to the appropriate authority.</p></details>
-
+ 
         <details class="faq"><summary>How many preferences can I fill in the pre registration window? Till when can I change it?</summary>
         <p>Any student can fill in as many preferences in the pre registration interface. They can change it till the deadline of the closing of the interface. Important to note - Pre registration is NOT first come first serve basis.</p></details>
-
+ 
         <details class="faq"><summary>How do I figure out which courses are allowed by my department as department or institute electives?</summary>
         <p>You should do the registration in consultation with your faculty advisor. As such, there is a list approved by the DUGC/DPGC of the department for which the courses are approved as department electives. Please ask your faculty advisor or Department General Secretary to help. If you want to take up some course which you think needs approval, ask your faculty advisor!</p></details>
-
+ 
         <details class="faq"><summary>How do I know which courses are running as minor courses?</summary>
         <p>The courses running as minor courses are updated on running courses and on the IIT Bombay Academic Website.</p></details>
-
+ 
         <details class="faq"><summary>One of the minor courses is available but I am still not able to register for it through the main registration.</summary>
         <p>Please check the running courses, if the course isn't running as a normal course [without the 'M' section], it won't be allowed to be registered in the main reg window.</p></details>
       </div>
-
+ 
     </article>
   </div>
 </section>
-
+ 
 <!-- ============================ RESOURCES ============================ -->
 <section class="page" id="page-resources">
   <div class="res-grid">
@@ -1031,7 +1073,7 @@
       <div class="pagehead">
     <h1>Quick Links</h1>
   </div>
-
+ 
   <div class="res-grid">
     <a href="https://resobin.gymkhana.iitb.ac.in/login" target="_blank" rel="noopener">ResoBin</a>
     <a href="https://landing.iitb.ac.in/?url=https://asc.iitb.ac.in/" target="_blank" rel="noopener">Internal ASC</a>
@@ -1043,11 +1085,11 @@
     <a href="https://www.iitb.ac.in/newacadhome/ugrulebook.pdf" target="_blank" rel="noopener">UG Rulebook</a>
     <a href="https://drive.google.com/file/d/1iyRDzS9ynF_xjZnRL1AvQorR_iC5iJFg/view?usp=drive_link" target="_blank" rel="noopener">ChEA Handbook</a>
     <a href="https://drive.google.com/file/d/1FNzj2swVgrZinDd9mNDuDV02phvh7IfM/view?usp=sharing" target="_blank" rel="noopener">BSBE Guide Part 1</a>
-
+ 
     <a href="https://drive.google.com/file/d/1gzrdJRcMpG_OVlIME8wYqQcMao2Lq1Et/view?usp=sharing" target="_blank" rel="noopener">The Library Spotlight</a>
-
+ 
   </div>
-
+ 
   <h2 class="team-section-title" style="font-size:34px;margin-top:44px;">Contact Information</h2>
   <div class="contact-grid contact-lead">
     <div class="card-person">
@@ -1093,7 +1135,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ============================ IDDDP ============================ -->
 <section class="page" id="page-idddp">
   <div class="pagehead">
@@ -1112,14 +1154,14 @@
     <p>For more info about the IDDD Program, please refer to the <a href="https://drive.google.com/file/d/16I4QIEBNni7X5Zcyec5tnqhkifhmuC46/view?usp=sharing" target="_blank" rel="noopener">IDDDP Booklet</a></p>
   </div>
 </section>
-
+ 
 <!-- ============================ CONTACT ============================ -->
 <section class="page" id="page-contact">
   <div class="pagehead">
     <h1>Our Team</h1>
     <p>Made with ❤️ by the UGAC Web Team in collaboration with Student Support Services</p>
   </div>
-
+ 
   <h2 class="team-section-title">Student Support Services</h2>
   <div class="team-grid team-lead">
     <div class="team-card">
@@ -1160,7 +1202,7 @@
       <div class="meta">Ph: 7648922250</div>
     </div>
   </div>
-
+ 
   <h2 class="team-section-title">Web Team</h2>
   <div class="team-grid team-lead">
     <div class="team-card">
@@ -1178,7 +1220,7 @@
       <div class="meta">Ph: 9619364473</div>
     </div>
   </div>
-
+ 
   <div class="team-grid">
     <div class="team-card">
       <img class="avatar" src="assets/team/arjun.jpeg" alt="Arjun" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -1210,9 +1252,9 @@
     </div>
   </div>
 </section>
-
+ 
 </main>
-
+ 
 <footer>
   <div class="foot-inner">
     <div class="foot-cols">
@@ -1250,7 +1292,7 @@
     </div>
   </div>
 </footer>
-
+ 
 <button class="disc-btn" id="discBtn" title="Disclaimer" aria-label="Disclaimer">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
@@ -1258,7 +1300,7 @@
     <line x1="12" y1="17" x2="12.01" y2="17"></line>
   </svg>
 </button>
-
+ 
 <div class="disc-overlay" id="discOver">
   <div class="disc-modal">
     <button class="disc-close">&times;</button>
@@ -1274,11 +1316,11 @@
     <p>It may happen that the actual details of courses or rules mentioned on this website may face an amendment over time. Please confirm the rules/details from relevant authorities before making any decisions.</p>
   </div>
 </div>
-
+ 
 <script>
   var pages = ['home','content','resources','idddp','contact'];
   var pendingAnchor = null;
-
+ 
   // ---------- Theme (defaults to dark) ----------
   function applyTheme(t){
     document.documentElement.setAttribute('data-theme', t);
@@ -1296,13 +1338,13 @@
     try{ saved = localStorage.getItem('ugwiki-theme') || 'light'; }catch(e){}
     applyTheme(saved);
   })();
-
+ 
   function setActiveNav(page){
     document.querySelectorAll('nav.links a').forEach(function(a){
       a.classList.toggle('active', a.getAttribute('data-nav')===page);
     });
   }
-
+ 
   function show(page){
     if(pages.indexOf(page)<0) page='home';
     pages.forEach(function(p){
@@ -1311,7 +1353,7 @@
     setActiveNav(page);
     document.getElementById('navlinks').classList.remove('open');
   }
-
+ 
   // go(page, [section], [subAnchor], event)  -- flexible args
   function go(page){
     var args = Array.prototype.slice.call(arguments,1);
@@ -1332,15 +1374,15 @@
     if(history && history.replaceState){ history.replaceState(null,'','#'+page); }
     return false;
   }
-
+ 
   function scrollTo2(id){
     var el = document.getElementById(id);
     if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
   }
-
+ 
   /* ---------- Search ---------- */
   var SEARCH_INDEX = [], SEARCH_RESULTS = [], searchHL = -1;
-
+ 
   function buildSearchIndex(){
     var items = [];
     document.querySelectorAll('#page-content .block').forEach(function(block){
@@ -1350,7 +1392,7 @@
       block.querySelectorAll('h3[id]').forEach(function(h3){
         var n = h3.nextElementSibling, buf = '';
         while(n && n.tagName!=='H3'){ buf += ' ' + n.textContent; n = n.nextElementSibling; }
-        items.push({id:h3.id, page:'content', title:h3.textContent.replace(/^[\d.\s ]+/, '').trim(), crumb:secTitle, text:buf});
+        items.push({id:h3.id, page:'content', title:h3.textContent.replace(/^[\d.\s ]+/, '').trim(), crumb:secTitle, text:buf});
       });
     });
     document.querySelectorAll('#faqs details.faq').forEach(function(d){
@@ -1362,7 +1404,7 @@
     items.push({id:null, page:'contact', title:'Our Team', crumb:'Page', text:'our team ananya gedela sanjana devashree patil raunak kumar suresh student support services sss academic coordinator web team ansh oswal surhud naik contact phone'});
     return items;
   }
-
+ 
   function escapeHtml(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   function escapeReg(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
   function highlight(text, terms){
@@ -1382,7 +1424,7 @@
     if(start+120 < text.length) snip = snip + ' …';
     return highlight(snip, terms);
   }
-
+ 
   function runSearch(q){
     var box = document.getElementById('searchResults');
     q = (q||'').trim().toLowerCase();
@@ -1419,7 +1461,7 @@
     }).join('');
     box.classList.add('open');
   }
-
+ 
   function searchPick(i, evt){
     if(evt) evt.preventDefault();
     var it = SEARCH_RESULTS[i];
@@ -1429,7 +1471,7 @@
     closeSearch(false);
     if(it.id) go(it.page, it.id); else go(it.page);
   }
-
+ 
   function searchKey(evt){
     var box = document.getElementById('searchResults');
     var items = box.querySelectorAll('a');
@@ -1441,19 +1483,19 @@
     else return;
     items.forEach(function(a, i){ a.classList.toggle('hl', i === searchHL); if(i === searchHL) a.scrollIntoView({block:'nearest'}); });
   }
-
+ 
   function closeSearch(clearInput){
     var box = document.getElementById('searchResults');
     if(box){ box.classList.remove('open'); box.innerHTML = ''; }
     searchHL = -1;
     if(clearInput){ var inp = document.getElementById('searchInput'); if(inp){ inp.value = ''; inp.blur(); } }
   }
-
+ 
   document.addEventListener('click', function(e){
     var s = document.getElementById('search');
     if(s && !s.contains(e.target)) closeSearch(false);
   });
-
+ 
   /* ---------- Scroll-spy for the booklet sidebar ---------- */
   function initScrollSpy(){
     var links = Array.prototype.slice.call(document.querySelectorAll('aside.side a[data-target]'));
@@ -1469,7 +1511,7 @@
     }, {rootMargin:'-90px 0px -65% 0px', threshold:0});
     targets.forEach(function(t){ obs.observe(t); });
   }
-
+ 
   /* ---------- Scroll reveal (fade-in) ---------- */
   function initReveal(){
     if(!('IntersectionObserver' in window)) return;
@@ -1485,18 +1527,18 @@
       else { ro.observe(el); }
     });
   }
-
+ 
   // initial route from hash
   (function(){
     var h = (location.hash||'').replace('#','');
     show(pages.indexOf(h)>=0 ? h : 'home');
   })();
-
+ 
   // build interactive features after the correct page is shown
   SEARCH_INDEX = buildSearchIndex();
   initScrollSpy();
   initReveal();
-
+ 
   /* ---------- Disclaimer ---------- */
   var discBtn = document.getElementById('discBtn');
   var discOver = document.getElementById('discOver');
@@ -1508,6 +1550,9 @@
     setTimeout(function(){ discOver.classList.add('open'); }, 400);
   }
 </script>
-
+ 
 </body>
 </html>
+
+
+
