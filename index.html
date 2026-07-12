@@ -365,6 +365,302 @@
   .foot-contact .meta span{display:flex;align-items:center;gap:8px;}
   .foot-contact .meta svg{flex:none;color:var(--brand);}
   :root[data-theme="dark"] .foot-contact .meta svg{color:var(--brand);}
+
+  /* ---------- Reviews section ---------- */
+  .reviews-intro{margin-bottom:18px;}
+  .reviews-layout{
+    display:grid;
+    grid-template-columns:280px minmax(0,1fr) 280px;
+    gap:0;
+    min-height:520px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:var(--surface);
+  }
+  .reviews-sidebar{
+    width:280px;
+    border-right:1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+    background:var(--surface);
+  }
+  .reviews-sidebar-head{
+    padding:14px 16px 10px;
+    border-bottom:1px solid var(--line);
+    flex:none;
+  }
+  .reviews-sidebar-head h4{
+    margin:0;
+    font-size:12px;
+    letter-spacing:.9px;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:800;
+  }
+  .reviews-list-panel{
+    flex:1;
+    overflow-y:auto;
+    padding:8px 0;
+    max-height:min(70vh,640px);
+  }
+  .reviews-type-group{margin-bottom:4px;}
+  .reviews-type-label{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:8px 16px 6px;
+    font-size:11.5px;
+    font-weight:800;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:var(--muted);
+    scroll-margin-top:90px;
+  }
+  .reviews-type-label svg{flex:none;opacity:.7;}
+  .review-item{
+    display:block;
+    width:100%;
+    text-align:left;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    padding:10px 16px 10px 18px;
+    border-left:3px solid transparent;
+    font-family:inherit;
+    transition:background .15s,border-color .15s;
+  }
+  .review-item:hover{background:var(--hover);}
+  .review-item.active{
+    background:var(--accent-soft);
+    border-left-color:var(--brand);
+  }
+  .review-item-name{
+    display:block;
+    font-weight:700;
+    font-size:14px;
+    color:var(--ink);
+    line-height:1.3;
+  }
+  .review-item-dept{
+    display:block;
+    margin-top:2px;
+    font-size:12.5px;
+    color:var(--muted);
+    font-weight:500;
+    line-height:1.35;
+  }
+  .reviews-main{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    background:var(--bg);
+    position:relative;
+  }
+  .review-fullscreen-bar{
+    display:none;
+    align-items:center;
+    gap:18px;
+    padding:14px 20px;
+    border-bottom:1px solid var(--line);
+    background:var(--surface);
+    flex:none;
+  }
+  .review-back-btn{
+    background:none;
+    border:none;
+    color:var(--brand-2);
+    font-weight:600;
+    font-size:14px;
+    cursor:pointer;
+    padding:6px 0;
+    font-family:inherit;
+    flex:none;
+    white-space:nowrap;
+  }
+  .review-back-btn:hover{text-decoration:underline;}
+  .review-fullscreen-title{
+    font-family:"Times New Roman",Times,serif;
+    font-weight:600;
+    font-size:clamp(16px,2vw,22px);
+    color:var(--ink);
+    line-height:1.3;
+    min-width:0;
+  }
+  #reviews.is-fullscreen{
+    position:fixed;
+    inset:0;
+    z-index:200;
+    margin:0!important;
+    padding:0!important;
+    border:none!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    background:var(--bg);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    scroll-margin-top:0;
+  }
+  #reviews.is-fullscreen > h2,
+  #reviews.is-fullscreen > .reviews-intro{display:none;}
+  #reviews.is-fullscreen .review-fullscreen-bar{display:flex;}
+  #reviews.is-fullscreen .reviews-layout{
+    flex:1;
+    min-height:0;
+    border:none;
+    border-radius:0;
+    grid-template-columns:280px minmax(0,1fr) 280px;
+    box-shadow:none;
+  }
+  #reviews.is-fullscreen .reviews-sidebar,
+  #reviews.is-fullscreen .reviews-filters-reserved{
+    display:flex;
+    height:100%;
+  }
+  #reviews.is-fullscreen .reviews-list-panel,
+  #reviews.is-fullscreen .reviews-filter-panel{
+    max-height:none;
+    flex:1;
+  }
+  #reviews.is-fullscreen .reviews-main{
+    height:100%;
+    min-height:0;
+  }
+  #reviews.is-fullscreen .review-frame,
+  #reviews.is-fullscreen .review-placeholder{
+    min-height:0;
+    flex:1;
+  }
+  #reviews.is-fullscreen .review-frame.loaded{
+    flex:1;
+    min-height:0;
+    height:auto;
+  }
+  .reviews-expand-btn{
+    display:inline-flex;
+    align-items:center;
+    margin-top:10px;
+    padding:8px 14px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--surface);
+    color:var(--brand-2);
+    font-size:13.5px;
+    font-weight:600;
+    cursor:pointer;
+    font-family:inherit;
+    transition:background .15s,border-color .15s;
+  }
+  .reviews-expand-btn:hover{background:var(--hover);border-color:var(--brand-2);}
+  #reviews.is-fullscreen .reviews-expand-btn{display:none;}
+  @media (max-width:1100px){
+    #reviews.is-fullscreen .reviews-layout{grid-template-columns:280px minmax(0,1fr);}
+    #reviews.is-fullscreen .reviews-filters-reserved{display:none;}
+  }
+  @media (max-width:720px){
+    #reviews.is-fullscreen .reviews-layout{grid-template-columns:1fr;}
+    #reviews.is-fullscreen .reviews-list-panel{max-height:240px;}
+  }
+  body.review-fullscreen-open{overflow:hidden;}
+  .review-placeholder{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 28px;
+    text-align:center;
+    color:var(--muted);
+    font-size:15px;
+    font-weight:600;
+    min-height:420px;
+  }
+  .review-frame{
+    flex:1;
+    width:100%;
+    min-height:520px;
+    border:none;
+    background:var(--surface);
+    display:none;
+  }
+  .review-frame.loaded{display:block;}
+  .reviews-filters-reserved{
+    width:280px;
+    border-left:1px solid var(--line);
+    flex:none;
+    background:var(--surface);
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+  }
+  .reviews-filter-subhead{
+    padding:10px 16px 8px;
+    font-size:11.5px;
+    font-weight:800;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:var(--muted);
+    border-bottom:1px solid var(--line);
+    flex:none;
+  }
+  .reviews-filter-panel{
+    flex:1;
+    overflow-y:auto;
+    padding:10px 16px 16px;
+    max-height:min(70vh,640px);
+  }
+  .review-filter-item{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:7px 0;
+    cursor:pointer;
+    font-size:13px;
+    color:var(--ink);
+    line-height:1.35;
+  }
+  .review-filter-item input{
+    margin-top:3px;
+    flex:none;
+    accent-color:var(--brand);
+    cursor:pointer;
+  }
+  .review-filter-item span{flex:1;min-width:0;}
+  .review-filter-clear{
+    display:block;
+    width:100%;
+    margin-top:10px;
+    padding:8px 10px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:transparent;
+    color:var(--muted);
+    font-size:12.5px;
+    font-weight:600;
+    cursor:pointer;
+    font-family:inherit;
+    transition:background .15s,color .15s;
+  }
+  .review-filter-clear:hover{background:var(--hover);color:var(--ink);}
+  @media (max-width:1100px){
+    .reviews-layout{grid-template-columns:280px minmax(0,1fr);}
+    .reviews-filters-reserved{display:none;}
+  }
+  @media (max-width:720px){
+    .reviews-layout{
+      grid-template-columns:1fr;
+      min-height:0;
+    }
+    .reviews-sidebar{
+      width:100%;
+      border-right:none;
+      border-bottom:1px solid var(--line);
+      max-height:none;
+    }
+    .reviews-list-panel{max-height:240px;}
+    .review-frame,.review-placeholder{min-height:360px;}
+  }
 </style>
 </head>
 <body>
@@ -954,60 +1250,38 @@
       <!-- 9. REVIEWS -->
       <div class="block" id="reviews">
         <h2><span class="badge">10</span>Reviews</h2>
-        <p>Reviews are written by students to help you decide which minors and courses to take. The reviews are individual opinions of the respective students and are shared only as a basis for your decision. Click a department below to open its minor reviews.</p>
- 
-        <h3 id="sec-minor-reviews">Minor Reviews</h3>
-        <ol class="review-list">
-          <li><a href="https://drive.google.com/drive/folders/1U6TsnsOVuwMtWX84unCakCy71DLiQHfP" target="_blank" rel="noopener">Aerospace Engineering</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1N-RONCYKyVFVW9VNvJaKKOccFuU84JaA" target="_blank" rel="noopener">Biosciences &amp; Bioengineering</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1a1hpQmT3Je_pE7oSPb4T8wRyBa7_fyZF" target="_blank" rel="noopener">Centre for Digital Health (KCDH)</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1EFRJwZgmbJMH5uEyu_MpMs05hM2pPZVJ" target="_blank" rel="noopener">Centre for Machine Intelligence and Data Science (C-MInDS)</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1fig61iBtmtMbyNBDmaTDVDR9m8jvD5HN" target="_blank" rel="noopener">Chemistry</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1YtqksB98kUTOc5WbTituJHaYXf_P05m6" target="_blank" rel="noopener">Computer Science and Engineering</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1Y8oRzSGM8f5z1gsOVqLh-yHmGRwGPgL3" target="_blank" rel="noopener">Economics</a></li>
-          <li><a href="https://drive.google.com/drive/folders/19Cf2QG7PDNbrkX8CuidJ9xVsAevbJK4j" target="_blank" rel="noopener">Electrical Engineering</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1qiefyZaEA2V7j4GVTnAXFn6Sxi1OpGl_" target="_blank" rel="noopener">Energy Science and Engineering</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1MsxosmA_8sL26V3aBOEI2Zqk2RoxEDbe" target="_blank" rel="noopener">Engineering Physics</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1nOrMjJooxseQSAjYM9JiJum8SPWQuGbf" target="_blank" rel="noopener">Entrepreneurship</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1w9VLIcdtN2ixNkSRtXR-uJAI4oqPKYU8" target="_blank" rel="noopener">Mathematics</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1xCHm1e4hrWiKtE9LihqpfZ9aGWBnw7hh" target="_blank" rel="noopener">Management</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1FMZdA_DnQCrwarTRyfuAIeWRK0fxauz9" target="_blank" rel="noopener">Robotics</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1FkwXfJb-527qVj6N5o7ERkTATU9P8grK" target="_blank" rel="noopener">Statistics</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1YAbJFww1lU3ZRuERRtJGTWeQfScm9515" target="_blank" rel="noopener">Systems and Control Engineering</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1DF2pUVCcurRUzm5ZZv-Klm156Vok3R6n" target="_blank" rel="noopener">MEMS</a></li>
-        </ol>
- 
-        <h3 id="sec-Honours-reviews">Honours Reviews</h3>
-        <p><a href="https://drive.google.com/drive/folders/1pImpInJn19ecC-MSVhM9YsOg_p5T6l1W" target="_blank" rel="noopener">Open the Honours Reviews folder ↗</a></p>
- 
-        <h3 id="sec-unconventional-reviews">Unconventional Course Reviews</h3>
-        <ol class="review-list">
-          <li><a href="https://drive.google.com/file/d/1SNJUqOstvJr-TBbi9xa9aRYgfq3SZ_N4/view" target="_blank" rel="noopener">BB405 - Molecular Biology</a></li>
-          <li><a href="https://drive.google.com/file/d/1v4n087pT6jbX5WOqCvXvBWGyFe9Mqvhl/view" target="_blank" rel="noopener">CH442 - Molecular Spectroscopy</a></li>
-          <li><a href="https://drive.google.com/file/d/1Iy_21clFqqIs7RxqBpYulr-CX6Eb3MFz/view" target="_blank" rel="noopener">CH806 - Molecular Photochemistry</a></li>
-          <li><a href="https://drive.google.com/file/d/1YGLoMWgEQTtnQ-VNzH1nFwi5byJzgXPB/view" target="_blank" rel="noopener">CH818 - Single Molecule Fluorescence Spectroscopy</a></li>
-          <li><a href="https://drive.google.com/file/d/1RpOE-hjxqnnV1UjixwC1hLHSyW_BY2Dm/view" target="_blank" rel="noopener">BB400 - Molecular Biophysics</a></li>
-          <li><a href="https://drive.google.com/file/d/1AQbqrE2Xws90r2ANpLKSwjnikmb8lm3T/view" target="_blank" rel="noopener">MM6002 - Principles and Applications of Piezoelectric and Ferroelectric Materials</a></li>
-          <li><a href="https://drive.google.com/file/d/1afwmKy3k10iwTuQ8Lzse7HCVbJcf3KYa/view" target="_blank" rel="noopener">CL726 - Introduction to Genomics</a></li>
-          <li><a href="https://drive.google.com/file/d/1BDSWL1LjMr7ez0WtftbVldNWnL3ZN-XR/view" target="_blank" rel="noopener">DH803 - Wearable Health Technologies</a></li>
-          <li><a href="https://drive.google.com/file/d/1uUnCv2IQm_SM8vRJuMq9AaFpSEFcKupl/view" target="_blank" rel="noopener">GNR649 - Planetary Sciences: Earth and Beyond</a></li>
-          <li><a href="https://drive.google.com/file/d/1_q7jc3kYGfEOFQqOeshCH1gytnzSxhRe/view" target="_blank" rel="noopener">HS618 - Introduction to Indian Astronomy</a></li>
-          <li><a href="https://drive.google.com/file/d/19DM43OMz1xBlUQJnJpKTX463fyXX4bGC/view" target="_blank" rel="noopener">CM801 - Introduction to Risk Analysis</a></li>
-          <li><a href="https://drive.google.com/file/d/1zFSH9TonxZUPzPCQDqBDDdXAWjCdukwv/view" target="_blank" rel="noopener">CS406 - Modern Cryptography</a></li>
-          <li><a href="https://drive.google.com/file/d/1MjRY7mDbTEzuhCrKpj0dM6nunBmRaVRB/view" target="_blank" rel="noopener">GNR607 - Principles of Satellite Image Processing</a></li>
-          <li><a href="https://drive.google.com/file/d/1kV_roHqfmuS6S1FbfZiJ0OfOxFnJ5nIK/view" target="_blank" rel="noopener">IE616 - Decision Analysis and Game Theory</a></li>
-        </ol>
- 
-        <h3 id="sec-slp-reviews">SLP/RnD Reviews</h3>
-        <p><a href="https://drive.google.com/drive/folders/18BbZt3jGud2yq9uiiq9uWaQsk9Zd1vCM" target="_blank" rel="noopener">Open the SLP/RnD Reviews folder ↗</a></p>
- 
-        <h3 id="sec-language-reviews">Language Courses Review</h3>
-        <ol class="review-list">
-          <li><a href="https://drive.google.com/drive/folders/1FzWE5_LKgQJX5LUq6ETBAj2ZIHxsYL05" target="_blank" rel="noopener">French</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1d5oNnnV-802m-e7euVz8mpl3AkUY0V0s" target="_blank" rel="noopener">German</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1f6xEFF8kexC6QfKlqFhvnRXBow5cFxax" target="_blank" rel="noopener">Japanese</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1Y1GB9-dlWBXmP3LZ4EKRsNydchHqxGrO" target="_blank" rel="noopener">Chinese</a></li>
-        </ol>
+        <p class="reviews-intro">Reviews are written by students to help you decide which minors and courses to take. The reviews are individual opinions of the respective students and are shared only as a basis for your decision. Select a review from the list to read it here.
+          <button type="button" class="reviews-expand-btn" onclick="enterReviewsFullscreen()">Open full view →</button>
+        </p>
+
+        <div class="review-fullscreen-bar" id="reviewFullscreenBar">
+          <button type="button" class="review-back-btn" id="reviewBackBtn" onclick="exitReviewsFullscreen()">← Back to all</button>
+          <span class="review-fullscreen-title">Reviews</span>
+        </div>
+
+        <div class="reviews-layout">
+          <aside class="reviews-sidebar" aria-label="Review list">
+            <div class="reviews-sidebar-head"><h4>Reviews</h4></div>
+            <div class="reviews-list-panel" id="reviewList" role="listbox" aria-label="Available reviews"></div>
+          </aside>
+
+          <div class="reviews-main">
+            <div class="review-placeholder" id="reviewPlaceholder">
+              Select a review from the list to preview it here.
+            </div>
+            <iframe
+              class="review-frame"
+              id="reviewFrame"
+              title="Review preview"
+            ></iframe>
+          </div>
+
+          <aside class="reviews-filters-reserved" aria-label="Review filters">
+            <div class="reviews-sidebar-head"><h4>Filters</h4></div>
+            <div class="reviews-filter-subhead">Department</div>
+            <div class="reviews-filter-panel" id="reviewFilterPanel"></div>
+          </aside>
+        </div>
       </div>
  
       <!-- 10. FAQs -->
@@ -1386,6 +1660,9 @@
   function scrollTo2(id){
     var el = document.getElementById(id);
     if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    if(isReviewSectionId(id)){
+      requestAnimationFrame(function(){ enterReviewsFullscreen(); });
+    }
   }
  
   /* ---------- Search ---------- */
@@ -1502,6 +1779,262 @@
   document.addEventListener('click', function(e){
     var s = document.getElementById('search');
     if(s && !s.contains(e.target)) closeSearch(false);
+  });
+
+  /* ---------- Reviews ---------- */
+  var reviews = [
+    { name: 'Saukya Telge', department: 'Aerospace Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1xxWq_L5baFfaa6jVt0AjzR3_lXkFCcPI/view?usp=drive_link' },
+    { name: 'Pratyush Brakes', department: 'Aerospace Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/11akpmi5D8pcIqVpZOqQ0wW6UjHsqUV8I/view?usp=sharing' },
+    { name: 'Shubhranil Chatterjee', department: 'Aerospace Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1IdVUZ7qLnH0e5Ff74ySjzgE02Ys522F3/view?usp=drive_link' },
+    { name: 'Diya Arvind', department: 'Biosciences & Bioengineering', type: 'Minor', url: 'https://drive.google.com/file/d/1-PrOXpHbk858hbMABOlqyLMzMzKibvNv/view?usp=drive_link' },
+    { name: 'Kadambari Bhide', department: 'Biosciences & Bioengineering', type: 'Minor', url: 'https://drive.google.com/file/d/1vSgter4A7g_RronJn3LhtnSAv8IHJSGk/view?usp=sharing' },
+    { name: 'Avanti Kulkarni', department: 'Centre for Digital Health (KCDH)', type: 'Minor', url: 'https://drive.google.com/file/d/1M2WAPV7Z4uSpbFiM6y_CHeaBJT4DxcW-/view?usp=drive_link' },
+    { name: 'Dhruv', department: 'Centre for Digital Health (KCDH)', type: 'Minor', url: 'https://drive.google.com/file/d/1zLCuGju0VOtqiqu0Mp5tgz62NFQfSKED/view?usp=drive_link' },
+    { name: 'Harsh Raj', department: 'Centre for Digital Health (KCDH)', type: 'Minor', url: 'https://drive.google.com/file/d/1TeUHB8eQ84sYy5FgEz4if94OTvEvR1-T/view?usp=drive_link' },
+    { name: 'Aatreyi Bhatia', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/1fUobOmspn5I9W8gqcOyfLKeVb9xrH_FE/view?usp=drive_link' },
+    { name: 'Dibyanshu Dash', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://docs.google.com/document/d/1MaihU1niWPTS4nqw4sao7Qd8wzFn3wnk6JJYuYp8IhE/edit?usp=drive_link' },
+    { name: 'Jeet Gurbani', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/1SM3ENu4DZbmQ0DrGROfO4MZJhckiY3_i/view?usp=drive_link' },
+    { name: 'Kandarp Solanki', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/1mlaDQlEWVOHikkxlr7Sh-kfsXDhyG2MY/view?usp=drive_link' },
+    { name: 'Pal Aggarwal', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/1WGmv1yAtabsCKOnWzN9zjZV445owOY4R/view?usp=drive_link' },
+    { name: 'Pranav Chaudhari', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/1ElgenfYpyurJUoE6W3E-d58tP7bNxcj9/view?usp=drive_link' },
+    { name: 'Rishi Tunuguntla', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/1ktBJBkl_epfCtu0xOl8tiXn_tKc5a_Tp/view?usp=drive_link' },
+    { name: 'Rohan Kalbag', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/1lJtXz3j9QOTSGt06jFPl7eGCQ68Bmd8G/view?usp=drive_link' },
+    { name: 'Shravya Suresh', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/1-kg61jhPigy3VQyOOqcRXNOIAK-aWw_t/view?usp=drive_link' },
+    { name: 'Utkarsh Chavan', department: 'Centre for Machine Intelligence and Data Science (C-MInDS)', type: 'Minor', url: 'https://drive.google.com/file/d/19lWGXJBY1SjDxVBWFyiajTLNr7n3AMFz/view?usp=drive_link' },
+    { name: 'Devashish Bhave', department: 'Chemistry', type: 'Minor', url: 'https://drive.google.com/file/d/18EE3bmjps8QEVtqm0gL3vhzhn-AXM6HA/view?usp=drive_link' },
+    { name: 'Agnipratim Nag', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1erJYqEof0vAtf9gespm82czS3PNdeOHZ/view?usp=drive_link' },
+    { name: 'Harman Agrawal', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1tdn_lfFGTADat82jocvLuF7QY3_ufPPE/view?usp=drive_link' },
+    { name: 'Param Rathour', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1WQ3vLwwuFpADrNTQBh0TAY_vZMertaUB/view?usp=drive_link' },
+    { name: 'Rohan Rajesh Kalbag', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1wuOd9yvTCq_B8owGRnE6oY1oL4mzKmYX/view?usp=drive_link' },
+    { name: 'Rounak Desai', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1BX2geRWqQVqfIvS9se8lVXEl2Ayb70mt/view?usp=drive_link' },
+    { name: 'Sahil Kale', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1MKxhiHqu7PTrz6oMYef8dpoJtbs6IYt-/view?usp=drive_link' },
+    { name: 'Shravya Suresh', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1HKrS67yAxege_9ShFe__e6HxdrI3VKCN/view?usp=drive_link' },
+    { name: 'Shubhhi Singh', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/12jxCKZMsUInCsJhTgJ2GifOCckJD-bS0/view?usp=drive_link' },
+    { name: 'Siddhant Midha', department: 'Computer Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1f6o7J1sbVDfd5Lk_6JJnKgYPLQAi5ekG/view?usp=drive_link' },
+    { name: 'Shishir Lal', department: 'Economics', type: 'Minor', url: 'https://drive.google.com/file/d/1tEF9mOrV_UrnVijv_AANx6EQCyhHbviH/view?usp=drive_link' },
+    { name: 'Tiyash Dutta', department: 'Electrical Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1IjtdRu-aSpgLS8jrhIPBMWWvz7uaX3nB/view?usp=drive_link' },
+    { name: 'Tharun Sidambaram', department: 'Energy Science and Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1tXGbojQOOC6dGCowQFoRh1sflH3dBZcs/view?usp=drive_link' },
+    { name: 'Ashwin Goyal', department: 'Engineering Physics', type: 'Minor', url: 'https://drive.google.com/file/d/1xENtvsMC7DjZd9AGvuVs_MUB6E8G_N2Y/view?usp=drive_link' },
+    { name: 'Siddhant Midha', department: 'Engineering Physics', type: 'Minor', url: 'https://drive.google.com/file/d/1jhSUQrjmdjIbLWPYFaxByrMF5iLsvoMZ/view?usp=drive_link' },
+    { name: 'Tamojeet Rowchowdhary', department: 'Engineering Physics', type: 'Minor', url: 'https://drive.google.com/file/d/1LgYxIRRDpg_KaKSYfbATdf2Nd9FU_nV9/view?usp=drive_link' },
+    { name: 'Vishnu Ravi', department: 'Engineering Physics', type: 'Minor', url: 'https://drive.google.com/file/d/1Z2uiLTq0shTip4PdLkC8rPYV3sSx-44n/view?usp=drive_link' },
+    { name: 'Harsh Shah', department: 'Entrepreneurship', type: 'Minor', url: 'https://drive.google.com/file/d/1jAHgRZeKMJm4HdnWdIjne0l24pGyJypT/view?usp=drive_link' },
+    { name: 'Aditya Agarwal', department: 'Mathematics', type: 'Minor', url: 'https://drive.google.com/file/d/1ghJ778fn3ns-1gD5F9PwiHoOgJ9lA5QT/view?usp=drive_link' },
+    { name: 'Aneesh Kamat', department: 'Mathematics', type: 'Minor', url: 'https://drive.google.com/file/d/1H3cAmof7aWnPyLL5u7n9yB8HbDpBJuSA/view?usp=drive_link' },
+    { name: 'Anurag Pendse', department: 'Mathematics', type: 'Minor', url: 'https://drive.google.com/file/d/1DmcSbjVKOgbRl_76eUvW_PtQ9Af9WB8n/view?usp=drive_link' },
+    { name: 'Navdha', department: 'Mathematics', type: 'Minor', url: 'https://drive.google.com/file/d/1aKyup3T0teAFj3UwVrpkKlPFk2s-DSCZ/view?usp=drive_link' },
+    { name: 'Preethi Malyala', department: 'Mathematics', type: 'Minor', url: 'https://drive.google.com/file/d/1yp4Q-mch5mEzvnNirnVaAwndchtDhnhv/view?usp=drive_link' },
+    { name: 'Rehmant Singh Chawla', department: 'Mathematics', type: 'Minor', url: 'https://drive.google.com/file/d/16nN4S8aNHi4Ch70llVAV4teqV5Cfm085/view?usp=drive_link' },
+    { name: 'Sidhandt', department: 'Mathematics', type: 'Minor', url: 'https://drive.google.com/file/d/1WBjicBTZnwHE2H8kSmJHunjQ7275GTXc/view?usp=drive_link' },
+    { name: 'Jainesh Mehta', department: 'Management', type: 'Minor', url: 'https://drive.google.com/file/d/1yy5n_oGglmf1SLPu-IRRXK4ZeeX3FQB9/view?usp=drive_link' },
+    { name: 'Nishit Trivedi', department: 'Management', type: 'Minor', url: 'https://drive.google.com/file/d/1XgFW7udkChKWPD4P-6yQGmXskt94Bi-Z/view?usp=drive_link' },
+    { name: 'Tushaar Jhamtani', department: 'Management', type: 'Minor', url: 'https://drive.google.com/file/d/1OWIUgI2bmRMpbUriXt4_Rf8e7VCIYPnk/view?usp=drive_link' },
+    { name: 'Atharva Jaltare', department: 'Robotics', type: 'Minor', url: 'https://drive.google.com/file/d/1_QEYtiQHO4nX8Xc6528jZz8xvzznEXkc/view?usp=drive_link' },
+    { name: 'Nishant Bhave', department: 'Robotics', type: 'Minor', url: 'https://drive.google.com/file/d/1uM14jqOpZmZR9sbxF32_E7PGs2YMRIqX/view?usp=drive_link' },
+    { name: 'Nilabha Saha', department: 'Statistics', type: 'Minor', url: 'https://drive.google.com/file/d/1ojmeC7vyVzfWtYSR8p6hGYf_klin2dW0/view?usp=drive_link' },
+    { name: 'Ameya Marakarkandy', department: 'Systems and Control Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1x63NkXLTMF-3xy7LXmHIzdegdICOSuYE/view?usp=drive_link' },
+    { name: 'Disha Gupta', department: 'Systems and Control Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1JJq9McEH7tdNnM_isEKQS_h8aN9uq60k/view?usp=drive_link' },
+    { name: 'Gokul', department: 'Systems and Control Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1Kt2hMdP4xx1IS72bO1T8_4W3vAVtYfDZ/view?usp=drive_link' },
+    { name: 'Jacob Sony', department: 'Systems and Control Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1FURMoV-D-B41TkfzDcm0to7NyWiTWVQS/view?usp=drive_link' },
+    { name: 'Mohammad Saad', department: 'Systems and Control Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1ZRUBX5M_W6CzU9oU7k5gjdR-zKTT4Ssd/view?usp=drive_link' },
+    { name: 'Pranav Gupta', department: 'Systems and Control Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/14Byu1wZ6tV7lIWXhnr4dAyGMSeHkSsKU/view?usp=drive_link' },
+    { name: 'Shreyas', department: 'Systems and Control Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1C0TTPRVc6S8OE1t7IM1uhTwCBqXdQmoE/view?usp=drive_link' },
+    { name: 'Vighnesh', department: 'Systems and Control Engineering', type: 'Minor', url: 'https://drive.google.com/file/d/1ZD7wfGA68WCqlePDDrCdM0FrUuiTjnz8/view?usp=drive_link' },
+    { name: 'Nayantara Ramakrishnan', department: 'MEMS', type: 'Minor', url: 'https://drive.google.com/file/d/1yKto6TW8Zi3ez3cloGQjeTcByGQ3qkic/view?usp=drive_link' },
+    { name: 'Ashwin Abraham', department: 'Computer Science and Engineering', type: 'Honours', url: 'https://drive.google.com/file/d/1j3YILqLK9-DX45v990i-0BIsUvLkZV2W/view?usp=drive_link' },
+    { name: 'Siddhant Midha', department: 'Computer Science and Engineering', type: 'Honours', url: 'https://docs.google.com/document/d/1oD3WkyWBeDMDNJX1Oj2oucQyaUpdEegv/edit?usp=drive_link&ouid=100686118765178245354&rtpof=true&sd=true' },
+    { name: 'Vedang Asgaonkar', department: 'Computer Science and Engineering', type: 'Honours', url: 'https://drive.google.com/file/d/1XFt1R6tVP2vzqyRC-1jWfeSq-jvjIS8r/view?usp=drive_link' },
+    { name: 'Pal Aggarwal', department: 'Engineering Physics', type: 'Honours', url: 'https://drive.google.com/file/d/1wVeizzIfu39dKuJ6xLL7YmOaBA-CKy5r/view?usp=drive_link' },
+    { name: 'Devashish Bhave', department: 'MEMS', type: 'Honours', url: 'https://drive.google.com/file/d/1kJvrCbepTfriYh0CSXUKGV9NyVH_YyG6/view?usp=drive_link' },
+    { name: 'Prajwal', department: 'MEMS', type: 'Honours', url: 'https://drive.google.com/file/d/1nx7ai55ZXmqhhT76wSOhcsNMf_2fPNVF/view?usp=drive_link' },
+    { name: 'Prajwal', department: 'MEMS', type: 'Honours', url: 'https://drive.google.com/file/d/1DGFlTt6Z5u4-Vv8lKe-w0WSQrTrhEVfl/view?usp=drive_link' },
+    { name: 'BB405 - Molecular Biology', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1SNJUqOstvJr-TBbi9xa9aRYgfq3SZ_N4/view' },
+    { name: 'CH442 - Molecular Spectroscopy', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1v4n087pT6jbX5WOqCvXvBWGyFe9Mqvhl/view' },
+    { name: 'CH806 - Molecular Photochemistry', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1Iy_21clFqqIs7RxqBpYulr-CX6Eb3MFz/view' },
+    { name: 'CH818 - Single Molecule Fluorescence Spectroscopy', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1YGLoMWgEQTtnQ-VNzH1nFwi5byJzgXPB/view' },
+    { name: 'BB400 - Molecular Biophysics', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1RpOE-hjxqnnV1UjixwC1hLHSyW_BY2Dm/view' },
+    { name: 'MM6002 - Principles and Applications of Piezoelectric and Ferroelectric Materials', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1AQbqrE2Xws90r2ANpLKSwjnikmb8lm3T/view' },
+    { name: 'CL726 - Introduction to Genomics', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1afwmKy3k10iwTuQ8Lzse7HCVbJcf3KYa/view' },
+    { name: 'DH803 - Wearable Health Technologies', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1BDSWL1LjMr7ez0WtftbVldNWnL3ZN-XR/view' },
+    { name: 'GNR649 - Planetary Sciences: Earth and Beyond', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1uUnCv2IQm_SM8vRJuMq9AaFpSEFcKupl/view' },
+    { name: 'HS618 - Introduction to Indian Astronomy', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1_q7jc3kYGfEOFQqOeshCH1gytnzSxhRe/view' },
+    { name: 'CM801 - Introduction to Risk Analysis', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/19DM43OMz1xBlUQJnJpKTX463fyXX4bGC/view' },
+    { name: 'CS406 - Modern Cryptography', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1zFSH9TonxZUPzPCQDqBDDdXAWjCdukwv/view' },
+    { name: 'GNR607 - Principles of Satellite Image Processing', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1MjRY7mDbTEzuhCrKpj0dM6nunBmRaVRB/view' },
+    { name: 'IE616 - Decision Analysis and Game Theory', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1kV_roHqfmuS6S1FbfZiJ0OfOxFnJ5nIK/view' },
+    { name: 'SLP/RnD Reviews', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/drive/folders/18BbZt3jGud2yq9uiiq9uWaQsk9Zd1vCM' },
+    { name: 'French', department: 'Language Courses', type: 'Language', url: 'https://drive.google.com/drive/folders/1FzWE5_LKgQJX5LUq6ETBAj2ZIHxsYL05' },
+    { name: 'German', department: 'Language Courses', type: 'Language', url: 'https://drive.google.com/drive/folders/1d5oNnnV-802m-e7euVz8mpl3AkUY0V0s' },
+    { name: 'Japanese', department: 'Language Courses', type: 'Language', url: 'https://drive.google.com/drive/folders/1f6xEFF8kexC6QfKlqFhvnRXBow5cFxax' },
+    { name: 'Chinese', department: 'Language Courses', type: 'Language', url: 'https://drive.google.com/drive/folders/1Y1GB9-dlWBXmP3LZ4EKRsNydchHqxGrO' }
+  ];
+
+  var REVIEW_TYPE_ORDER = ['Minor', 'Honours', 'Unconventional Course', 'SLP/RnD', 'Language'];
+  var REVIEW_TYPE_LABELS = {
+    'Minor': 'Minor Reviews',
+    'Honours': 'Honours Reviews',
+    'Unconventional Course': 'Unconventional Courses',
+    'SLP/RnD': 'SLP/RnD Reviews',
+    'Language': 'Language Courses'
+  };
+  var REVIEW_TYPE_ANCHORS = {
+    'Minor': 'sec-minor-reviews',
+    'Honours': 'sec-Honours-reviews',
+    'Unconventional Course': 'sec-unconventional-reviews',
+    'SLP/RnD': 'sec-slp-reviews',
+    'Language': 'sec-language-reviews'
+  };
+  var selectedReview = null;
+  var reviewFilterQuery = '';
+  var selectedDepartments = [];
+  var REVIEW_SECTION_IDS = ['reviews','sec-minor-reviews','sec-Honours-reviews','sec-unconventional-reviews','sec-slp-reviews','sec-language-reviews'];
+
+  function isReviewSectionId(id){
+    return REVIEW_SECTION_IDS.indexOf(id) >= 0;
+  }
+
+  function enterReviewsFullscreen(){
+    var block = document.getElementById('reviews');
+    if(block) block.classList.add('is-fullscreen');
+    document.body.classList.add('review-fullscreen-open');
+  }
+
+  function exitReviewsFullscreen(){
+    var block = document.getElementById('reviews');
+    if(block) block.classList.remove('is-fullscreen');
+    document.body.classList.remove('review-fullscreen-open');
+  }
+
+  function toPreviewUrl(url){
+    if(!url) return '';
+    var docMatch = url.match(/docs\.google\.com\/document\/d\/([^/]+)/);
+    if(docMatch) return 'https://docs.google.com/document/d/' + docMatch[1] + '/preview';
+    var fileMatch = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+    if(fileMatch) return 'https://drive.google.com/file/d/' + fileMatch[1] + '/preview';
+    return url.replace(/\/(edit|view)(\?.*)?$/, '/preview$2');
+  }
+
+  function loadReview(review){
+    if(!review) return;
+    selectedReview = review;
+    var frame = document.getElementById('reviewFrame');
+    var placeholder = document.getElementById('reviewPlaceholder');
+    if(!frame || !placeholder) return;
+    frame.src = toPreviewUrl(review.url);
+    frame.classList.add('loaded');
+    placeholder.style.display = 'none';
+    renderReviewList();
+  }
+
+  function filterReviews(query){
+    reviewFilterQuery = (query || '').trim().toLowerCase();
+    renderReviewList();
+  }
+
+  function toggleDepartmentFilter(dept){
+    var idx = selectedDepartments.indexOf(dept);
+    if(idx >= 0) selectedDepartments.splice(idx, 1);
+    else selectedDepartments.push(dept);
+    renderReviewList();
+    renderDepartmentFilters();
+  }
+
+  function clearDepartmentFilters(){
+    selectedDepartments = [];
+    renderReviewList();
+    renderDepartmentFilters();
+  }
+
+  function getReviewDepartments(){
+    var depts = [];
+    reviews.forEach(function(r){
+      if(depts.indexOf(r.department) < 0) depts.push(r.department);
+    });
+    depts.sort(function(a, b){ return a.localeCompare(b); });
+    return depts;
+  }
+
+  function getFilteredReviews(){
+    var result = reviews.slice();
+    if(selectedDepartments.length){
+      result = result.filter(function(r){
+        return selectedDepartments.indexOf(r.department) >= 0;
+      });
+    }
+    if(reviewFilterQuery){
+      result = result.filter(function(r){
+        var hay = (r.name + ' ' + r.department + ' ' + r.type).toLowerCase();
+        return hay.indexOf(reviewFilterQuery) >= 0;
+      });
+    }
+    return result;
+  }
+
+  function renderDepartmentFilters(){
+    var panel = document.getElementById('reviewFilterPanel');
+    if(!panel) return;
+    var depts = getReviewDepartments();
+    var html = depts.map(function(dept, i){
+      var checked = selectedDepartments.indexOf(dept) >= 0 ? ' checked' : '';
+      return '<label class="review-filter-item">'
+        + '<input type="checkbox" data-dept-idx="' + i + '"' + checked + '>'
+        + '<span>' + escapeHtml(dept) + '</span>'
+        + '</label>';
+    }).join('');
+    if(selectedDepartments.length){
+      html += '<button type="button" class="review-filter-clear" id="reviewFilterClear">Clear filters</button>';
+    }
+    panel.innerHTML = html;
+    panel._deptList = depts;
+    panel.querySelectorAll('input[type="checkbox"]').forEach(function(cb){
+      cb.addEventListener('change', function(){
+        var dept = panel._deptList[parseInt(cb.getAttribute('data-dept-idx'), 10)];
+        toggleDepartmentFilter(dept);
+      });
+    });
+    var clearBtn = document.getElementById('reviewFilterClear');
+    if(clearBtn) clearBtn.addEventListener('click', clearDepartmentFilters);
+  }
+
+  function renderReviewList(){
+    var list = document.getElementById('reviewList');
+    if(!list) return;
+    var filtered = getFilteredReviews();
+    var grouped = {};
+    filtered.forEach(function(r){
+      if(!grouped[r.type]) grouped[r.type] = [];
+      grouped[r.type].push(r);
+    });
+    var html = '';
+    REVIEW_TYPE_ORDER.forEach(function(type){
+      var items = grouped[type];
+      if(!items || !items.length) return;
+      var anchorId = REVIEW_TYPE_ANCHORS[type] || '';
+      html += '<div class="reviews-type-group">';
+      html += '<div class="reviews-type-label"' + (anchorId ? ' id="' + anchorId + '"' : '') + '>' + escapeHtml(REVIEW_TYPE_LABELS[type] || type) + '</div>';
+      items.forEach(function(review){
+        var active = selectedReview === review ? ' active' : '';
+        var reviewIndex = reviews.indexOf(review);
+        html += '<button type="button" class="review-item' + active + '" onclick="loadReview(reviews[' + reviewIndex + '])">'
+          + '<span class="review-item-name">' + escapeHtml(review.name) + '</span>'
+          + '<span class="review-item-dept">' + escapeHtml(review.department) + '</span>'
+          + '</button>';
+      });
+      html += '</div>';
+    });
+    if(!html){
+      html = '<div class="review-placeholder" style="min-height:120px;padding:20px 16px;font-size:13px;">No reviews match the selected filters.</div>';
+    }
+    list.innerHTML = html;
+  }
+
+  renderReviewList();
+  renderDepartmentFilters();
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && document.getElementById('reviews') && document.getElementById('reviews').classList.contains('is-fullscreen')){
+      exitReviewsFullscreen();
+    }
   });
  
   /* ---------- Scroll-spy for the booklet sidebar ---------- */
