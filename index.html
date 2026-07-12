@@ -815,7 +815,7 @@
       <a data-target="why-Honours" onclick="scrollTo2('why-Honours')">5. Why Take Up An Honours</a>
       <a data-target="tagging" onclick="scrollTo2('tagging')">6. Tagging Rules</a>
       <a data-target="research" onclick="scrollTo2('research')">7. Research</a>
-      <a class="sub" data-target="sec-slp" onclick="scrollTo2('sec-slp-reviews')">7.1 SLP</a>
+      <a class="sub" data-target="sec-slp-reviews" onclick="scrollTo2('sec-slp-reviews')">7.1 SLP</a>
       <a class="sub" data-target="sec-btp" onclick="scrollTo2('sec-btp')">7.2 B.Tech. Project</a>
       <a class="sub" data-target="sec-ura" onclick="scrollTo2('sec-ura')">7.3 URA</a>
       <a data-target="idddp-intro" onclick="scrollTo2('idddp-intro')">8. Intro to IDDDP</a>
@@ -1170,12 +1170,12 @@
       <div class="block" id="research">
         <h2><span class="badge">7</span>Research</h2>
  
-        <h3 id="sec-slp">6.1 &nbsp;Supervised Learning Project (SLP)</h3>
+        <h3 id="sec-slp">7.1 &nbsp;Supervised Learning Project (SLP)</h3>
         <p>Supervised Learning Project (SLP), also known as RnD in some departments, is a project-based course - generally for 6 credits, where a student can work for one entire semester on a project under a professor.</p>
         <p>It is not always necessary to do a project under a professor in your department.</p>
         <p>The professor you choose can be from a different department, but it is subject to rules and conditions laid down by your department.</p>
  
-        <h3 id="sec-btp">6.2 &nbsp;B.Tech. Project</h3>
+        <h3 id="sec-btp">7.2 &nbsp;B.Tech. Project</h3>
         <p>B.Tech. projects (BTPs) may be offered as a single unit of 12 credits (BTP) or as 6 credits of BTP-I followed by BTP-II of 6 credits or 12 credits.</p>
         <p>Wherever it is split into two units, BTP - I becomes a pre-requisite for BTP - II.</p>
         <p>Departments may prescribe a minimum performance in BTP - I (which may be higher than the pass grade ‘DD’) for being eligible for BTP - II.</p>
@@ -1185,7 +1185,7 @@
         <p>The dates for submission of reports, the dates for presentations, and details of mode of assessment are decided by the individual departments.</p>
         <p>Both BTPs are counted in CPI calculation.</p>
  
-        <h3 id="sec-ura">6.3 &nbsp;Undergraduate Research Awards (URA)</h3>
+        <h3 id="sec-ura">7.3 &nbsp;Undergraduate Research Awards (URA)</h3>
         <p>The Undergraduate Research Awards (URA) is a program designed for students with a strong inclination toward research. It aims to recognize and document their research and developmental efforts at three levels: URA01, URA02, and URA03. Each award is independent and reflects the student's contributions and achievements. These awards are listed in the Transcript.</p>
         <p><b>URA 01</b></p>
         <ul>
@@ -1658,11 +1658,21 @@
   }
  
   function scrollTo2(id){
+    if(isReviewSectionId(id)){
+      enterReviewsFullscreen();
+      requestAnimationFrame(function(){
+        renderReviewList();
+        if(id === 'reviews'){
+          var panel = document.querySelector('.reviews-list-panel');
+          if(panel) panel.scrollTop = 0;
+        } else {
+          scrollReviewListTo(id);
+        }
+      });
+      return;
+    }
     var el = document.getElementById(id);
     if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
-    if(isReviewSectionId(id)){
-      requestAnimationFrame(function(){ enterReviewsFullscreen(); });
-    }
   }
  
   /* ---------- Search ---------- */
@@ -1862,11 +1872,20 @@
     { name: 'CS406 - Modern Cryptography', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1zFSH9TonxZUPzPCQDqBDDdXAWjCdukwv/view' },
     { name: 'GNR607 - Principles of Satellite Image Processing', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1MjRY7mDbTEzuhCrKpj0dM6nunBmRaVRB/view' },
     { name: 'IE616 - Decision Analysis and Game Theory', department: 'Unconventional Course', type: 'Unconventional Course', url: 'https://drive.google.com/file/d/1kV_roHqfmuS6S1FbfZiJ0OfOxFnJ5nIK/view' },
-    { name: 'SLP/RnD Reviews', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/drive/folders/18BbZt3jGud2yq9uiiq9uWaQsk9Zd1vCM' },
-    { name: 'French', department: 'Language Courses', type: 'Language', url: 'https://drive.google.com/drive/folders/1FzWE5_LKgQJX5LUq6ETBAj2ZIHxsYL05' },
-    { name: 'German', department: 'Language Courses', type: 'Language', url: 'https://drive.google.com/drive/folders/1d5oNnnV-802m-e7euVz8mpl3AkUY0V0s' },
-    { name: 'Japanese', department: 'Language Courses', type: 'Language', url: 'https://drive.google.com/drive/folders/1f6xEFF8kexC6QfKlqFhvnRXBow5cFxax' },
-    { name: 'Chinese', department: 'Language Courses', type: 'Language', url: 'https://drive.google.com/drive/folders/1Y1GB9-dlWBXmP3LZ4EKRsNydchHqxGrO' }
+    { name: 'Abhilasha', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/file/d/1-zou3wQZI4hw4hdPL8l3aV6zzhuWpDJk/view?usp=drive_link' },
+    { name: 'Advait Mehla', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/file/d/1yq9f4YfWdccxrXUdHuakg7IVFl_u0WuJ/view?usp=drive_link' },
+    { name: 'Kandarp Solanki', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/file/d/1v3ufgbGRGKGb97gCHBcuXGXkcz0ebFAs/view?usp=drive_link' },
+    { name: 'Prakriti Shah', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/file/d/1r0MZzqOA2Ug1K8TnxylEhDEb6dXGD2fs/view?usp=drive_link' },
+    { name: 'Rishi Tunuguntla', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/file/d/17HY7NC_bYtwhocCbtPlFQrtm0q3mO9M1/view?usp=drive_link' },
+    { name: 'Sara Ahire', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/file/d/1oCEMikD86m8M6Qd_WR6ImDkSstVltug7/view?usp=drive_link' },
+    { name: 'Spandan Anaokar', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/file/d/1xvPPXgrxaqHKUDP6GV06BOFm7AfzXUPE/view?usp=drive_link' },
+    { name: 'Tamojeet Rowchaowdhary', department: 'SLP/RnD', type: 'SLP/RnD', url: 'https://drive.google.com/file/d/1mklXr1tsI7npqcokXLUytcZtjb73mErg/view?usp=drive_link' },
+    { name: 'Avanti Kulkarni', department: 'French', type: 'Language', url: 'https://drive.google.com/file/d/1dsOKExAVBHeEoOkQReh0wQvJsERlxWec/view?usp=drive_link' },
+    { name: 'Ijaz', department: 'French', type: 'Language', url: 'https://drive.google.com/file/d/1Lj_CJJ5gWZQIqCRjt4dvaBkBfvGxGlli/view?usp=drive_link' },
+    { name: 'Deepali Gupta', department: 'German', type: 'Language', url: 'https://drive.google.com/file/d/1Xk4lmk4Sdq8Zl_92BkgHrN-kfXpMu2xs/view?usp=drive_link' },
+    { name: 'Abhinav Katiyar', department: 'Japanese', type: 'Language', url: 'https://drive.google.com/file/d/1RxvE87PAfx-1LGRQ0eso8RBkdc7EvDvG/view?usp=drive_link' },
+    { name: 'Pranav Sai Reddy', department: 'Japanese', type: 'Language', url: 'https://drive.google.com/file/d/1QKB6PwE0cdtr9e6aFy2ntWRDiBNy4mOG/view?usp=drive_link' },
+    { name: 'Chinese', department: 'Chinese', type: 'Language', url: 'https://drive.google.com/drive/folders/1Y1GB9-dlWBXmP3LZ4EKRsNydchHqxGrO' }
   ];
 
   var REVIEW_TYPE_ORDER = ['Minor', 'Honours', 'Unconventional Course', 'SLP/RnD', 'Language'];
@@ -1888,9 +1907,34 @@
   var reviewFilterQuery = '';
   var selectedDepartments = [];
   var REVIEW_SECTION_IDS = ['reviews','sec-minor-reviews','sec-Honours-reviews','sec-unconventional-reviews','sec-slp-reviews','sec-language-reviews'];
+  var DEPARTMENT_REVIEW_ANCHORS = {
+    'SLP/RnD': 'sec-slp-reviews',
+    'Unconventional Course': 'sec-unconventional-reviews',
+    'French': 'sec-language-reviews',
+    'German': 'sec-language-reviews',
+    'Japanese': 'sec-language-reviews',
+    'Chinese': 'sec-language-reviews'
+  };
 
   function isReviewSectionId(id){
     return REVIEW_SECTION_IDS.indexOf(id) >= 0;
+  }
+
+  function scrollReviewListTo(anchorId){
+    if(!anchorId) return;
+    var target = document.getElementById(anchorId);
+    var panel = document.querySelector('.reviews-list-panel');
+    if(!target || !panel) return;
+    panel.scrollTop = target.offsetTop - panel.offsetTop - 8;
+  }
+
+  function navigateToReviewSection(anchorId){
+    if(!anchorId) return;
+    enterReviewsFullscreen();
+    requestAnimationFrame(function(){
+      renderReviewList();
+      scrollReviewListTo(anchorId);
+    });
   }
 
   function enterReviewsFullscreen(){
@@ -1933,10 +1977,14 @@
 
   function toggleDepartmentFilter(dept){
     var idx = selectedDepartments.indexOf(dept);
+    var adding = idx < 0;
     if(idx >= 0) selectedDepartments.splice(idx, 1);
     else selectedDepartments.push(dept);
     renderReviewList();
     renderDepartmentFilters();
+    if(adding && DEPARTMENT_REVIEW_ANCHORS[dept]){
+      navigateToReviewSection(DEPARTMENT_REVIEW_ANCHORS[dept]);
+    }
   }
 
   function clearDepartmentFilters(){
