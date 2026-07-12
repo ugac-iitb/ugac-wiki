@@ -488,7 +488,8 @@
     line-height:1.3;
     min-width:0;
   }
-  #reviews.is-fullscreen{
+  #reviews.is-fullscreen,
+  #idddp-reviews-block.is-fullscreen{
     position:fixed;
     inset:0;
     z-index:200;
@@ -504,9 +505,13 @@
     scroll-margin-top:0;
   }
   #reviews.is-fullscreen > h2,
-  #reviews.is-fullscreen > .reviews-intro{display:none;}
-  #reviews.is-fullscreen .review-fullscreen-bar{display:flex;}
-  #reviews.is-fullscreen .reviews-layout{
+  #reviews.is-fullscreen > .reviews-intro,
+  #idddp-reviews-block.is-fullscreen > h2,
+  #idddp-reviews-block.is-fullscreen > .reviews-intro{display:none;}
+  #reviews.is-fullscreen .review-fullscreen-bar,
+  #idddp-reviews-block.is-fullscreen .review-fullscreen-bar{display:flex;}
+  #reviews.is-fullscreen .reviews-layout,
+  #idddp-reviews-block.is-fullscreen .reviews-layout{
     flex:1;
     min-height:0;
     border:none;
@@ -515,25 +520,33 @@
     box-shadow:none;
   }
   #reviews.is-fullscreen .reviews-sidebar,
-  #reviews.is-fullscreen .reviews-filters-reserved{
+  #reviews.is-fullscreen .reviews-filters-reserved,
+  #idddp-reviews-block.is-fullscreen .reviews-sidebar,
+  #idddp-reviews-block.is-fullscreen .reviews-filters-reserved{
     display:flex;
     height:100%;
   }
   #reviews.is-fullscreen .reviews-list-panel,
-  #reviews.is-fullscreen .reviews-filter-panel{
+  #reviews.is-fullscreen .reviews-filter-panel,
+  #idddp-reviews-block.is-fullscreen .reviews-list-panel,
+  #idddp-reviews-block.is-fullscreen .reviews-filter-panel{
     max-height:none;
     flex:1;
   }
-  #reviews.is-fullscreen .reviews-main{
+  #reviews.is-fullscreen .reviews-main,
+  #idddp-reviews-block.is-fullscreen .reviews-main{
     height:100%;
     min-height:0;
   }
   #reviews.is-fullscreen .review-frame,
-  #reviews.is-fullscreen .review-placeholder{
+  #reviews.is-fullscreen .review-placeholder,
+  #idddp-reviews-block.is-fullscreen .review-placeholder,
+  #idddp-reviews-block.is-fullscreen .review-content-body{
     min-height:0;
     flex:1;
   }
-  #reviews.is-fullscreen .review-frame.loaded{
+  #reviews.is-fullscreen .review-frame.loaded,
+  #idddp-reviews-block.is-fullscreen .review-content-body.loaded{
     flex:1;
     min-height:0;
     height:auto;
@@ -554,26 +567,32 @@
     transition:background .15s,border-color .15s;
   }
   .reviews-expand-btn:hover{background:var(--hover);border-color:var(--brand-2);}
-  #reviews.is-fullscreen .reviews-expand-btn{display:none;}
+  #reviews.is-fullscreen .reviews-expand-btn,
+  #idddp-reviews-block.is-fullscreen .reviews-expand-btn{display:none;}
   @media (max-width:1100px){
-    #reviews.is-fullscreen .reviews-layout{
+    #reviews.is-fullscreen .reviews-layout,
+    #idddp-reviews-block.is-fullscreen .reviews-layout{
       grid-template-columns:minmax(200px,34vw) minmax(0,1fr);
       grid-template-areas:
         "list preview"
         "filters filters";
     }
-    #reviews.is-fullscreen .reviews-filters-reserved{
+    #reviews.is-fullscreen .reviews-filters-reserved,
+    #idddp-reviews-block.is-fullscreen .reviews-filters-reserved{
       grid-area:filters;
       display:none;
     }
-    #reviews.is-fullscreen .reviews-filters-reserved.mobile-open{display:flex;}
+    #reviews.is-fullscreen .reviews-filters-reserved.mobile-open,
+    #idddp-reviews-block.is-fullscreen .reviews-filters-reserved.mobile-open{display:flex;}
   }
   @media (max-width:720px){
-    #reviews.is-fullscreen .reviews-layout{
+    #reviews.is-fullscreen .reviews-layout,
+    #idddp-reviews-block.is-fullscreen .reviews-layout{
       grid-template-columns:1fr;
       grid-template-areas:"list" "filters" "preview";
     }
-    #reviews.is-fullscreen .reviews-list-panel{max-height:min(34vh,240px);}
+    #reviews.is-fullscreen .reviews-list-panel,
+    #idddp-reviews-block.is-fullscreen .reviews-list-panel{max-height:min(34vh,240px);}
   }
   body.review-fullscreen-open{overflow:hidden;}
   .review-placeholder{
@@ -597,6 +616,34 @@
     display:none;
   }
   .review-frame.loaded{display:block;}
+  .review-content-body{
+    flex:1;
+    overflow-y:auto;
+    padding:24px 28px;
+    font-size:14.5px;
+    line-height:1.7;
+    color:var(--doc-ink);
+    display:none;
+  }
+  .review-content-body.loaded{display:block;}
+  .review-content-body h3{
+    font-size:15px;
+    font-weight:700;
+    color:var(--ink);
+    margin:22px 0 8px;
+    line-height:1.4;
+  }
+  .review-content-body h3:first-of-type{margin-top:0;}
+  .review-content-body p{margin:0 0 12px;}
+  .review-content-meta{
+    margin-bottom:18px;
+    padding-bottom:14px;
+    border-bottom:1px solid var(--line);
+    font-size:13.5px;
+    color:var(--muted);
+    line-height:1.5;
+  }
+  .review-content-meta strong{color:var(--ink);}
   .reviews-filters-reserved{
     width:280px;
     border-left:1px solid var(--line);
@@ -675,7 +722,8 @@
     transition:background .15s,border-color .15s;
   }
   .reviews-filter-toggle:hover{background:var(--hover);border-color:var(--brand-2);}
-  #reviews.is-fullscreen .reviews-filter-toggle{
+  #reviews.is-fullscreen .reviews-filter-toggle,
+  #idddp-reviews-block.is-fullscreen .reviews-filter-toggle{
     margin:0;
     border-radius:0;
     border-left:none;
@@ -704,17 +752,20 @@
     }
     .reviews-filters-reserved.mobile-open{display:flex;}
     .reviews-filter-toggle{display:flex;}
-    #reviews.is-fullscreen .reviews-layout{
+    #reviews.is-fullscreen .reviews-layout,
+    #idddp-reviews-block.is-fullscreen .reviews-layout{
       grid-template-columns:minmax(200px,34vw) minmax(0,1fr);
       grid-template-areas:
         "list preview"
         "filters filters";
     }
-    #reviews.is-fullscreen .reviews-filters-reserved{
+    #reviews.is-fullscreen .reviews-filters-reserved,
+    #idddp-reviews-block.is-fullscreen .reviews-filters-reserved{
       grid-area:filters;
       display:none;
     }
-    #reviews.is-fullscreen .reviews-filters-reserved.mobile-open{display:flex;}
+    #reviews.is-fullscreen .reviews-filters-reserved.mobile-open,
+    #idddp-reviews-block.is-fullscreen .reviews-filters-reserved.mobile-open{display:flex;}
   }
   @media (max-width:880px){
     main{padding:24px 16px 64px;}
@@ -743,7 +794,8 @@
   }
   @media (max-width:720px){
     .reviews-layout,
-    #reviews.is-fullscreen .reviews-layout{
+    #reviews.is-fullscreen .reviews-layout,
+    #idddp-reviews-block.is-fullscreen .reviews-layout{
       grid-template-columns:1fr;
       grid-template-areas:
         "list"
@@ -763,9 +815,12 @@
     .review-fullscreen-bar{padding:12px 14px;gap:12px;flex-wrap:wrap;}
     .review-fullscreen-title{font-size:17px;}
     .reviews-expand-btn{width:100%;justify-content:center;margin-top:12px;}
-    #reviews.is-fullscreen .reviews-list-panel{max-height:min(34vh,240px);}
+    #reviews.is-fullscreen .reviews-list-panel,
+    #idddp-reviews-block.is-fullscreen .reviews-list-panel{max-height:min(34vh,240px);}
     #reviews.is-fullscreen .review-frame,
-    #reviews.is-fullscreen .review-placeholder{min-height:0;}
+    #reviews.is-fullscreen .review-placeholder,
+    #idddp-reviews-block.is-fullscreen .review-placeholder,
+    #idddp-reviews-block.is-fullscreen .review-content-body{min-height:0;}
   }
   @media (max-width:640px){
     .search-results{left:auto;right:0;min-width:min(320px,calc(100vw - 28px));}
@@ -2217,8 +2272,54 @@
 
 </section>
 
+<!-- ============================ IDDDP REVIEWS ============================ -->
+<section class="page" id="page-idddp-reviews">
 
+  <div class="pagehead">
+    <h1>Reviews / Blogs</h1>
+  </div>
 
+  <div class="quick" style="justify-content:flex-start;margin-bottom:20px;">
+    <a href="#" onclick="return go('idddp',event)">
+      ← Back to IDDDP Corner
+    </a>
+  </div>
+
+  <div class="block" id="idddp-reviews-block">
+    <h2><span class="badge">10</span>Reviews</h2>
+    <p class="reviews-intro">Student experiences from IDDDP and Dual Degree (DDP) conversions. These are individual opinions shared to help you make an informed decision. Select a review from the list to read it here.
+      <button type="button" class="reviews-expand-btn" onclick="enterIdddpReviewsFullscreen()">Open full view →</button>
+    </p>
+
+    <div class="review-fullscreen-bar" id="idddpReviewFullscreenBar">
+      <button type="button" class="review-back-btn" onclick="exitIdddpReviewsFullscreen()">← Back to all</button>
+      <span class="review-fullscreen-title">IDDDP / DDP Reviews</span>
+    </div>
+
+    <button type="button" class="reviews-filter-toggle" id="idddpReviewFilterToggle" onclick="toggleIdddpReviewMobileFilters()" aria-expanded="false" aria-controls="idddpReviewFilterPanel">Show department filters</button>
+
+    <div class="reviews-layout">
+      <aside class="reviews-sidebar" aria-label="IDDDP review list">
+        <div class="reviews-sidebar-head"><h4>Reviews</h4></div>
+        <div class="reviews-list-panel" id="idddpReviewList" role="listbox" aria-label="Available IDDDP and DDP reviews"></div>
+      </aside>
+
+      <div class="reviews-main">
+        <div class="review-placeholder" id="idddpReviewPlaceholder">
+          Select a review from the list to preview it here.
+        </div>
+        <div class="review-content-body" id="idddpReviewContent"></div>
+      </div>
+
+      <aside class="reviews-filters-reserved" aria-label="IDDDP review filters">
+        <div class="reviews-sidebar-head"><h4>Filters</h4></div>
+        <div class="reviews-filter-subhead">Host Department</div>
+        <div class="reviews-filter-panel" id="idddpReviewFilterPanel"></div>
+      </aside>
+    </div>
+  </div>
+
+</section>
 
  
 <!-- ============================ CONTACT ============================ -->
@@ -2507,6 +2608,7 @@ var pages = [
     });
     items.push({id:null, page:'resources', title:'Quick Links', crumb:'Page', text:'resources resobin asc internal external rulebook booklet academic calendar pre-registration registration video idddp chea bsbe handbook guide slides'});
     items.push({id:null, page:'idddp', title:'The IDDDP Corner', crumb:'Page', text:'interdisciplinary dual degree masters program one extra year'});
+    items.push({id:null, page:'idddp-reviews', title:'IDDDP / DDP Reviews', crumb:'IDDDP Corner', text:'idddp ddp dual degree reviews student experiences conversion mathematics chemistry aerospace physics civil kcdh cminds chemical idc'});
     items.push({id:null, page:'contact', title:'Our Team', crumb:'Page', text:'our team ananya gedela sanjana devashree patil raunak kumar suresh student support services sss academic coordinator web team ansh oswal surhud naik contact phone'});
     return items;
   }
@@ -2899,9 +3001,332 @@ var pages = [
   renderReviewList();
   renderDepartmentFilters();
 
+  /* ---------- IDDDP / DDP Reviews ---------- */
+  var idddpReviews = [
+    {
+      name: 'Nilabha Saha',
+      parentDept: 'Computer Science and Engineering',
+      parentDegree: 'B.Tech',
+      hostDept: 'Mathematics',
+      program: 'IDDDP',
+      sections: [
+        { q: 'Why did you decide to convert into IDDDP?', a: 'I wanted to pursue mathematics in greater depth and length than I had a chance to during my undergraduate time. Mathematics, without its full rigour, is often dealt with in other courses, but more advanced mathematics (even applied mathematics) is hard to appreciate without the underlying rigour offered in a pure mathematics curriculum. An IDDDP gave me a chance and time to explore mathematics in greater depth.' },
+        { q: 'How did you find out about the number and choice of courses you have? Could you please mention the exact courses you had to do, along with the tag (compulsory/elective)?', a: "There's an IDDDP chapter in the Mathematics Curriculum booklet, that has the details of what courses are required. As far as tagging them, they're all currently tagged as ALCs." },
+        { q: 'What was the exact process you followed for converting into IDDDP?', a: 'I had to mail the HoD to ask about the details, and had to ask a few of my math professors to submit LoRs to the HoD. Once the HoD approved the process, I had to ensure my eligibility and then submit a form for conversion that was provided on External ASC at some point of time.' },
+        { q: 'What was the criterion for getting selected under IDDDP into your host department?', a: 'I had to have completed at least 4 courses from a set S of courses mentioned in the math curriculum booklet, a CPI ≥ 8, an average CPI of ≥ 8.5 in the 4 S courses mentioned above, and a lack of any FF/FR grades in any of the MA/SI courses I had taken.' },
+        { q: 'Who did you talk to before making the decision?', a: 'I majorly spoke to a few professors in the department and a student who had done an IDDDP from CSE to Math before me.' },
+        { q: 'Which all relevant courses did you do before IDDDP?', a: 'I had done a few courses in trying to pursue a Math minor, and a few more for my Statistics minor. I also had a Math course I took as an ALC which factored in as one of the S courses the department required me to do to be eligible.' },
+        { q: 'Any tips you would like to give for form related things, like SoP, etc.?', a: "It would be very useful, both for the person writing and for the person reading the SoP, if it's a genuine indication of why the applicant is interested in applying for the programme, instead of being a polished LLM-ed SoP. No one is as concerned about the literary abilities of the applicant that they need to resort to means other than their own thoughts and writing abilities to pen down their SoP.\n\nIt would also help to have the contact of some authority in the department while filling in the form because it does ask certain questions which no applicant would be in a position to answer at the time of filling, such as a list of courses they plan to take to complete their degree (this list is not even decided before the academic year starts). To this end, it helps not to postpone form-filling to the very last day as that might leave very little time for communication with the department." },
+        { q: 'Did you face any difficulties in the entire process?', a: "There is a lack of proper rules and guidelines for applying to an IDDDP programme. This raised a lot of confusion, some of which are still not clear, and some of which there still exist no rules.\n\nThere are a lot of loopholes and issues with the IDDDP design which are yet to be fixed. A recurring difficulty is with ASC - it just does not understand how IDDDP works. I have had to manually register for courses after converting because ASC assumed I'm ineligible to take any course. Furthermore, ASC does not allow me to look at my graduation requirements because of a glitch that is still unfixed." }
+      ]
+    },
+    {
+      name: 'Samuel B',
+      parentDept: 'Chemistry',
+      parentDegree: 'B.S.',
+      hostDept: 'Chemistry',
+      program: 'DDP',
+      sections: [
+        { q: 'Why did you decide to convert into DDP?', a: 'I decided to convert to DD because I enjoyed the research I was doing, which primarily involved applying ML in the field of cancer. So, I chose to continue with DD in my own parent department, as it aligned with the work I was already doing. I also wanted to explore the area in greater depth and needed a bit more time to decide whether to go for a PhD or pursue something else.' },
+        { q: 'How did you find out about the number and choice of courses you have? Could you please mention the exact courses you had to do, along with the tag (compulsory/elective)?', a: "You can navigate the department website. It has everything listed over there, ask your seniors or DAMPC or DGSec should know about this.\n\nAll your core courses + 5 DE + 2 IE\n\nWell, since the curriculum has changed from mine to yours. So, all your required credits to be completed for a bachelor's degree should be completed before the end of your term." },
+        { q: 'What was the exact process you followed for converting into DDP?', a: "Find a professor who aligns with your interests and get their confirmation that they're willing to host you in their lab for the next year.\n\nOnce that's sorted, you need to fill a form (which you can get from the DGSec), get it signed by the FacAd, have the professor's recommendation and approval on it, and then submit it back to the DGSec after making sure all the requirements in the form are fulfilled.\n\nAfter you submit, the DGSec will circulate the form in the DUGC for their approval, and once that's done, you're good to go." },
+        { q: 'What was the criterion for getting selected under DDP into your host department?', a: 'The criteria was having a CPI of 7 as of the start of 4th year or end of 3rd year, no backlogs and a prof is ready to take you in.' },
+        { q: 'Who did you talk to before making the decision?', a: 'I talked with my best friend, she helped me solidify the decision. You can talk to your senior or mentor who has already done it to help you out.' },
+        { q: 'How did you choose your DDP guide?', a: "Well, I chose my guide because they're the only one in the department who works on what I'm doing. So, to figure out who to approach, a great option is to go through the department website, find the person whose work aligns with what you're doing or want to do, and then reach out to them. Set up a meeting, discuss your interests and why you want to work with them. My honest suggestion-be upfront with them. They're going to either make or break your journey in the year ahead. Be very careful when choosing your guide; if they don't vibe with you, it's going to be rough. As long as they don't block your career path, you should be fine." },
+        { q: 'Which all relevant courses did you do before DDP?', a: "Well, since I've done DD, I guess all my core courses fall into the relevant courses I've done, haha. Just kidding-since the topic I'm working on (Machine Learning applications in cancer research-detection, prediction, and maybe drug design if time allows) doesn't have direct courses in the chemistry department, I had to take a bunch of courses and projects outside to fill the gaps. I've done Amit Sethi's ML course, research projects under different profs to figure out what topic I really enjoy working on, NLP with Pushpak (a CS prof), BB and DH courses as well." },
+        { q: 'Any tips you would like to give for form related things, like SoP, etc.?', a: "In the form, you'll only need to get your guide's signature and their recommendation. Take the time to find the most suitable guide for yourself, and throughout the process, just be yourself-trust me on this." },
+        { q: 'Did you face any difficulties in the entire process?', a: 'Nothing which I can mention over here.' },
+        { q: 'Final remarks for the students?', a: "Follow what your heart says and what you wanna do and don't stress out!" }
+      ]
+    },
+    {
+      name: 'Ameya Marakarkandy',
+      parentDept: 'Aerospace Engineering',
+      parentDegree: 'B.Tech',
+      hostDept: 'Aerospace Engineering',
+      program: 'DDP',
+      sections: [
+        { q: 'Why did you decide to convert into DDP?', a: 'I had a specific case, I am a part of student satellite team of IITB and so we have been working on satellite program which is expected to be completed by the end of next year is the major reason to convert but apart from it DDP would give me enough time to work on the side projects, access to academic facilities(student licences, etc.)' },
+        { q: 'What was the exact process you followed for converting into DDP?', a: 'You need to complete the honours requirement, DDP project and some credits needed to be done in a particular specialisation. Then you submit a document stating the courses you have taken as a part of your BTech program and an application which includes Plan Of Action for completion of credits, guides and tentative topic. Collect application form from Aerospace office and submit with signatures from guide/co-guide and faculty advisor.' },
+        { q: 'Who did you talk to before making the decision?', a: 'Seniors and friends who had converted to the program.' },
+        { q: 'How did you choose your DDP guide?', a: 'Continued with my BTP guide after discussing with him about my interests and plans for DD year.' },
+        { q: 'Did you face any difficulties in the entire process?', a: 'None, very smooth.' }
+      ]
+    },
+    {
+      name: 'Aditya Mehta',
+      parentDept: 'Physics',
+      parentDegree: 'B.Tech',
+      hostDept: 'Physics',
+      program: 'DDP',
+      sections: [
+        { q: 'Why did you decide to convert to DDP?', a: "At the end of 3rd year, I decided I wanted to go to Europe for my PhD (because of the lesser course requirements and shorter duration of the PhD). Almost all universities in Europe require a master's degree before getting a PhD, unlike the US system, where you can get a master's degree during your PhD. Getting a funded master's program in Physics outside India is quite difficult, so DD felt like the best option." },
+        { q: 'How did you find out about the number and choice of courses you have? Could you please mention the exact courses you had to do, along with the tag (compulsory/elective)?', a: 'I reached out to seniors who have converted to DD, and also the curriculum book given by the department. For my department, there are 4 department electives, which include Supervised Learning Project (PH 303) and 4 core courses.' },
+        { q: 'What was the exact process you followed for converting into DDP?', a: "I just had to fill out a Google form floated by the department. The form asked for a tentative DD supervisor, so it's a good idea to reach out to profs beforehand regarding DD projects." },
+        { q: 'Who did you talk to before making the decision?', a: 'I talked to a few seniors who had converted to DD before.' },
+        { q: 'How did you choose your DDP guide?', a: 'I have known him quite well since the 2nd year, because he taught us a few courses. And of course, I have similar areas of interest, so I decided to do my DD project with him.' },
+        { q: 'Which all relevant courses did you do before DDP?', a: 'I had done a few honours courses, which I will retag to satisfy the additional department elective requirement.' }
+      ]
+    },
+    {
+      name: 'Naman Banchhor',
+      parentDept: 'Civil Engineering',
+      parentDegree: 'B.Tech',
+      hostDept: 'Civil Engineering',
+      program: 'DDP',
+      sections: [
+        { q: 'Why did you decide to convert to DDP?', a: 'I was interested in getting a higher degree in civil engineering.' },
+        { q: 'How did you find out about the number and choice of courses you have? Could you please mention the exact courses you had to do, along with the tag (compulsory/elective)?', a: 'It is mentioned online in the civil department website. You can search "IITB curriculum" and it will give the courses and electives you have to do for all specialisations.' },
+        { q: 'What was the exact process you followed for converting into DDP?', a: 'You can get the DD conversion form from the DGSec or civil dept office. Fill the form and write an SoP. Get your transcript. Get all three signed by your faculty advisor and submit them in the department office.' },
+        { q: 'What was the criterion for getting selected under DDP into your department?', a: 'CPI >= 7 and no active backlogs.' },
+        { q: 'Who did you talk to before making the decision?', a: 'I talked to a few seniors who had converted to DD before.' },
+        { q: 'How did you choose your DDP guide?', a: 'A list of seminar topics was circulated from which I chose one topic.' },
+        { q: 'Which all relevant courses did you do before DDP?', a: 'No relevant courses were required.' },
+        { q: 'Did you face any difficulties in the entire process?', a: 'When I applied for DD, I was at home. So, I had to do all the process online like getting the sign of FacAd. Then I asked my friend to print the final form and submit it in the dept office. He submitted but later the office told me that my form was misplaced. So, I had to send them my form again and ask them to manually convert me to DD. So, I would suggest that you stay on campus if you are converting to DD because it will be much easier to do the process yourself.' }
+      ]
+    },
+    {
+      name: 'Saksham Gupta',
+      parentDept: 'Economics',
+      parentDegree: 'B.S.',
+      hostDept: 'Centre for Digital Health (KCDH)',
+      program: 'IDDDP',
+      sections: [
+        { q: 'Why did you decide to convert to IDDDP?', a: "It was only in my 6th semester that I started feeling I wanted to do research in/study more Economics. I didn't feel like applying for an MS/PhD that November, as I felt I didn't have that much research experience and hadn't done any pure math, as is suggested when you're applying for a PhD. I also wanted to be a little more confident in my decision, and the backup of placements did exist with IDDDP. Overall, I felt I just needed a year to be more sure of everything.\n\nEconomics does not have a dual degree yet, and by doing an IDDDP in KCDH, I could have my master's thesis be in Health Economics. The curriculum would still be relevant, and I had already done a couple of KCDH courses already because of the minor I was thinking of doing earlier. I also planned to complete honours, a MInDS minor and a math minor with the extra year I got." },
+        { q: 'How did you find out about the number and choice of courses you have? Could you please mention the exact courses you had to do, along with the tag (compulsory/elective)?', a: 'The curriculum is clearly stated on the KCDH website.\n\nDH302 is the only core course. Apart from that, you have to do 7 electives. The range of electives is pretty decent and the department is generally open to adding new courses, granted they are relevant.\n\nFor those in other departments who might be interested in something related to Economics for their DDP (and not ML like most), you still can. Do the introductory health economics course (DH304) in your 8th sem. Some ML knowledge that you have will transfer, but try to learn some econometrics as well before starting the project.\n\nThe elective courses that I personally have done are: ME781, DH301, DH304, DH307, DH604, BB626, BB603' },
+        { q: 'What was the exact process you followed for converting into IDDDP?', a: "I was doing a project with an economics professor in my 6th sem under DH307. I talked to him towards the end of the sem and he agreed to take me on. Over the summer, there wasn't much to do about the application process. I just mailed him one final time before applying to confirm that he was willing and filled out the application, which (as far as I remember) just asked for the name of the guide, a tentative topic of your thesis, a plan for completing the rest of your degree requirements and an SoP (which I don't think anyone read)." },
+        { q: 'What was the criterion for getting selected under IDDDP into your host department?', a: 'As far as I can tell, it was just based on CPI and a willing advisor. No interviews or anything. One day in July, I just got an email of all the selected students, and my name was on there.' },
+        { q: 'Who did you talk to before making the decision?', a: 'Seniors who had converted.' },
+        { q: 'How did you choose your IDDDP guide?', a: 'As I knew I wanted to do something in Economics, and there were only a few professors in Economics associated with KCDH, my choices were pretty limited. I was already doing a project with a KCDH prof in my 6th semester under DH307, and he was the only one in the department whose main specialisation was health economics, so I went with him.\n\nOverall, as long as you have some experience in the related domain (ML mostly for KCDH), professors associated with KCDH will usually take you on even if you reach out now. Just please reach out to the prof and get their assent before filling the application form.' },
+        { q: 'Which all relevant courses did you do before IDDDP?', a: 'No specific courses to do as such. I would suggest just knowing some basic ML. The curriculum is very flexible. As I was already planning to do a minor, I had already done DH301, DH307 and DH302 by the end of my third year.' },
+        { q: 'Any tips you would like to give for form related things, like SoP, etc.?', a: 'I doubt the SoP matters that much. There was no interview or anything.\n\nAs far as I can tell, CPI was the only criterion apart from having a willing prof.' },
+        { q: 'Final remarks for the students?', a: "Life in the fifth year can get boring, especially if you are not planning to sit for placements/most of your friends are graduating. There is a small emotional cost in being the only one in your department to not move on from IITB so it's best to have concrete reasons and a good plan. One year is a long time, so think things through." }
+      ]
+    },
+    {
+      name: 'Abhishek Choudhary',
+      parentDept: 'Civil Engineering',
+      parentDegree: 'B.Tech',
+      hostDept: 'Centre for Machine Intelligence and Data Science (C-MInDS)',
+      program: 'IDDDP',
+      sections: [
+        { q: 'Why did you decide to convert into IDDDP?', a: "My primary objective was to learn some techie stuff since I hadn't done much until my 3rd year or I thought so. Anyway, I think I know a lot more than I did before. My (personal) learning curve growth has been very high in the last year (4th year)." },
+        { q: 'How did you find out about the number and choice of courses you have? Could you please mention the exact courses you had to do, along with the tag (compulsory/elective)?', a: 'There is an exhaustive and detailed document on the CMInDS website under the IDDDP section.\n\nNote that there are three baskets of courses and 2 courses need to be done from each, on top of DS203 and DS303.' },
+        { q: 'What was the exact process you followed for converting into IDDDP?', a: 'Filling out the ASC application, then the department floated its own preference form for the dd projects and the concerned Professor. We were supposed to talk to the professor proposing the project and gain his/her approval. This is like an interview step, but depends on the guide how he wants to assess you. The results were announced later.' },
+        { q: 'What was the criterion for getting selected under IDDDP into your host department?', a: "Based on the students' preferences, the professors also fill out their preference(internally) and they send a priority list back to the department.\n\nThe department then takes the final call on the selections. This is mostly based on CPI but this is the second stage. The primary stage is to get the approval from the professor first." },
+        { q: 'Who did you talk to before making the decision?', a: 'I talked to a few seniors who had converted to IDDDP before.' },
+        { q: 'How did you choose your IDDDP guide?', a: 'I was sure I was gonna do IDDDP with one or the other. My preferences were based on my interest in the project proposed.' },
+        { q: 'Which all relevant courses did you do before IDDDP?', a: 'DS203 and DS303.' },
+        { q: 'Any tips you would like to give for form related things, like SoP, etc.?', a: "Frankly speaking, nobody cares about the SoP. Fill out a tentative course plan in the ASC application. Make sure you highlight how you plan to complete the B.Tech credits by the fourth year since your application will go through your current faculty advisor and he/she would be interested just in that.\n\nAs far as CMInDS is concerned, the major part is to get a professor to guide you, that is, to recommend you to the department. If this is done, it's just based on CPI. Fairly objective procedure." },
+        { q: 'Final remarks for the students?', a: "Be sure if you really want to do it. CMInDS doesn't allow internships in the fourth year summers. I believe there would be such catches in other departments too." }
+      ]
+    },
+    {
+      name: 'Diya K Aravind',
+      parentDept: 'Chemical Engineering',
+      parentDegree: 'B.Tech',
+      hostDept: 'Chemical Engineering',
+      program: 'DDP',
+      sections: [
+        { q: 'Why did you decide to convert into DDP?', a: 'Long term interest in a specific project but it required long hours in the lab that could not be given considering the academic course load.' },
+        { q: 'How did you find out about the number and choice of courses you have? Could you please mention the exact courses you had to do, along with the tag (compulsory/elective)?', a: 'Through the dept course policy. It was required to complete the honors courses (2 of which are pre-decided) along with 4 DD electives.' },
+        { q: 'What was the exact process you followed for converting into DDP?', a: "An email was sent after the 7th semester to which a reply CC'ing the DDP guide and faculty advisor had to be sent with CPI details and the name of the project of interest. After this, a course plan needs to be made with the guide in which a compulsory BTP/SLP needs to be taken to get acquainted with the project of interest. This then gets approved by the DD PIC (Prof. Jhumpa Adhikari for ChE). The programme change is then reflected in ASC within the first two weeks of the 8th semester." },
+        { q: 'What was the criterion for getting selected under DDP into your department?', a: 'CPI greater than 7 and completion of at least 1 or 2 honors courses.' },
+        { q: 'Who did you talk to before making the decision?', a: "Didn't really talk to anyone besides my DDP guide about it. I did ask some generic questions to Parth Manish Dani, one of the DGSecs in ChE who converted to DD, about the timeline, stipend rules, etc." },
+        { q: 'How did you choose your DDP guide?', a: 'Based on a project of interest I was shadowing on and off since my fourth semester.' },
+        { q: 'Which all relevant courses did you do before DDP?', a: 'Was not required to do any for this particular project. Some profs may insist on it though.' },
+        { q: 'Any tips you would like to give for form related things, like SoP, etc.?', a: "The ChE's form is rather straightforward but don't take any decisions before talking to your prospective guide first. It's possible some may have additional requirements although I've not personally dealt with something like that." },
+        { q: 'Final remarks for the students?', a: 'I would suggest that one should talk to seniors and shadow a project beforehand (pick a project that has a student working on it with the scope to take it further. Try talking to that grad student about it and get as much info as possible before choosing a project) instead of just making an impulse decision based on the availability of projects. Profs very often add more projects if a student has shown prior interest in them. Hope this helps!' }
+      ]
+    },
+    {
+      name: 'Hitesh Kumar',
+      parentDept: 'Aerospace Engineering',
+      parentDegree: 'B.Tech',
+      hostDept: 'Aerospace Engineering',
+      program: 'DDP',
+      sections: [
+        { q: 'How did you find out about the number and choice of courses you have? Could you please mention the exact courses you had to do, along with the tag (compulsory/elective)?', a: "See the requirement of say IDDDP or DD is the same, it's just a different department. For this you'll have to do 48 credits of courses and 72 credits of DDP other for graduation requirement. So a total of 120 credits more are to be done in one year. To convert to IDDDP there is a proper procedure so people know the timeline, also for any IDDDP one is required to do at least 2 courses as minor and they must have got more than 8 on average in both of them and they should clear whatever CPI criteria is laid by a specific department.\n\nIn dual degree there is again CPI criteria and while you are applying for dual degree you should have enough time or if you are applying in your 7th sem, 8th sem then you should be completed with graduation requirement and also you should be done with 4 or more PG courses (requirement for DD)." },
+        { q: 'What was the exact process you followed for converting into DDP?', a: "Maintain required CPI. See what you are good at and then choose wisely.\n\nAlign your interest with available projects. If you are in touch with some project in a particular department then it is likely that you'll get a project under him and he'll pick you as well.\n\nApply well before the deadline." },
+        { q: 'What was the criterion for getting selected under DDP into your department?', a: 'CPI and course requirements and Graduation requirement completion.' },
+        { q: 'Who did you talk to before making the decision?', a: "To seniors, to those who are working in my interested domain and after knowing about the professor. Mostly it depends on one's willingness to invest one more year." },
+        { q: 'How did you choose your DDP guide?', a: 'I did previous projects under him and he is well known in the department for work for which I am interested.' },
+        { q: 'Which all relevant courses did you do before DDP?', a: 'Mostly their departments courses are to be done as minor, or elective for DD.' },
+        { q: 'Final remarks for the students?', a: 'All the best, chase your dreams till your last breath, never settle.' }
+      ]
+    },
+    {
+      name: 'Laksh Rajpal',
+      parentDept: 'IDC',
+      parentDegree: 'B.Des.',
+      hostDept: 'IDC',
+      program: 'DDP',
+      sections: [
+        { q: 'Why did you decide to convert into DDP?', a: "The main reason was that master's education is almost free - the fees are very low, and you can make it back through your TAship. Also, while a regular master's programme takes 2 years, the dual degree lets you finish it in just 1 year." },
+        { q: 'What was the exact process and criterion for converting into DDP?', a: 'At the end of our 3rd year or the beginning of our 4th year, we are given a simple google form to indicate our preferences for the discipline we want to pursue for our master\'s. Based on CPI and preference, 10 students are allotted a dual degree. Technically, only 4 students per discipline are allowed, which is why CPI plays a major role. Faculty guides are assigned based on the discipline you get into.' },
+        { q: 'Any remarks about the duration or structure of the programme?', a: "It essentially spans 2 semesters. So it's not a huge extension over the bachelors program, and you get a full master's degree." },
+        { q: 'Do you need to write an SoP for the dual degree conversion in your department?', a: "No, we don't need an SoP. Like I said, it's just a simple Google Form. It's a simple and straightforward process." },
+        { q: 'Any final comments or insights?', a: "My department, IDC, was originally started in 1969 solely with a master's programme. The bachelor's programme was introduced only in 2015 or 2016. As a result, a lot of our alumni are from the master's programme.\n\nAdditionally, since design is a relatively newer field, many companies that hire have policies that only allow master's students to be shortlisted or apply for certain roles. So that's another reason one might consider doing a dual degree." }
+      ]
+    }
+  ];
+
+  var IDDDP_REVIEW_TYPE_ORDER = ['IDDDP', 'DDP'];
+  var IDDDP_REVIEW_TYPE_LABELS = {
+    'IDDDP': 'IDDDP Reviews',
+    'DDP': 'Dual Degree (DDP) Reviews'
+  };
+  var IDDDP_REVIEW_TYPE_ANCHORS = {
+    'IDDDP': 'sec-idddp-reviews-idddp',
+    'DDP': 'sec-idddp-reviews-ddp'
+  };
+  var selectedIdddpReview = null;
+  var selectedIdddpDepartments = [];
+
+  function enterIdddpReviewsFullscreen(){
+    var block = document.getElementById('idddp-reviews-block');
+    if(block) block.classList.add('is-fullscreen');
+    document.body.classList.add('review-fullscreen-open');
+  }
+
+  function exitIdddpReviewsFullscreen(){
+    var block = document.getElementById('idddp-reviews-block');
+    if(block) block.classList.remove('is-fullscreen');
+    document.body.classList.remove('review-fullscreen-open');
+  }
+
+  function toggleIdddpReviewMobileFilters(){
+    var panel = document.querySelector('#idddp-reviews-block .reviews-filters-reserved');
+    var btn = document.getElementById('idddpReviewFilterToggle');
+    if(!panel || !btn) return;
+    var open = panel.classList.toggle('mobile-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Hide department filters' : 'Show department filters';
+  }
+
+  function formatReviewAnswer(text){
+    return escapeHtml(text).replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+  }
+
+  function loadIdddpReview(review){
+    if(!review) return;
+    selectedIdddpReview = review;
+    var content = document.getElementById('idddpReviewContent');
+    var placeholder = document.getElementById('idddpReviewPlaceholder');
+    if(!content || !placeholder) return;
+    var meta = '<div class="review-content-meta">'
+      + '<strong>Review by ' + escapeHtml(review.name) + '</strong><br>'
+      + 'Parent department — ' + escapeHtml(review.parentDept) + ', ' + escapeHtml(review.parentDegree)
+      + ' &nbsp;|&nbsp; Host department — ' + escapeHtml(review.hostDept)
+      + '</div>';
+    var body = review.sections.map(function(sec){
+      return '<h3>' + escapeHtml(sec.q) + '</h3><p>' + formatReviewAnswer(sec.a) + '</p>';
+    }).join('');
+    content.innerHTML = meta + body;
+    content.classList.add('loaded');
+    placeholder.style.display = 'none';
+    renderIdddpReviewList();
+  }
+
+  function toggleIdddpDepartmentFilter(dept){
+    var idx = selectedIdddpDepartments.indexOf(dept);
+    if(idx >= 0) selectedIdddpDepartments.splice(idx, 1);
+    else selectedIdddpDepartments.push(dept);
+    renderIdddpReviewList();
+    renderIdddpDepartmentFilters();
+  }
+
+  function clearIdddpDepartmentFilters(){
+    selectedIdddpDepartments = [];
+    renderIdddpReviewList();
+    renderIdddpDepartmentFilters();
+  }
+
+  function getIdddpReviewDepartments(){
+    var depts = [];
+    idddpReviews.forEach(function(r){
+      if(depts.indexOf(r.hostDept) < 0) depts.push(r.hostDept);
+    });
+    depts.sort(function(a, b){ return a.localeCompare(b); });
+    return depts;
+  }
+
+  function getFilteredIdddpReviews(){
+    if(!selectedIdddpDepartments.length) return idddpReviews.slice();
+    return idddpReviews.filter(function(r){
+      return selectedIdddpDepartments.indexOf(r.hostDept) >= 0;
+    });
+  }
+
+  function renderIdddpDepartmentFilters(){
+    var panel = document.getElementById('idddpReviewFilterPanel');
+    if(!panel) return;
+    var depts = getIdddpReviewDepartments();
+    var html = depts.map(function(dept, i){
+      var checked = selectedIdddpDepartments.indexOf(dept) >= 0 ? ' checked' : '';
+      return '<label class="review-filter-item">'
+        + '<input type="checkbox" data-dept-idx="' + i + '"' + checked + '>'
+        + '<span>' + escapeHtml(dept) + '</span>'
+        + '</label>';
+    }).join('');
+    if(selectedIdddpDepartments.length){
+      html += '<button type="button" class="review-filter-clear" id="idddpReviewFilterClear">Clear filters</button>';
+    }
+    panel.innerHTML = html;
+    panel._deptList = depts;
+    panel.querySelectorAll('input[type="checkbox"]').forEach(function(cb){
+      cb.addEventListener('change', function(){
+        var dept = panel._deptList[parseInt(cb.getAttribute('data-dept-idx'), 10)];
+        toggleIdddpDepartmentFilter(dept);
+      });
+    });
+    var clearBtn = document.getElementById('idddpReviewFilterClear');
+    if(clearBtn) clearBtn.addEventListener('click', clearIdddpDepartmentFilters);
+  }
+
+  function renderIdddpReviewList(){
+    var list = document.getElementById('idddpReviewList');
+    if(!list) return;
+    var filtered = getFilteredIdddpReviews();
+    var grouped = {};
+    filtered.forEach(function(r){
+      if(!grouped[r.program]) grouped[r.program] = [];
+      grouped[r.program].push(r);
+    });
+    var html = '';
+    IDDDP_REVIEW_TYPE_ORDER.forEach(function(type){
+      var items = grouped[type];
+      if(!items || !items.length) return;
+      var anchorId = IDDDP_REVIEW_TYPE_ANCHORS[type] || '';
+      html += '<div class="reviews-type-group">';
+      html += '<div class="reviews-type-label"' + (anchorId ? ' id="' + anchorId + '"' : '') + '>' + escapeHtml(IDDDP_REVIEW_TYPE_LABELS[type] || type) + '</div>';
+      items.forEach(function(review){
+        var active = selectedIdddpReview === review ? ' active' : '';
+        var reviewIndex = idddpReviews.indexOf(review);
+        html += '<button type="button" class="review-item' + active + '" onclick="loadIdddpReview(idddpReviews[' + reviewIndex + '])">'
+          + '<span class="review-item-name">' + escapeHtml(review.name) + '</span>'
+          + '<span class="review-item-dept">' + escapeHtml(review.hostDept) + '</span>'
+          + '</button>';
+      });
+      html += '</div>';
+    });
+    if(!html){
+      html = '<div class="review-placeholder" style="min-height:120px;padding:20px 16px;font-size:13px;">No reviews match the selected filters.</div>';
+    }
+    list.innerHTML = html;
+  }
+
+  renderIdddpReviewList();
+  renderIdddpDepartmentFilters();
+
   document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && document.getElementById('reviews') && document.getElementById('reviews').classList.contains('is-fullscreen')){
-      exitReviewsFullscreen();
+    if(e.key === 'Escape'){
+      if(document.getElementById('reviews') && document.getElementById('reviews').classList.contains('is-fullscreen')){
+        exitReviewsFullscreen();
+      }
+      if(document.getElementById('idddp-reviews-block') && document.getElementById('idddp-reviews-block').classList.contains('is-fullscreen')){
+        exitIdddpReviewsFullscreen();
+      }
     }
   });
  
