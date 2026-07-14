@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UG Wiki by the Undergraduate Academic Council, IIT Bombay — your comprehensive guide to courses, registration, research, and FAQs for undergraduate students." />
+  <meta name="keywords" content="UG Wiki, IIT Bombay, Undergraduate Academic Council, courses, registration, research, academics" />
+  <meta name="author" content="Undergraduate Academic Council, IIT Bombay" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ugac.gymkhana.iitb.ac.in/UG-Wiki/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Course Booklet - UG Wiki - Undergraduate Academic Council, IIT Bombay" />
+  <meta property="og:description" content="UG Wiki by the Undergraduate Academic Council, IIT Bombay — your comprehensive guide to courses, registration, research, and FAQs for undergraduate students." />
+  <meta property="og:url" content="https://ugac.gymkhana.iitb.ac.in/UG-Wiki/" />
+  <meta property="og:site_name" content="UG Wiki, IIT Bombay" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Course Booklet - UG Wiki - Undergraduate Academic Council, IIT Bombay" />
+  <meta name="twitter:description" content="UG Wiki by the Undergraduate Academic Council, IIT Bombay — your comprehensive guide to courses, registration, research, and FAQs for undergraduate students." />
+  <title>Course Booklet - UG Wiki - Undergraduate Academic Council, IIT Bombay</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "UG Wiki, IIT Bombay",
+    "url": "https://ugac.gymkhana.iitb.ac.in/UG-Wiki/",
+    "description": "UG Wiki by the Undergraduate Academic Council, IIT Bombay — your comprehensive guide to courses, registration, research, and FAQs for undergraduate students.",
+    "author": {
+      "@type": "Organization",
+      "name": "Undergraduate Academic Council, IIT Bombay"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand" onclick="go('home')" title="UG Wiki - Home">
+      <img class="logo" src="assets/ug-wiki-logo.png" alt="UG Wiki" />
+      <span class="divider"></span>
+      <div><b>UG Wiki</b></div>
+    </div>
+    <div class="nav-right">
+      <div class="search" id="search">
+        <svg class="search-ic" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="searchInput" type="text" placeholder="Search the wiki…" autocomplete="off"
+               oninput="runSearch(this.value)" onfocus="runSearch(this.value)" onkeydown="searchKey(event)" />
+        <div class="search-results" id="searchResults" role="listbox"></div>
+      </div>
+      <nav class="links" id="navlinks">
+        <a href="index.html" data-nav="home" onclick="go('home',event)">Home</a>
+        <a href="resources.html" data-nav="resources" onclick="go('resources',event)">Resources</a>
+        <a href="idddp.html" data-nav="idddp" onclick="go('idddp',event)">The IDDDP Corner</a>
+        <a href="contact.html" data-nav="contact" onclick="go('contact',event)">Our Team</a>
+      </nav>
+      <button class="icon-btn" id="themeBtn" title="Toggle dark / light mode" onclick="toggleTheme()">🌙</button>
+      <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page active" id="page-content">
+    <div class="layout">
+    <aside class="side">
+      <h4>Contents</h4>
+      <a data-target="registration" onclick="scrollTo2('registration')">1. Registration</a>
+      <a class="sub" data-target="sec-pre-registration" onclick="scrollTo2('sec-pre-registration')">1.1 Pre-Registration</a>
+      <a class="sub" data-target="sec-registration" onclick="scrollTo2('sec-registration')">1.2 Registration</a>
+      <a class="sub" data-target="sec-course-adjustment" onclick="scrollTo2('sec-course-adjustment')">1.3 Course Adjustment</a>
+      <a class="sub" data-target="sec-dropping" onclick="scrollTo2('sec-dropping')">1.4 Dropping of Courses</a>
+      <a class="sub" data-target="sec-sem-wise" onclick="scrollTo2('sec-sem-wise')">1.5 Semester Wise Courses</a>
+      <a data-target="academic-standing" onclick="scrollTo2('academic-standing')">2. Academic Standing</a>
+      <a data-target="courses" onclick="scrollTo2('courses')">3. Courses &amp; their Categories</a>
+      <a class="sub" data-target="sec-ltpc" onclick="scrollTo2('sec-ltpc')">3.0 LTPC</a>
+      <a class="sub" data-target="sec-core" onclick="scrollTo2('sec-core')">3.1 Core Courses</a>
+      <a class="sub" data-target="sec-minor" onclick="scrollTo2('sec-minor')">3.2 Minor Courses</a>
+      <a class="sub" data-target="sec-Honours" onclick="scrollTo2('sec-Honours')">3.3 Honours Courses</a>
+      <a class="sub" data-target="sec-electives" onclick="scrollTo2('sec-electives')">3.4 Electives</a>
+      <a class="sub" data-target="sec-alc" onclick="scrollTo2('sec-alc')">3.5 ALC</a>
+      <a class="sub" data-target="sec-audit" onclick="scrollTo2('sec-audit')">3.6 Audit Courses</a>
+      <a class="sub" data-target="sec-sit" onclick="scrollTo2('sec-sit')">3.7 Sit Through</a>
+      <a class="sub" data-target="sec-selfstudy" onclick="scrollTo2('sec-selfstudy')">3.8 Self Study</a>
+      <a class="sub" data-target="sec-guided" onclick="scrollTo2('sec-guided')">3.9 Guided Study</a>
+      <a class="sub" data-target="sec-summer" onclick="scrollTo2('sec-summer')">3.10 Summer Courses</a>
+      <a class="sub" data-target="sec-nptel" onclick="scrollTo2('sec-nptel')">3.11 NPTEL/SWAYAM</a>
+      <a class="sub" data-target="sec-seminars" onclick="scrollTo2('sec-seminars')">3.12 Seminars</a>
+      <a class="sub" data-target="sec-ir" onclick="scrollTo2('sec-ir')">3.13 IR Language</a>
+      <a data-target="why-minor" onclick="scrollTo2('why-minor')">4. Why Take Up A Minor</a>
+      <a data-target="why-Honours" onclick="scrollTo2('why-Honours')">5. Why Take Up An Honours</a>
+      <a data-target="tagging" onclick="scrollTo2('tagging')">6. Tagging Rules</a>
+      <a data-target="research" onclick="scrollTo2('research')">7. Research</a>
+      <a class="sub" data-target="sec-slp-reviews" onclick="scrollTo2('sec-slp-reviews')">7.1 SLP</a>
+      <a class="sub" data-target="sec-btp" onclick="scrollTo2('sec-btp')">7.2 B.Tech. Project</a>
+      <a class="sub" data-target="sec-ura" onclick="scrollTo2('sec-ura')">7.3 URA</a>
+      <a data-target="idddp-intro" onclick="scrollTo2('idddp-intro')">8. Intro to IDDDP</a>
+      <a data-target="semester-exchange" onclick="scrollTo2('semester-exchange')">9. Semester Exchange</a>
+      <a data-target="reviews" onclick="scrollTo2('reviews')">10. Reviews</a>
+      <a class="sub" data-target="sec-minor-reviews" onclick="scrollTo2('sec-minor-reviews')">10.1 Minor Reviews</a>
+      <a class="sub" data-target="sec-Honours-reviews" onclick="scrollTo2('sec-Honours-reviews')">10.2 Honours Reviews</a>
+      <a class="sub" data-target="sec-unconventional-reviews" onclick="scrollTo2('sec-unconventional-reviews')">10.3 Unconventional Courses</a>
+      <a class="sub" data-target="sec-slp-reviews" onclick="scrollTo2('sec-slp-reviews')">10.4 SLP/RnD Reviews</a>
+      <a class="sub" data-target="sec-language-reviews" onclick="scrollTo2('sec-language-reviews')">10.5 Language Courses</a>
+      <a data-target="faqs" onclick="scrollTo2('faqs')">11. FAQs</a>
+    </aside>
+ 
+    <article class="doc">
+ 
+      <!-- 1. REGISTRATION -->
+      <div class="block" id="registration">
+        <h2><span class="badge">1</span>Registration</h2>
+        <p class="lead">IIT Bombay follows a specialized credit-based semester system, therefore registration at the beginning of each semester is mandatory for you till you complete your program (lookout for the dates in the <a href="https://drive.google.com/file/d/1_7uOBxBIdRibI0K0rbvfrSqBI-VyDGdu/view?usp=drivesdk" target="_blank" rel="noopener">Academic Calendar</a>). Without registration, any academic activity (course/seminar/project, etc.) that you undergo will not be counted towards the requirements of your degree.</p>
+ 
+        <h3 id="sec-pre-registration">1.1 &nbsp;Pre-Registration</h3>
+        <p class="kv"><b>When:</b> Usually held about a week before the official course registration begins. This year's dates are 10th July, 2026 - 14th July, 2026 for the Autumn Semester and 12th December, 2026 - 16th December, 2026 for the Spring Semester. Note that Pre-registration is NOT FCFS (First-Come-First-Serve).</p>
+        <p class="kv"><b>What it covers:</b> Minor Courses, Popular and high-demand electives (e.g., Entrepreneurship electives) and certain specific department electives.</p>
+        <p class="kv"><b>Process for minor registration pre-registration</b> can be found <a href="https://www.iitb.ac.in/newacadhome/MinorRegistrationinformationforstudnts_20_dec_Revised.pdf">here</a></p>
+        <p class="kv"><b>How allocation works:</b> Most minor courses are generally allocated based on CPI, and some others are allotted on the professor's selection criteria.</p>
+        <p class="kv"><b>Where to pre-register:</b> Through the External ASC portal under the Forms/Requests section. Click <a href="https://youtu.be/_LlTFtnz6ZU?si=DAe7nDU7GTMkxKSE" target="_blank" rel="noopener">here</a> for a guide video for the same.</p>
+        <p class="kv"><b>Prerequisites:</b> Semester fees must be paid and at least the first SMA instalment should be cleared via External ASC.</p>
+ 
+        <h3 id="sec-registration">1.2 &nbsp;Registration</h3>
+        <p class="kv"><b>When:</b> Happens before the start of each semester, at the end of December for the Spring Semester and end of July for the Autumn Semester.</p>
+        <p class="kv">Autumn Semester: 21st July, 2026 - 24th July, 2026</p>
+        <p class="kv">Spring Semester: 29th December, 2026 - 1st January, 2027</p>
+        <p class="kv"><b>Where to register:</b> Use the Internal ASC portal → go to Academics → Registration → Registration/Adjustments. Click <a href="https://youtu.be/ecPmluuRV4E?si=OpBwTd7ZhH8y_t6p" target="_blank" rel="noopener">here</a> for a guide video for the same.</p>
+        <p class="kv"><b>How it works:</b></p>
+        <ul>
+          <li>Courses you’ve already pre-registered for (like electives and minors) will be automatically added.</li>
+          <li>You can also register for additional courses (not part of pre-registration) or any pre-reg courses that still have open slots.</li>
+          <li>These open courses are allotted on a First-Come-First-Serve (FCFS) basis, so early action is advised.</li>
+        </ul>
+        <p class="kv"><b>Important Reminders:</b></p>
+        <ul>
+          <li>You must register for the semester on internal ASC before the final deadline mentioned in the Academic Calendar.</li>
+          <li>Once submitted successfully, you’ll receive a confirmation email.</li>
+          <li>Missing the registration submission can result in your registration not being processed, so don’t wait till the last moment!</li>
+        </ul>
+ 
+        <h3 id="sec-course-adjustment">1.3 &nbsp;Course Adjustment</h3>
+        <p class="kv"><b>Duration:</b> Typically open for around 7-10 days after the course registration period ends. The last date for course adjustment this year is:</p>
+        <p class="kv">Autumn Semester: 3rd August 2026</p>
+        <p class="kv">Spring Semester: 11th January 2027</p>
+        <p class="kv"><b>What you can do:</b> Add or remove courses (generally electives, for core courses - you need the permission of your FacAd). You can make multiple changes during this phase, but must re-submit the updated course registration form each time you make the changes.</p>
+        <p class="kv"><b>Conditions:</b> Your total credits should not fall below 18 or exceed the overload limit as per your category.</p>
+ 
+        <h3 id="sec-dropping">1.4 &nbsp;Dropping of Courses</h3>
+        <p>If a student finds their academic load too heavy, even after the date for course adjustment has passed, they may drop some courses out of the registered ones provided the minimum credit limit for a semester (18 credits) holds. Dropping core courses requires prior consultation with your Faculty Advisor.
+</p>
+        <p>This year the dates are for the</p>
+        <p class="kv"><b>Autumn Semester:</b></p>
+        <ul>
+          <li>First half-semester courses: 4th August, 2026 - 17th August, 2026</li>
+          <li>Second half-semester courses: 21st September, 2026 - 12th October, 2026</li>
+          <li>Full-semester courses: 4th August, 2026 - 17th August, 2026</li>
+        </ul>
+        <p class="kv"><b>Spring Semester:</b></p>
+        <ul>
+          <li>First half-semester courses: 12th January, 2027 - 25th January, 2027</li>
+          <li>Second half-semester courses: 1st March, 2027 - 22nd March, 2027</li>
+          <li>Full-semester courses: 12th January, 2027 - 25th January, 2027</li>
+        </ul>
+ 
+        <h3 id="sec-sem-wise">1.5 &nbsp;Semester Wise Courses Offered</h3>
+        <p>You can check a particular semester’s curriculum on ASC. Follow the path: Academic --&gt; All about courses --&gt; Curriculum.</p>
+        <p>Kindly note: From the third semester onwards, registration is dependent on the Academic Standing of the student</p>
+      </div>
+ 
+      <!-- 2. ACADEMIC STANDING -->
+      <div class="block" id="academic-standing">
+        <h2><span class="badge">2</span>Academic Standing</h2>
+        <p class="lead">At the end of every semester, every student is assigned an Academic Standing (Category I&ndash;VI) based on their academic performance over the previous two regular registered semesters. Your academic standing determines the maximum number of credits you can register for in the upcoming semester.</p>
+        <div class="note">Note: An NP (Not Passed) grade in a non-credited course is not treated as a failed course (FR/DX/DR/W) for determining academic standing.</div>
+ 
+        <h3>Categories of Academic Standing</h3>
+        <table>
+          <thead><tr><th>Category</th><th>Eligibility</th><th>Implication</th></tr></thead>
+          <tbody>
+            <tr><td>I</td><td>A student who has no FR/DX/DR/W in any of the core courses, and has a CPI equal to or greater than 8.0.</td><td>Upto 54 credits</td></tr>
+            <tr><td>II</td><td>CPI &lt; 8. Registered for at least 18 credits in each of the two preceding regular semesters and not failed in any course in these two semesters.</td><td>Upto 48 credits</td></tr>
+            <tr><td>III</td><td>Received at least 1 FR/DX/W/DR in core courses and at most 1 FR/DX in other courses in the previous two semesters.</td><td>Upto 48 credits</td></tr>
+            <tr><td>IV</td><td>Received at least 1 FR/DX/W/DR in core courses and more than one FR/DX in other courses in the previous two semesters.</td><td>Upto 48 credits</td></tr>
+            <tr><td>V</td><td>Not earned at least 18 credits in either one of the previous two regular registered semesters.</td><td>Upto 36 credits</td></tr>
+            <tr><td>VI</td><td>Accumulated at least 36 credits worth of FR/DX in core courses.</td><td>Upto 24 credits</td></tr>
+          </tbody>
+        </table>
+ 
+        <div class="note"><b>Note:</b>
+          <ul>
+            <li>Academic Standing is recalculated before every semester registration based on your performance in the previous two regular registered semesters.</li>
+            <li>Category VI supersedes all other categories. If you satisfy the conditions for Category VI, you will be placed in Category VI regardless of any other category.</li>
+            <li>Students in the 8th semester of B.Tech./B.S. and 10th semester of Dual Degree programmes may be permitted to register for up to 54 credits with the recommendation of their Faculty Advisor/PIC, subject to Institute rules.</li>
+            <li>If your grades from an exchange semester are not available before registration, your Academic Standing is determined using the last two completed semesters.</li>
+          </ul>
+        </div>
+ 
+        <p>For more details, please refer to the Institute Academic Rulebook.</p>
+      </div>
+ 
+      <!-- 3. COURSES -->
+      <div class="block" id="courses">
+        <h2><span class="badge">3</span>Courses and their Categories</h2>
+ 
+        <h3 id="sec-ltpc">3.0 &nbsp;Theory and Lab Course Systems (LTPC)</h3>
+        <p>Courses are broadly classified as Theory Courses and Laboratory Courses. Theory courses consist of lecture (L) and tutorial (T) hours, but may have attached practical (P) hours in special cases. Laboratory courses consist of practical hours, but may have attached tutorial hours in special cases. Credit (C) for a course is obtained by multiplying the number of hours of instruction per week in that course, by two (2) for lecture and tutorial hours, and by one (1) for laboratory hours i.e. C = 2xL + 2xT + P. A student is expected to spend, on average, one hour every week outside class for every lecture/ tutorial held that week.</p>
+ 
+        <h3 id="sec-core">3.1 &nbsp;Core Courses</h3>
+        <p>Core courses are those courses which you have to do compulsorily for obtaining your degree.</p>
+        <p>These courses count towards your final degree in all respects and count in your CPI (Cumulative Performance Index).</p>
+        <p>They are NOT optional and have to be completed within the stipulated duration of your coursework (4 or 5 years).</p>
+        <p>The courses give you a lot of exposure to your own departmental subjects and research.</p>
+        <p>They also have an elective component, details regarding which are explained in the section on electives.</p>
+ 
+        <h3 id="sec-minor">3.2 &nbsp;Minor Courses</h3>
+        <p>A Minor is an additional credential a student will earn if they do a minimum of 30 credits (5 courses in most cases) worth of additional learning in a discipline other than their major discipline.</p>
+        <p>Many academic units in the Institute offer minors in their disciplines and prescribe a specific set of courses and/ or other activities like projects for earning a minor in that discipline.</p>
+        <p>Note that courses equivalent in content to any of these specified courses from the same department can be taken as a minor course with the approval of the concerned HOD.</p>
+        <p>After the completion of credits under the stipulated time period, a minor degree is awarded to the student. It is mentioned in the Degree Certificate "Bachelor of Technology in xxx with Minor in yyy.” The fact will also be reflected in the transcript, along with the list of courses taken.</p>
+        <p>Students are eligible to pursue a Minor starting from the 3rd semester.</p>
+        <p>Minor courses are allocated to students only through a <a href="https://youtu.be/_LlTFtnz6ZU?si=iiWkF1XCXhS5J4zY" target="_blank" rel="noopener">pre-registration process</a> before the start of every semester and the allocation for every minor course is done on the basis of the CPI of the student as the seats are limited in every minor course.</p>
+        <p>You can opt for as many courses of your choice during the process of pre-registration (in particular preference order). You will be allotted the minor course based on your (major) CPI and preference order after the pre-registration window closes.</p>
+        <p>The waitlist that is maintained for the minor courses (for students who have missed out on the course of their choice) is also sorted on the basis of the CPI of the students, such that if any student who has got the minor course drops it during the process of registration, the next student in the waitlist will get the minor course.</p>
+        <p>If a student doesn’t complete the full 30 credits required for a Minor, they won’t be awarded the Minor. However, any courses completed as part of the Minor will still appear on the transcript individually.</p>
+        <div class="note">Note - The only way to get a minor is through the pre-registration window. It would not be possible to register for a minor on the main registration window.</div>
+        <p>Please refer to the <a href="https://acad.iitb.ac.in/sites/default/files/UG_RULE_BOOK.pdf" target="_blank" rel="noopener">UG Rulebook</a> to check the eligibility criteria to register for minor courses.</p>
+ 
+        <h3 id="sec-Honours">3.3 &nbsp;Honours Courses</h3>
+        <p>Honours is an additional credential a student will earn if they opt for the extra 24 credits (in some cases, 30) needed for this in their own discipline.</p>
+        <p>In certain departments, there are some core Honours courses that are compulsory to earn an Honours degree and some Honours elective. It is best to consult your DGSec for details on the same.</p>
+        <p>Honours courses are either advanced-level courses in your discipline or are courses designed to give you more exposure to different areas of your discipline.</p>
+        <p>This will be mentioned in the Degree Certificate as “Bachelor of Technology in xxx, with Honours” on the successful accumulation of credits at the end of the program. The fact will also be reflected in the transcript, along with the list of courses, etc., taken.</p>
+        <p>For B.Tech / B.S. students, the CPI for Honours courses is calculated separately from your Major CPI. Your grades in Honours courses will not impact your Major CPI.</p>
+        <p>There's no separate registration process for Honours. The courses you intend to count towards Honours are registered along with your regular courses on the Internal ASC portal (but ensure that you register for them as an O tag).</p>
+        <p>Dual Degree students have to do the Honours courses by default. They are considered as their core courses. Honours courses do not count in your CPI other than for dual degree students</p>
+ 
+        <h3 id="sec-electives">3.4 &nbsp;Electives</h3>
+        <p>Every program (B.Tech/Dual degree/BS) in IIT Bombay will have its own curriculum defined, which will define your core courses and the total credit requirement for the award degree. According to your curriculum, your course completion may require doing courses of your own choice, wish and interest from</p>
+        <p><b>Department Electives:</b> Students choose advanced-level courses (e.g., 4xx or 5xx) from their department. In some cases, courses from other departments may be tagged as department electives with approval from the concerned department.</p>
+        <p><b>Interdisciplinary STEM Elective:</b> These courses do not have core prerequisites and can be taken as STEM electives by students from other disciplines.</p>
+        <p><b>Interdisciplinary HASMED Elective:</b> Offered by departments under the HASMED umbrella (Humanities, Arts, Social Sciences, Management, and Design), these courses typically have no core prerequisites and focus on interdisciplinary themes.</p>
+        <div class="note">Note: Electives are part of the curriculum and count towards the CPI. These do not come by default on your course registration form unlike core courses, you need to add these by yourself during registration.</div>
+        <p>To complete the degree, students must earn elective credits from different categories as specified by their department curriculum.</p>
+        <ul>
+          <li>Department Electives: 18 credits</li>
+          <li>HASMED Electives: 12 credits</li>
+          <li>STEM Electives: 12 credits</li>
+          <li>Flexible Electives: 30 credits (should be from among Department, STEM, or HASMED electives)</li>
+        </ul>
+        <div class="note">Note: The Flexible Electives credit requirement is fulfilled through DE, SE, and HE courses only. The exact credit requirements and elective distribution may vary across departments and programs. Always refer to your department's latest curriculum for the most accurate requirements.</div>
+ 
+ 
+        <h3 id="sec-alc">3.5 &nbsp;Additional Learning Courses (ALC)</h3>
+        <p>Apart from core courses, a student can take some extra courses. These Additional Learning Courses (ALCs) don’t constitute the core CPI/SPI of a student.</p>
+        <p>The tag of such a course can be changed during the retagging period, which is explained later.</p>
+        <div class="note">Note: Exceeding any of the criteria for credits is NOT admissible under any circumstances.</div>
+ 
+        <h3 id="sec-audit">3.6 &nbsp;Audit Courses</h3>
+        <ul>
+          <li>Audit courses are taken purely for learning purposes, with no credits or grade points.</li>
+          <li>Registration for audit courses is done alongside main course registration, but requires prior permission from the instructor.</li>
+          <li>Only Category I and II students are allowed to audit courses during regular semesters and summer terms.</li>
+          <li>A student may audit a maximum of two courses during their entire program.</li>
+          <li>If completed successfully, the course will be reflected on the transcript with an ‘AU’ grade.</li>
+          <li>The ‘AU’ grade is awarded only if attendance is satisfactory and additional requirements set by the instructor are met.</li>
+          <li>If attendance or performance is unsatisfactory, no grade will be awarded, and the student will be deregistered from the course.</li>
+          <li>The ‘AU’ grade does not carry any grade point and is not included in SPI/CPI calculations.</li>
+          <li>Audit courses cannot be retagged under any other category.</li>
+        </ul>
+ 
+        <h3 id="sec-sit">3.7 &nbsp;Sit Through</h3>
+        <ul>
+          <li>Sit-through is an option for students interested in a course but unable to register due to constraints (commonly happens with popular minor courses).</li>
+          <li>In such cases, you may seek permission from the course instructor to attend the classes without official registration.</li>
+          <li>Sit-through courses do NOT appear on your transcript.</li>
+          <li>Credits from sit-through courses are not counted toward your degree requirements.</li>
+          <li>No formal registration is required or done for sit-through courses.</li>
+        </ul>
+ 
+        <table>
+          <thead><tr><th>Type of Course</th><th>Description</th><th>Effect on CPI</th></tr></thead>
+          <tbody>
+            <tr><td>Minors</td><td>30 credits worth of additional learning in a discipline other than your own major.</td><td>Don’t count towards major CPI</td></tr>
+            <tr><td>Honours</td><td>24 (in some cases 30) credits worth of additional learning in your own discipline</td><td>Don’t count towards major CPI</td></tr>
+            <tr><td>STEM Electives</td><td>Science, Technology, Engineering &amp; Mathematics related courses which are mandatory to be done but are chosen based on interest</td><td>Count towards CPI</td></tr>
+            <tr><td>HASMED Electives</td><td>Humanities, Arts, Sociology, Management, Entrepreneurship and Design related courses</td><td>Count towards CPI</td></tr>
+            <tr><td>Flexible Electives</td><td>All electives including STEM, HASMED and Department electives come under this superset</td><td>Count towards CPI</td></tr>
+            <tr><td>Department Electives</td><td>Advanced-level courses from your department</td><td>Count towards CPI</td></tr>
+            <tr><td>Additional Learning Courses (ALCs)</td><td>Any extra course, in any department, by your choice, taken up for extra learning.</td><td>Don’t count towards CPI</td></tr>
+            <tr><td>Audit Courses</td><td>Wanting just an exposure to a course - without having to obtain a good grade - maximum of 2 audit courses in the entire period of study</td><td>Don’t count towards CPI</td></tr>
+            <tr><td>Sit through</td><td>Sitting through a course only for exposure without registering for it</td><td>Don’t count towards CPI</td></tr>
+          </tbody>
+        </table>
+        <div class="note">NOTE: All courses which count towards major CPI are compulsory to complete the minimum requirement for a degree.</div>
+ 
+        <h3 id="sec-selfstudy">3.8 &nbsp;Self Study Courses</h3>
+        <p class="kv"><b>Purpose:</b> Primarily for final-year students (after 8th semester or after expiry of program duration) who need to complete mandatory credits for graduation.</p>
+        <p class="kv"><b>Course Limit:</b> A student can take a maximum of two courses in self-study mode.</p>
+        <p class="kv"><b>Support:</b></p>
+        <ul>
+          <li>Professors provide study materials.</li>
+          <li>Doubt-clearing sessions are conducted.</li>
+          <li>Exams are held and normal grading policies apply, same as regular courses.</li>
+        </ul>
+        <p class="kv"><b>Registration Process:</b></p>
+        <ul>
+          <li>Submit the <a href="https://drive.google.com/file/d/1aOvevYq-xVsf0XZtbhnd8f5I6J887uCl/view?usp=sharing" target="_blank" rel="noopener">Self-Study Form</a> to the respective department office.</li>
+          <li>After submission, you will receive an email from the Academic Office with payment instructions.</li>
+          <li>Visit the Academic Office (Main Building, 2nd floor) to generate a payment request.</li>
+          <li>Make an offline payment at the Cash Section by showing the payment request.</li>
+          <li>Submit the payment receipt back to the Academic Office.</li>
+          <li>Once processed, the course will appear on the ASC portal.</li>
+        </ul>
+        <p class="kv"><b>Fees:</b></p>
+        <ul>
+          <li>₹2000 per course for General/OBC/EWS students.</li>
+          <li>₹1000 per course for SC/ST students.</li>
+        </ul>
+        <p class="kv"><b>Duration:</b> Typically runs from the second week of May to the second week of July.</p>
+        <p class="kv"><b>Evaluation:</b> Aligned with the academic calendar and treated at par with regular semester courses (whether in summer or normal terms).</p>
+ 
+        <h3 id="sec-guided">3.9 &nbsp;Guided Study Courses</h3>
+        <p class="kv"><b>Purpose:</b> Designed for Category I students to pursue non-core courses in a self-study mode during regular semesters.</p>
+        <p class="kv"><b>Approvals Required:</b> 
+          <ul>
+            <li>Recommendation from the Faculty Adviser or Project Guide.</li>
+            <li>Approval from both the DUGC and UGAPEC</li> 
+</ul>
+</p>
+        <p class="kv"><b>Course Limit:</b> 
+          <ul>
+            <li>Maximum one course per semester, starting from the third semester.</li>
+            <li>Maximum of four Guided Study courses allowed during the entire program.</li> 
+</ul>
+</p>
+     <p class="kv"><b>Faculty Involvement: </b>Enrollment is subject to the availability and willingness of a faculty member to supervise the course. </p>
+        <p class="kv"><b>Restrictions:</b></p>
+        <ul>
+          <li>Cannot be taken concurrently with a URA (Undergraduate Research Award).</li>
+          <li>Standard credit load rules still apply.</li>
+        </ul>
+          <p class="kv"><b>Credit Tagging: </b>Credits may count towards a Minor or Honors if explicitly specified by the academic unit.</p>
+ 
+        <p class="kv"><b>Registration & Evaluation:</b></p>
+        <ul>
+          <li>Follow the same process as regular courses. </li>
+          <li>Students must fill out the <a href="https://drive.google.com/file/d/1T2denUneBi-7rywKo_GvW7wuXi54dXwb/view?usp=sharing">Guided Study Form</a> and submit it to the concerned professor before registration begins.</li>
+        </ul>
+ 
+ 
+        <h3 id="sec-summer">3.10 &nbsp;Summer Courses</h3>
+        <p>Students with backlogs can register for summer courses. If registering for 2+ backlog courses, they may also take 1 course in advance. A maximum of 24 credits (typically 4 courses) is allowed, except for extension students who can take more if available.</p>
+        <p>Minimum 80% attendance is mandatory; falling short results in an FR grade. Courses can be dropped within 7 days of the first lecture.</p>
+        <p>Register via Internal ASC under “Registration/Adjustments.” Pay ₹9000 per course through External ASC under “Payments.” No offline process is needed.</p>
+        <p>Check Internal ASC (select semester) for available courses. All relevant dates and procedures are listed in the academic calendar. You can also refer to the <a href="https://bighome.iitb.ac.in/index.php/s/PMd3dDYrYHZtxWx">Summer Term Guidelines 2025-26</a>
+ 
+        <h3 id="sec-nptel">3.11 &nbsp;NPTEL / SWAYAM Courses</h3>
+        <p class="kv"><b>Credit Limit:</b> Students can complete up to 2 elective courses (max 12 credits) via <a href="https://nptel.ac.in/" target="_blank" rel="noopener">NPTEL</a>. Extension/ARP students may take up to 24 credits (core and elective) with DUGC recommendation.</p>
+        <p class="kv"><b>Credits &amp; Grading:</b> A 12-week course equals 6 credits, while 8-week courses equal to 3-4 credits. Grades for NPTEL courses are awarded out of 100 and are not included in CPI calculations.</p>
+        <p class="kv"><b>Enrollment Process:</b> Submit an NPTEL Course Mapping Request Form signed by Faculty Advisor and course instructor to the DUGC via the General Secretary (GSec) for approval.</p>
+        <p class="kv"><b>Registration &amp; Fee:</b> After approval, register and pay ₹1000 on the <a href="https://swayam.gov.in/about" target="_blank" rel="noopener">SWAYAM</a> portal for the course exam.</p>
+        <p class="kv"><b>Completion Formalities:</b> On passing the exam, submit the printed certificate and the signed NPTEL form to DUGC via GSec. It will then be forwarded to the Academic Office for ASC entry under course code O-IITB.</p>
+        <p class="kv"><b>Timelines:</b> Refer to the SWAYAM portal for all deadlines and follow them strictly.</p>
+        <p>Here are some <a href="https://docs.google.com/document/d/10FmHbdOdeEKnzE00Qc90zKLxgYGAtNHD/edit?usp=sharing&amp;ouid=106989683938248810409&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">FAQs</a> for detailed guidance.</p>
+ 
+        <h3 id="sec-seminars">3.12 &nbsp;Seminars</h3>
+        <p>A Seminar is a 3-credit course where, under the supervision of a faculty member, the student conducts an in-depth study on a specialized topic.</p>
+        <p>This involves surveying relevant technical literature, gaining an understanding of various aspects of the problem, and synthesizing the findings.</p>
+        <p>The student is expected to compile the insights into a written report and deliver an oral presentation before a designated committee of faculty members.</p>
+ 
+ 
+        <h3 id="sec-ir">3.13 &nbsp;IR Language Courses</h3>
+        <p>International Relations (IR) language courses are the courses that are offered for the benefit of students as well as staff of IIT Bombay.</p>
+        <p>These courses are offered in many languages such as Japanese, French, Spanish and Chinese.</p>
+        <p>These courses are separately run and have no relation to credits/grades.</p>
+        <p>You can contact the Institute Secretary International Relations (ISIR - UG) for more details about the IR language courses. Reviews for these courses can be found <a href="https://drive.google.com/drive/folders/13Hn728qx0PUhIP5KdX6KnT9t6lD1vcqc?usp=sharing" target="_blank" rel="noopener">here</a>.</p>
+      </div>
+ 
+      <!-- 3. WHY MINOR -->
+      <div class="block" id="why-minor">
+        <h2><span class="badge">4</span>Why Should One Take Up a Minor</h2>
+        <p>Minor courses allow you to officially explore a department other than yours while at the same time getting credit for it. It adds value to your major degree and can be a gateway to get opportunities in the field you have completed your minor in.</p>
+        <p>Your minor degree can give you sufficient knowledge to enable you to take part in interdisciplinary research and even pursue your higher studies in such fields.</p>
+        <p>Though a minor degree can be pursued simply out of genuine and deep interest in a particular department without any specific end goal in view, for the general majority, you should select it in such a way that it either suits your major degree in a research-oriented interdisciplinary manner or in a generic way to any engineer or scientist.</p>
+        <p>You should also look at how all the minor courses fit in with each other for a more holistic approach; some departments draw up a suggested schedule of when each minor course must be taken to reap the full benefits out of the curriculum.</p>
+        <p>Minor courses don’t count in your CPI, so you should select a minor based on your interest.</p>
+      </div>
+ 
+      <!-- 4. WHY Honours -->
+      <div class="block" id="why-Honours">
+        <h2><span class="badge">5</span>Why Should One Take Up an Honours</h2>
+        <p>Honours courses are either advanced-level courses in your department or are courses designed to give you more exposure to different areas in your department. It is like a specialization in your own discipline..</p>
+        <p>Honours research topics are varied and negotiable - if you are really interested in a topic and want to learn more about it, you’ll be encouraged and supported.</p>
+        <p>From a potential employer’s perspective, whatever your department, it appears laudable to have demonstrated the ability to achieve a complex and demanding goal and have in-depth knowledge in your department.</p>
+        <p>It helps you prepare for higher studies or to take a job in a particular specialized area so that you can compete with, say, an M.Tech who has specialized in the same area; there are also higher chances that your profile will get noticed by universities for their MS/Ph.D. programs..</p>
+      </div>
+ 
+      <!-- 5. TAGGING -->
+      <div class="block" id="tagging">
+        <h2><span class="badge">6</span>Tagging Rules</h2>
+        <p>Every course you do in the institute falls under one of the categories of courses as described in section 1. Tags are given to courses to classify them. The tags of electives can be changed as per the rules that follow.</p>
+        <p>This facility allows students to do additional courses and finally make select courses count towards 'Core CPI' (the CPI of prescribed curriculum credits)</p>
+        <p><b>Rules:</b></p>
+        <p>Re-tagging will be available to students ONLY TWICE in their entire program duration, the first time before placements (Second Last Semester Starting) and second time post curriculum completion (Last Semester).</p>
+        <div class="note"><b>Note:</b>
+          <ul>
+            <li>For students who convert to the IDDDP/Dual Degree Programme after the 6th semester, eligibility for retagging depends on whether they avail the retagging window available after their 6th semester. If they do not use this opportunity, they will remain eligible to retag after their 8th and 10th semesters. However, if they avail the retagging window after the 6th semester (prior to conversion), they will have only one retagging opportunity remaining, which will be after their 10th semester.</li>
+            <li>For students enrolled in the Dual Degree Programme from the beginning, retagging is available only after their 8th and 10th semesters. They are not eligible to avail the retagging window after their 6th semester.</li>
+          </ul>
+        </div>
+        <p><b>Tags of courses:</b></p>
+        <ul>
+          <li>Core Course - C</li>
+          <li>Department Elective - D</li>
+          <li>Interdisciplinary STEM Elective - SE</li>
+          <li>Interdisciplinary HASMED Elective - HE</li>
+          <li>Minor Course - M</li>
+          <li>Additional Learning Courses - T</li>
+          <li>Honours Course - O</li>
+        </ul>
+        <p>An approved change of tag will result in fresh calculation of SPI/ CPI from the semester. The tag change has been made effective due to the fact that additional learning course(s) do NOT constitute the core SPI/ CPI of a student.</p>
+        <p>Following is a table specifying the current rules about the changing of tags from one to another and the restrictions put on the same:</p>
+        <table>
+          <thead><tr><th>TAG CODE</th><th>TAG DESCRIPTION</th><th>CHANGEABLE INTO</th></tr></thead>
+          <tbody>
+            <tr><td>T</td><td>Additional Learning Course(ALC)</td><td>SE, HE, O, M</td></tr>
+            <tr><td>C</td><td>Core Course</td><td>C</td></tr>
+            <tr><td>D</td><td>Department Electives</td><td>T,O</td></tr>
+            <tr><td>SE</td><td>Interdisciplinary Stem Electives</td><td>T,M</td></tr>
+            <tr><td>HE</td><td>Interdisciplinary Hasmed Electives</td><td>T,M</td></tr>
+            <tr><td>O</td><td>Honours Course</td><td>T, D</td></tr>
+            <tr><td>M</td><td>Minor Course</td><td>T, SE, HE</td></tr>
+          </tbody>
+        </table>
+        <p>Please check for the updated retagging rules here before making any decision as these are subject to change.</p>
+        <div class="note"><b>NOTE:</b>
+          <ul>
+            <li>These retagging rules are not applicable for all courses. It is advised to talk to the course instructor or a senior before you take up a course. For a lot of courses, the instructors do not allow retagging.</li>
+            <li>The Institute Elective (I) tag has been discontinued. Do not tag any course as "I" during registration, as it may create issues with your graduation requirements.</li>
+            <li>For any special requests i.e. a change, which cannot be implemented on the tagging interface, the student has to get approval from the HOD of the concerned department (other department in case of minors).</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <!-- 6. RESEARCH -->
+      <div class="block" id="research">
+        <h2><span class="badge">7</span>Research</h2>
+ 
+        <h3 id="sec-slp">7.1 &nbsp;Supervised Learning Project (SLP)</h3>
+        <p>Supervised Learning Project (SLP), also known as RnD in some departments, is a project-based course - generally for 6 credits, where a student can work for one entire semester on a project under a professor.</p>
+        <p>It is not always necessary to do a project under a professor in your department.</p>
+        <p>The professor you choose can be from a different department, but it is subject to rules and conditions laid down by your department.</p>
+ 
+        <h3 id="sec-btp">7.2 &nbsp;B.Tech. Project</h3>
+        <p>B.Tech. projects (BTPs) may be offered as a single unit of 12 credits (BTP) or as 6 credits of BTP-I followed by BTP-II of 6 credits or 12 credits.</p>
+        <p>Wherever it is split into two units, BTP - I becomes a pre-requisite for BTP - II.</p>
+        <p>Departments may prescribe a minimum performance in BTP - I (which may be higher than the pass grade ‘DD’) for being eligible for BTP - II.</p>
+        <p>BTP - I and BTP - II are separately graded, at the end of the respective semesters.</p>
+        <p>These projects are supervised, and need regular interaction (at least once a week) with the supervisor.</p>
+        <p>Students have to submit a project report and present it in front of a panel of examiners.</p>
+        <p>The dates for submission of reports, the dates for presentations, and details of mode of assessment are decided by the individual departments.</p>
+        <p>Both BTPs are counted in CPI calculation.</p>
+ 
+        <h3 id="sec-ura">7.3 &nbsp;Undergraduate Research Awards (URA)</h3>
+        <p>The Undergraduate Research Awards (URA) is a program designed for students with a strong inclination toward research. It aims to recognize and document their research and developmental efforts at three levels: URA01, URA02, and URA03. Each award is independent and reflects the student's contributions and achievements. These awards are listed in the Transcript.</p>
+        <p><b>URA 01</b></p>
+        <ul>
+          <li>For preliminary research/ developmental experience for any 1st/2nd /3rd year UG students.</li>
+          <li>You need to take prior approval from DUGC with a signed application by the guide.</li>
+          <li>Upon completion of the project (4-6 months including summer/winter vacations) you need to fill the URA 01 form and submit it to DUGC via GSec.</li>
+          <li>Form link: <a href="https://drive.google.com/file/d/1W0ynVEfdYmn3fj6y9OMZBismTXGEuffn/view?usp=sharing" target="_blank" rel="noopener">URA 01</a></li>
+          <li>No credits are given for this, it just appears on the transcript with a PP grade in the immediate next semester.</li>
+        </ul>
+        <p><b>URA 02</b></p>
+        <ul>
+          <li>Recognition of truly exceptional work, both in quality and in extent, done in the BTP, is only for B.Tech students, not for DD students.</li>
+          <li>Additional 6 credits with an AA is given for URA 02. Hence, it will improve your CPI.</li>
+          <li>You compulsorily need to do two BTPs one in 7th and another in 8th semester.</li>
+          <li>Your work will be evaluated by a committee formed by the DUGC and then the recommendation is sent to the UGAPEC.</li>
+          <li>After BTP 2 you can apply for URA 02 by filling the form and submitting it to the DUGC via GSec.</li>
+          <li>Form link: <a href="https://drive.google.com/file/d/1KytmWnbrFKe90qp0Bb6PhsMM49KTHSWN/view?usp=sharing" target="_blank" rel="noopener">URA 02</a></li>
+        </ul>
+        <p><b>URA 03</b></p>
+        <ul>
+          <li>Recognition of truly exceptional work, both in quality and in extent, done in the DDP.</li>
+          <li>Only for DD students.</li>
+          <li>You compulsorily need to do two DDPs one in 9th and another in 10th semester as DD requirements.</li>
+          <li>Additional 6 credits with an AA is given for URA 03. Hence, it will improve your CPI.</li>
+          <li>Your work will be evaluated by a committee formed by the DUGC and then the recommendation is sent to the UGAPEC.</li>
+          <li>After DDP 2 you can apply for URA 03 by filling the form and submitting it to the DUGC via GSec.</li>
+          <li>Form link: <a href="https://drive.google.com/file/d/1YsRpdcQArO5_Ullab3883cY9OFmr6EqC/view?usp=sharing" target="_blank" rel="noopener">URA 03</a></li>
+        </ul>
+      </div>
+ 
+      <!-- 7. IDDDP -->
+      <div class="block" id="idddp-intro">
+        <h2><span class="badge">8</span>Intro to IDDDP</h2>
+        <p>The Interdisciplinary Dual Degree Program (IDDDP) is an academic initiative that allows undergraduate students to pursue an additional master's degree in a specialized interdisciplinary area by extending their studies by one year. This program enables students to combine their core undergraduate discipline with advanced knowledge in an emerging or allied field.</p>
+        <p><b>Degree Format:</b></p>
+        <p>Bachelor of Technology in XXX and Master of Technology in YYY with specialization in ZZZ (if any)</p>
+        <p><b>Example:</b></p>
+        <p>Bachelor of Technology in Chemical Engineering and Master of Technology in Electrical Engineering with Specialization in Microelectronics</p>
+        <p>For the full guide, including who it suits, its benefits, head to <a href="#idddp" onclick="go('idddp',event)">The IDDDP Corner</a>.</p>
+      </div>
+ 
+      <!-- 8. SEMESTER EXCHANGE -->
+      <div class="block" id="semester-exchange">
+        <h2><span class="badge">9</span>Intro to Semester Exchange</h2>
+        <p>The Semester Exchange Program at IIT Bombay is a chance to study abroad for one semester at one of IIT Bombay’s partner universities. IIT Bombay signs Memoranda of Understanding (MoUs) with various institutions worldwide, many of which facilitate academic exchanges. MoUs lay the groundwork for how these will work - student eligibility, departments/schools and so on.</p>
+        <p>Spending a semester abroad has several advantages:</p>
+        <ul>
+          <li>Study at top international universities</li>
+          <li>Take unique courses not offered at IITB</li>
+          <li>Exposure to different cultures and perspectives</li>
+          <li>Build a global network of friends and contacts</li>
+          <li>Improve soft skills like adaptability, independence, communication</li>
+          <li>Learn how academics and research work in other countries</li>
+          <li>Students who go on to tertiary studies find themselves more comfortable in ‘foreign’ environments.</li>
+          <li>Prospective employers in almost every field look favorably upon experience gained while living overseas and knowledge obtained of another language and culture.</li>
+          <li>Increased pressure to communicate and relate to others develops an awareness of group dynamics and personal sensitivity towards others.</li>
+          <li>Successful program completion represents an excellent measure of personal flexibility, encompassing an ability to reach compromise, focus and succeed through challenging times.</li>
+        </ul>
+        <p>For more info about the Semester Exchange Program (Eligibility, timeline, list of universities etc.) please visit the official <a href="https://www.ir.iitb.ac.in/" target="_blank" rel="noopener">IITB International Relations Website</a>.</p>
+      </div>
+ 
+      <!-- 9. REVIEWS -->
+      <div class="block" id="reviews">
+        <h2><span class="badge">10</span>Reviews</h2>
+        <p class="reviews-intro">Reviews are written by students to help you decide which minors and courses to take. The reviews are individual opinions of the respective students and are shared only as a basis for your decision. Select a review from the list to read it here.
+          <button type="button" class="reviews-expand-btn" onclick="enterReviewsFullscreen()">Open full view →</button>
+        </p>
+
+        <div class="review-fullscreen-bar" id="reviewFullscreenBar">
+          <button type="button" class="review-back-btn" id="reviewBackBtn" onclick="exitReviewsFullscreen()">← Back to all</button>
+          <span class="review-fullscreen-title">Reviews</span>
+        </div>
+
+        <button type="button" class="reviews-filter-toggle" id="reviewFilterToggle" onclick="toggleReviewMobileFilters()" aria-expanded="false" aria-controls="reviewFilterPanel">Show department filters</button>
+
+        <div class="reviews-layout">
+          <aside class="reviews-sidebar" aria-label="Review list">
+            <div class="reviews-sidebar-head"><h4>Reviews</h4></div>
+            <div class="reviews-list-panel" id="reviewList" role="listbox" aria-label="Available reviews"></div>
+          </aside>
+
+          <div class="reviews-main">
+            <div class="review-placeholder" id="reviewPlaceholder">
+              Select a review from the list to preview it here.
+            </div>
+            <iframe
+              class="review-frame"
+              id="reviewFrame"
+              title="Review preview"
+            ></iframe>
+          </div>
+
+          <aside class="reviews-filters-reserved" aria-label="Review filters">
+            <div class="reviews-sidebar-head"><h4>Filters</h4></div>
+            <div class="reviews-filter-subhead">Department</div>
+            <div class="reviews-filter-panel" id="reviewFilterPanel"></div>
+          </aside>
+        </div>
+      </div>
+ 
+      <!-- 10. FAQs -->
+      <div class="block" id="faqs">
+        <h2><span class="badge">11</span>FAQs</h2>
+ 
+        <details class="faq"><summary>If I get an FR Grade in a minor course, do I need to repeat the course? And will it reflect in my final transcript?</summary>
+        <p>No, you do not need to repeat the course. However, an 'FR' grade will reflect on the course, under the additional courses done.</p></details>
+ 
+        <details class="faq"><summary>What's the difference between an ALC, Audit and sitting through a course?</summary>
+        <p>Additional Learning Courses (ALCs) do not count towards your CPI but are involved in tagging - if you tag it later as an elective, the grade you get then counts in your CPI. When you audit a course, you do it without obtaining a grade - you get an ‘AU’ on successful completion of the course, which does not carry grade points. Formal registration is required for both these, and they appear on your transcript. But for sitting through a course, you don’t need to register for it, nor does it appear on your transcript.</p></details>
+ 
+        <details class="faq"><summary>If one gets an FR in Elective HS *xxx*, do they need to repeat the same course or can they take up Elective HS *yyy* in its place?</summary>
+        <p>Yes, they can take *yyy* as their HSS elective by changing the tag of HS *xxx* to additional learning and registering for *yyy* in the next semester as HSS-Elective.</p></details>
+ 
+        <details class="faq"><summary>What about the credits when one does some Honours courses but not enough for an Honours degree?</summary>
+        <p>If one has completed some Honours courses but not enough to acquire an Honours degree, then those courses would be counted under Additional learning Courses. Some departments allow to tag these as Department/other electives as well.</p></details>
+ 
+        <details class="faq"><summary>Suppose I take up any other random subject course, but I don’t want to get a minor; will that course show up anywhere while passing out?</summary>
+        <p>The grade that you obtained in the course will show up in the transcript. All the courses taken up as a minor are converted to an ALC unless you have completed 30 prescribed minor credits in a particular department.</p></details>
+ 
+        <details class="faq"><summary>Can I take a minor course through the main registration window?</summary>
+        <p>One cannot take a minor course through a main registration window if the 'minor course tag' has been allotted through the pre registration window.</p></details>
+ 
+        <details class="faq"><summary>Can I take a course which is ONLY running as a minor course as an elective course?</summary>
+        <p>If a course is only running as a minor course [Way to check: ASC&gt;Academics&gt;All About Courses] - If there is no other entry of the course apart from the section 'M', then it means it is only running as a minor course. If the course is only running as a minor 'section' course, one cannot take it as an elective tag through the main registration. Example - MG courses last Autumn Semester. One can later, [during graduation/retagging] however tag them as minor courses with the permission of their [parent] department.</p></details>
+ 
+        <details class="faq"><summary>Where can I see the waitlist of a pre registered course?</summary>
+        <p>You are automatically enrolled into the waitlist of the higher preference courses once the minor allocation has been done. You will be automatically enrolled in a higher preference course in the main registration window if a seat is available in the course. A student cannot see their waitlist number or the waitlist of the pre registered course in the main registration window.</p></details>
+ 
+        <details class="faq"><summary>Can I go back to my lower preference if I got my higher preference and I didn't freeze my lower preference?</summary>
+        <p>No, not in any case will you be allowed to move to your lower preference if you have been allotted a higher preference. Hence, you are always advised to fill in your preferences carefully.</p></details>
+ 
+        <details class="faq"><summary>Can I register for a course in the FCFS waitlist in the main registration window of a minor course which is offered through pre registration?</summary>
+        <p>There is no FCFS waitlist for minor courses offered through pre registration. If the course is also running as an elective course, the course can be taken up from the main registration window.</p></details>
+ 
+        <details class="faq"><summary>A course has a prerequisite, but not mentioned on ASC.</summary>
+        <p>Please follow the information mentioned on the department website. You can also report it to the appropriate authority.</p></details>
+ 
+        <details class="faq"><summary>How many preferences can I fill in the pre registration window? Till when can I change it?</summary>
+        <p>Any student can fill in as many preferences in the pre registration interface. They can change it till the deadline of the closing of the interface. Important to note - Pre registration is NOT first come first serve basis.</p></details>
+ 
+        <details class="faq"><summary>How do I figure out which courses are allowed by my department as department or institute electives?</summary>
+        <p>You should do the registration in consultation with your faculty advisor. As such, there is a list approved by the DUGC/DPGC of the department for which the courses are approved as department electives. Please ask your faculty advisor or Department General Secretary to help. If you want to take up some course which you think needs approval, ask your faculty advisor!</p></details>
+ 
+        <details class="faq"><summary>How do I know which courses are running as minor courses?</summary>
+        <p>The courses running as minor courses are updated on running courses and on the IIT Bombay Academic Website.</p></details>
+ 
+        <details class="faq"><summary>One of the minor courses is available but I am still not able to register for it through the main registration.</summary>
+        <p>Please check the running courses, if the course isn't running as a normal course [without the 'M' section], it won't be allowed to be registered in the main reg window.</p></details>
+      </div>
+ 
+    </article>
+  </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-cols">
+      <div>
+        <div class="foot-logos">
+          <img src="assets/ugac-logo.png" alt="Undergraduate Academic Council" />
+          <img src="assets/sss-logo.png" alt="Student Support Services" />
+        </div>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/studentsupportservices_iitb?igsh=aWJrbmd6eGtmaHVo" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.facebook.com/sss.iitb/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="mailto:sss1.iitb@gmail.com" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-contact">
+        <div class="name">Contact Us</div>
+        <div class="role">Ananya Gedela<br>Institute Secretary, Academic Affairs<br>Head, Student Support Services</div>
+        <div class="meta">
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+            <a href="mailto:isaa.sss.iitb@gmail.com">isaa.sss.iitb@gmail.com</a>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>6362901001</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="disc-btn" id="discBtn" title="Disclaimer" aria-label="Disclaimer">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+    <line x1="12" y1="9" x2="12" y2="13"></line>
+    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+  </svg>
+</button>
+ 
+<div class="disc-overlay" id="discOver">
+  <div class="disc-modal">
+    <button class="disc-close">&times;</button>
+    <div class="disc-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+        <line x1="12" y1="9" x2="12" y2="13"></line>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      <span>Disclaimer</span>
+    </div>
+    <p>Information on this website is only a guideline for the students to help them with the choices they make and also in the various important features of the Institute academic system.</p>
+    <p>It may happen that the actual details of courses or rules mentioned on this website may face an amendment over time. Please confirm the rules/details from relevant authorities before making any decisions.</p>
+  </div>
+</div>
+
+<script src="assets/search_index.js"></script>
+<script src="assets/main.js"></script>
+
+</body>
+</html>

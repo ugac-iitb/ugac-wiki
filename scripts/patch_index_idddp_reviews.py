@@ -1,11 +1,11 @@
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-INDEX = ROOT / "index.html"
+INDEX = ROOT / "idddp-reviews.html"
 GENERATED = ROOT / "scripts" / "idddp_reviews.generated.js"
 
 START_MARKER = "  /* ---------- IDDDP / DDP Reviews ---------- */\n  var idddpReviews = ["
-END_MARKER = "\n\n  var IDDDP_REVIEW_TYPE_ORDER"
+END_MARKER = "\n</script>"
 
 OLD_META = """    var meta = '<div class="review-content-meta">'
       + '<strong>Review by ' + escapeHtml(review.name) + '</strong><br>'
@@ -29,12 +29,10 @@ def main():
     end = html.index(END_MARKER, start)
     html = html[:start] + "  /* ---------- IDDDP / DDP Reviews ---------- */\n" + generated + html[end:]
 
-    if OLD_META not in html:
-        raise SystemExit("Could not find loadIdddpReview meta block")
-    html = html.replace(OLD_META, NEW_META, 1)
+
 
     INDEX.write_text(html, encoding="utf-8")
-    print("Updated index.html with CSV review data")
+    print("Updated idddp-reviews.html with CSV review data")
 
 
 if __name__ == "__main__":
