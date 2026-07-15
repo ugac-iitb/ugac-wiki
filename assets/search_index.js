@@ -203,13 +203,6 @@ var SEARCH_INDEX = [
     "text": "The Undergraduate Research Awards (URA) is a program designed for students with a strong inclination toward research. It aims to recognize and document their research and developmental efforts at three levels: URA01, URA02, and URA03. Each award is independent and reflects the student's contributions and achievements. These awards are listed in the Transcript. URA 01 For preliminary research/ developmental experience for any 1st/2nd /3rd year UG students. You need to take prior approval from DUGC with a signed application by the guide. Upon completion of the project (4-6 months including summer/winter vacations) you need to fill the URA 01 form and submit it to DUGC via GSec. Form link: URA 01 No credits are given for this, it just appears on the transcript with a PP grade in the immediate next semester. URA 02 Recognition of truly exceptional work, both in quality and in extent, done in the BTP, is only for B.Tech students, not for DD students. Additional 6 credits with an AA is given for URA 02. Hence, it will improve your CPI. You compulsorily need to do two BTPs one in 7th and another in 8th semester. Your work will be evaluated by a committee formed by the DUGC and then the recommendation is sent to the UGAPEC. After BTP 2 you can apply for URA 02 by filling the form and submitting it to the DUGC via GSec. Form link: URA 02 URA 03 Recognition of truly exceptional work, both in quality and in extent, done in the DDP. Only for DD students. You compulsorily need to do two DDPs one in 9th and another in 10th semester as DD requirements. Additional 6 credits with an AA is given for URA 03. Hence, it will improve your CPI. Your work will be evaluated by a committee formed by the DUGC and then the recommendation is sent to the UGAPEC. After DDP 2 you can apply for URA 03 by filling the form and submitting it to the DUGC via GSec. Form link: URA 03"
   },
   {
-    "id": "idddp-intro",
-    "page": "content",
-    "title": "Intro to IDDDP",
-    "crumb": "Course Booklet",
-    "text": "The Interdisciplinary Dual Degree Program (IDDDP) is an academic initiative that allows undergraduate students to pursue an additional master's degree in a specialized interdisciplinary area by extending their studies by one year. This program enables students to combine their core undergraduate discipline with advanced knowledge in an emerging or allied field. Degree Format: Bachelor of Technology in XXX and Master of Technology in YYY with specialization in ZZZ (if any) Example: Bachelor of Technology in Chemical Engineering and Master of Technology in Electrical Engineering with Specialization in Microelectronics For the full guide, including who it suits, its benefits, head to The IDDDP Corner ."
-  },
-  {
     "id": "semester-exchange",
     "page": "content",
     "title": "Intro to Semester Exchange",
@@ -355,6 +348,97 @@ var SEARCH_INDEX = [
     "title": "IDDDP / DDP Reviews",
     "crumb": "IDDDP Corner",
     "text": "idddp ddp dual degree reviews student experiences conversion mathematics chemistry aerospace physics civil kcdh cminds chemical idc"
+  },
+  {
+    "id": null,
+    "page": "idddp-eligibility",
+    "title": "IDDDP Eligibility",
+    "crumb": "IDDDP Corner",
+    "text": "idddp eligibility criteria who can apply Irrespective of the degree you are currently pursuing (B.Tech, B.S., or Dual Degree), you can apply for an IDDDP program for all specialisations of Dual Degree and M.Tech programs approved by the Academic Senate, provided you satisfy the minimum eligibility criteria. Eligible Degrees: B.Tech, B.S. or Dual Degree programs can apply (except Electrical Dual Degree students). Minimum CPI: at least 7.5 at the end of the 6th semester. Academic Standing: no FR, DR, DX, or W grades in any mandatory course including NSO, NSS, or NCC. Students admitted to a B.S. program through the Mathematics Olympiad are not eligible. The DUGC/DPGC of the host department may specify extra eligibility or selection criteria."
+  },
+  {
+    "id": null,
+    "page": "idddp-application",
+    "title": "IDDDP Application",
+    "crumb": "IDDDP Corner",
+    "text": "idddp application when do I apply for the program conversion To convert to an IDDDP, you can apply at the end of your 6th semester. The Academic Office sends out an email with the timeline: opening of online application form tentatively around mid-June, online recommendations by Faculty Advisor (home department), online approval or rejection by Convener DUGC home department, online approval or rejection by Convener DUGC/DPGC host department, final decision by Convener UGAPEC. To convert to a Dual Degree Program you apply manually at the end of your 6th semester until one week prior to the start of the 7th semester."
+  },
+  {
+    "id": null,
+    "page": "idddp-selection",
+    "title": "IDDDP Selection",
+    "crumb": "IDDDP Corner",
+    "text": "idddp selection how many get selected At most 2 students per DD/M.Tech specialization. Exceptions: KCDH and CMinDS 8 TA and 22 RAP for each, Climate Studies 5 students. There may also be certain additional criteria for some departments; review their websites before applying."
+  },
+  {
+    "id": null,
+    "page": "idddp-departments",
+    "title": "Departments Offering IDDDP",
+    "crumb": "IDDDP Corner",
+    "text": "idddp departments offering the program Chemical Engineering Chemistry Civil Engineering Center for Climate Studies Centre for Digital Health KCDH C-MInDS Electrical Engineering Industrial Engineering and Operations Research IEOR Mathematics Statistics Mechanical Engineering Energy Science and Engineering Physics Shailesh J. Mehta School of Management SJMSOM Systems and Control SysCon"
+  },
+  {
+    "id": null,
+    "page": "idddp-prerequisites",
+    "title": "IDDDP Pre-requisite Courses",
+    "crumb": "IDDDP Corner",
+    "text": "idddp pre-requisite prerequisite courses Is there a set of courses that need to be done. IDDDP is highly department and specialization specific therefore there is no centralized list of courses. Some courses need to be done compulsorily as core courses and the remaining would be elective courses. There can be extra courses demanded by the host department, and prerequisite courses in terms of minor courses or other electives. The department-specific prerequisites and eligibility criteria are dynamic and subject to change; confirm with the host department."
+  },
+  {
+    "id": null,
+    "page": "idddp-minor",
+    "title": "IDDDP Minor Requirements",
+    "crumb": "IDDDP Corner",
+    "text": "idddp minor requirements Do I need to complete a Minor in the other department. While a minor is not necessary while applying for an IDDDP, it is strongly recommended by students to have one as going straight into Master's level courses without solid foundations can be a challenge. If both you and your supervisor feel you have the required basics, you do not need a Minor in the same department. Not all minor courses can get transferred to your coursework for IDDDP because IDDDP calls for Master's level courses and many 2xx, 3xx and even 4xx courses may not be acceptable."
+  },
+  {
+    "id": null,
+    "page": "idddp-procedure",
+    "title": "IDDDP Application Procedure",
+    "crumb": "IDDDP Corner",
+    "text": "idddp application procedure Find a guide or supervisor for your IDDDP project. SOP, course plan, research credentials optional. Completely online application, choose up to three departments/programs and two specializations. Apply via External ASC Forms/Requests IDDDP Application. Approvals required from Faculty Adviser, Convener DUGC of home department, Convener DUGC/DPGC of host department, final decision by UGAPEC. All approvals are fully online via Internal ASC. Dual Degree Program guidelines vary by department. Your entry into the IDDDP program remains provisional till 8th semester until you complete your B.S and B.Tech curriculum. TAship payment subject to terms and conditions. You get a new faculty advisor after selection and your roll number remains the same."
+  },
+  {
+    "id": null,
+    "page": "idddp-retagging",
+    "title": "IDDDP Re-Tagging Windows",
+    "crumb": "IDDDP Corner",
+    "text": "idddp re-tagging retagging windows For students converting to IDDDP/DD after the 6th semester: if they do not avail the re-tagging window after their 6th semester they remain eligible for retagging windows after their 8th and 10th semesters; if they avail the retagging window after the 6th semester they have only one retagging opportunity remaining after their 10th semester. Manual re-tagging for IDDDP students: the Graduation Requirements tab may not appear on external ASC, so manual re-tagging is required by submitting tagging requests approved by the faculty advisor to the Academic Office."
+  },
+  {
+    "id": null,
+    "page": "idddp-links",
+    "title": "IDDDP Useful Links",
+    "crumb": "IDDDP Corner",
+    "text": "idddp useful links IDDDP Guidelines 2025, Slides and Recording of the Session To Dual Or Not To Dual 2026, Guide for IDDDP Application on External ASC, IDDDP Video series by SSS, IDDDP Contact Database, IDDDP/DD Whatsapp Community, UG Rulebook, CMInDS, SJMSOM IDDDP in Management MBA, IEOR, KCDH IDDDP in Healthcare Informatics, Syscon, Energy, Mathematics and Statistics."
+  },
+  {
+    "id": null,
+    "page": "policy-newsletter",
+    "title": "Policy Newsletter",
+    "crumb": "Resources",
+    "text": "policy newsletter decoding the latest IITB policies Senate decisions Category V credit limit 36 credits, final semester registration cap 54 credits, dual minor policy more than one minor two minors honours, IDDDP in Chemistry, withdrawal of courses with W grade discontinued course dropping period extended, fixed timeline conversion B.Tech to Dual Degree, re-tagging of courses only once"
+  },
+  {
+    "id": null,
+    "page": "dues",
+    "title": "Information Regarding Levy and Clearance of Dues",
+    "crumb": "Resources",
+    "text": "dues levy clearance of dues no dues status green red yellow white convocation degree Dean SA Office hostel HCU department office academic office scholarship SAU semester fees advances excess scholarships gymkhana estate office quarters library late fee books fine payment cash section"
+  },
+  {
+    "id": null,
+    "page": "fast-track-degree",
+    "title": "Fast Track Degree Guide",
+    "crumb": "Resources",
+    "text": "fast track degree guide graduate early complete degree requirements before four years B.Tech B.S. at least three years at institute eligibility application approval FacAd DUGC UGAPEC provisional certificate credit completion degree conferment convocation no semester fees placement"
+  },
+  {
+    "id": null,
+    "page": "rejoining-procedure",
+    "title": "Procedures for Rejoining After Being Inactive for a Semester",
+    "crumb": "Resources",
+    "text": "rejoining after being inactive semester drop semester exchange SemEx continuation fee 3000 academic office registration portal reopened course registration hostel fee exemption credit transfer HoD grade card transcript credit conversion form UGAPEC course tagging"
   },
   {
     "id": null,

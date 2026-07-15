@@ -3,6 +3,11 @@ var pages = [
   'content',
   'resources',
 
+  'policy-newsletter',
+  'dues',
+  'fast-track-degree',
+  'rejoining-procedure',
+
   'idddp',
   'idddp-eligibility',
   'idddp-application',
@@ -50,6 +55,10 @@ var pages = [
     'home': 'index.html',
     'content': 'content.html',
     'resources': 'resources.html',
+    'policy-newsletter': 'policy-newsletter.html',
+    'dues': 'dues.html',
+    'fast-track-degree': 'fast-track-degree.html',
+    'rejoining-procedure': 'rejoining-procedure.html',
     'idddp': 'idddp.html',
     'idddp-eligibility': 'idddp-eligibility.html',
     'idddp-application': 'idddp-application.html',
@@ -104,6 +113,7 @@ var pages = [
           var panel = document.querySelector('.reviews-list-panel');
           if(panel) panel.scrollTop = 0;
         } else {
+          loadFirstReviewOfSection(id);
           scrollReviewListTo(id);
         }
       });
@@ -324,6 +334,7 @@ var pages = [
   var selectedReview = null;
   var reviewFilterQuery = '';
   var selectedDepartments = [];
+  var selectedCategories = [];
   var REVIEW_SECTION_IDS = ['reviews','sec-minor-reviews','sec-Honours-reviews','sec-unconventional-reviews','sec-slp-reviews','sec-language-reviews'];
   var DEPARTMENT_REVIEW_ANCHORS = {
     'SLP/RnD': 'sec-slp-reviews',
@@ -336,6 +347,23 @@ var pages = [
 
   function isReviewSectionId(id){
     return REVIEW_SECTION_IDS.indexOf(id) >= 0;
+  }
+
+  var REVIEW_ANCHOR_TO_TYPE = {
+    'sec-minor-reviews': 'Minor',
+    'sec-Honours-reviews': 'Honours',
+    'sec-unconventional-reviews': 'Unconventional Course',
+    'sec-slp-reviews': 'SLP/RnD',
+    'sec-language-reviews': 'Language'
+  };
+
+  // When the user opens a specific review section, preview its first review
+  // instead of leaving a previously selected (stale) review on screen.
+  function loadFirstReviewOfSection(anchorId){
+    var type = REVIEW_ANCHOR_TO_TYPE[anchorId];
+    if(!type) return;
+    var list = getFilteredReviews().filter(function(r){ return r.type === type; });
+    if(list.length) loadReview(list[0]);
   }
 
   function scrollReviewListTo(anchorId){
@@ -351,6 +379,7 @@ var pages = [
     enterReviewsFullscreen();
     requestAnimationFrame(function(){
       renderReviewList();
+      loadFirstReviewOfSection(anchorId);
       scrollReviewListTo(anchorId);
     });
   }
@@ -420,6 +449,47 @@ var pages = [
     renderDepartmentFilters();
   }
 
+  function toggleCategoryFilter(type){
+    var idx = selectedCategories.indexOf(type);
+    var adding = idx < 0;
+    if(idx >= 0) selectedCategories.splice(idx, 1);
+    else selectedCategories.push(type);
+    renderReviewList();
+    renderCategoryFilters();
+    if(adding && REVIEW_TYPE_ANCHORS[type]){
+      navigateToReviewSection(REVIEW_TYPE_ANCHORS[type]);
+    }
+  }
+
+  function clearCategoryFilters(){
+    selectedCategories = [];
+    renderReviewList();
+    renderCategoryFilters();
+  }
+
+  function renderCategoryFilters(){
+    var panel = document.getElementById('reviewCategoryPanel');
+    if(!panel) return;
+    var html = REVIEW_TYPE_ORDER.map(function(type, i){
+      var checked = selectedCategories.indexOf(type) >= 0 ? ' checked' : '';
+      return '<label class="review-filter-item">'
+        + '<input type="checkbox" data-cat-idx="' + i + '"' + checked + '>'
+        + '<span>' + escapeHtml(REVIEW_TYPE_LABELS[type] || type) + '</span>'
+        + '</label>';
+    }).join('');
+    if(selectedCategories.length){
+      html += '<button type="button" class="review-filter-clear" id="reviewCategoryClear">Clear categories</button>';
+    }
+    panel.innerHTML = html;
+    panel.querySelectorAll('input[type="checkbox"]').forEach(function(cb){
+      cb.addEventListener('change', function(){
+        toggleCategoryFilter(REVIEW_TYPE_ORDER[parseInt(cb.getAttribute('data-cat-idx'), 10)]);
+      });
+    });
+    var clearBtn = document.getElementById('reviewCategoryClear');
+    if(clearBtn) clearBtn.addEventListener('click', clearCategoryFilters);
+  }
+
   function getReviewDepartments(){
     var depts = [];
     reviews.forEach(function(r){
@@ -431,6 +501,11 @@ var pages = [
 
   function getFilteredReviews(){
     var result = reviews.slice();
+    if(selectedCategories.length){
+      result = result.filter(function(r){
+        return selectedCategories.indexOf(r.type) >= 0;
+      });
+    }
     if(selectedDepartments.length){
       result = result.filter(function(r){
         return selectedDepartments.indexOf(r.department) >= 0;
@@ -504,6 +579,7 @@ var pages = [
   }
 
   renderReviewList();
+  renderCategoryFilters();
   renderDepartmentFilters();
 
   var IDDDP_REVIEW_TYPE_ORDER = ['IDDDP', 'DDP'];
@@ -696,6 +772,18 @@ var pages = [
       if(visibleNow){ el.classList.add('in'); }   // synchronous: no flash for above-the-fold
       else { ro.observe(el); }
     });
+    // Safety net: on some mobile browsers the IntersectionObserver callback can be
+    // delayed, leaving in-viewport content stuck at opacity:0 (a blank page). After a
+    // short delay, force-reveal any element that is already within the viewport.
+    setTimeout(function(){
+      els.forEach(function(el){
+        if(el.classList.contains('in')) return;
+        var r = el.getBoundingClientRect();
+        if(el.offsetParent !== null && r.top < (window.innerHeight || 800) && r.bottom > 0){
+          el.classList.add('in');
+        }
+      });
+    }, 600);
   }
  
   
@@ -711,6 +799,10 @@ var pages = [
     var path = window.location.pathname;
     var page = 'home';
     if(path.indexOf('resources.html') >= 0) page = 'resources';
+    else if(path.indexOf('policy-newsletter.html') >= 0) page = 'resources';
+    else if(path.indexOf('dues.html') >= 0) page = 'resources';
+    else if(path.indexOf('fast-track-degree.html') >= 0) page = 'resources';
+    else if(path.indexOf('rejoining-procedure.html') >= 0) page = 'resources';
     else if(path.indexOf('idddp') >= 0) page = 'idddp';
     else if(path.indexOf('contact.html') >= 0) page = 'contact';
     else if(path.indexOf('content.html') >= 0) page = 'content';
@@ -729,6 +821,7 @@ var pages = [
     }
     if(document.getElementById('reviews')){
       renderReviewList();
+      renderCategoryFilters();
       renderDepartmentFilters();
     }
     if(document.getElementById('idddp-reviews-block') && typeof idddpReviews !== 'undefined'){

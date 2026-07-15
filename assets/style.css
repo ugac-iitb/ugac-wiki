@@ -513,6 +513,7 @@
     flex:1;
     min-height:0;
     height:auto;
+    max-height:none;
   }
   .reviews-expand-btn{
     display:inline-flex;
@@ -587,6 +588,7 @@
     line-height:1.7;
     color:var(--doc-ink);
     display:none;
+    max-height:min(70vh,640px);
   }
   .review-content-body.loaded{display:block;}
   .review-content-body h3{
@@ -631,6 +633,14 @@
     overflow-y:auto;
     padding:10px 16px 16px;
     max-height:min(70vh,640px);
+  }
+  /* Fixed-height filter group (e.g. the short Review Category list) so it does
+     not compete for vertical space with the scrolling Department list. */
+  .reviews-filter-panel--fixed{
+    flex:none;
+    overflow:visible;
+    max-height:none;
+    border-bottom:1px solid var(--line);
   }
   .review-filter-item{
     display:flex;
