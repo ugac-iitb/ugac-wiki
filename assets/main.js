@@ -76,6 +76,7 @@ var pages = [
     'idddp-procedure': 'idddp-procedure.html',
     'idddp-retagging': 'idddp-retagging.html',
     'idddp-links': 'idddp-links.html',
+    'idddp-speaker-slides': 'idddp-speaker-slides.html',
     'idddp-reviews': 'idddp-reviews.html',
     'grad': 'grad.html',
     'grad-getting-started': 'grad-getting-started.html',
