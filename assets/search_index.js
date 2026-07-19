@@ -338,7 +338,7 @@ var SEARCH_INDEX = [
   {
     "id": null,
     "page": "idddp",
-    "title": "The IDDDP Corner",
+    "title": "IDDDP Corner",
     "crumb": "Page",
     "text": "interdisciplinary dual degree masters program one extra year"
   },
@@ -446,5 +446,47 @@ var SEARCH_INDEX = [
     "title": "Our Team",
     "crumb": "Page",
     "text": "our team ananya gedela sanjana devashree patil raunak kumar suresh student support services sss academic coordinator web team ansh oswal surhud naik contact phone"
+  },
+  {
+    "id": null,
+    "page": "grad",
+    "title": "Grad Corner",
+    "crumb": "Grad Corner",
+    "text": "Grad Corner guide to higher studies applying to universities masters ms phd graduate school abroad application booklet getting started research interests univ hunt building your profile application process"
+  },
+  {
+    "id": null,
+    "page": "grad-getting-started",
+    "title": "Getting Started",
+    "crumb": "Grad Corner",
+    "text": "getting started whats next after graduation higher studies vs jobs ms vs phd pathways pursue higher studies career prospects global exposure research specialization funding duration"
+  },
+  {
+    "id": null,
+    "page": "grad-research-interests",
+    "title": "Narrowing Down Research Interests",
+    "crumb": "Grad Corner",
+    "text": "narrowing down research interests identify departments learning from seniors explore professors work networking alumni research areas extra courses projects internships surp"
+  },
+  {
+    "id": null,
+    "page": "grad-univ-hunt",
+    "title": "The Univ Hunt",
+    "crumb": "Grad Corner",
+    "text": "the univ hunt shortlisting universities research interest curriculum faculty resources rankings qs world us news shanghai financial aspect cost of education funding scholarships location climate culture"
+  },
+  {
+    "id": null,
+    "page": "grad-profile",
+    "title": "Building Your Profile",
+    "crumb": "Grad Corner",
+    "text": "building your profile cv resume academic curriculum vitae statement of purpose sop letters of recommendation lor recommender referees latex projects publications awards"
+  },
+  {
+    "id": null,
+    "page": "grad-application",
+    "title": "Application Process",
+    "crumb": "Grad Corner",
+    "text": "application process gre graduate record examination gmat graduate management admission test verbal quantitative reasoning analytical writing data insights application form biographical academic history test scores toefl essays fees payment"
   }
 ];

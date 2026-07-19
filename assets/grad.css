@@ -1,0 +1,60 @@
+/* ============================================================
+   Grad Corner — page-specific styles
+   Layered on top of style.css; uses the same theme variables
+   so it adapts to both light and dark modes automatically.
+   ============================================================ */
+
+/* Eyebrow label above the page title (e.g. "1 · Getting Started") */
+.g-eyebrow{
+  display:inline-block;font-size:12px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--brand);background:var(--accent-soft);
+  padding:6px 13px;border-radius:999px;margin:0 0 14px;
+}
+
+/* Sticky in-page sub-navigation (used on longer sections) */
+.g-subnav{
+  display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;position:sticky;top:66px;z-index:30;
+  background:var(--bg);padding:10px 0;
+}
+/* Offset anchored sections so their headings clear the sticky header + sub-nav */
+#cv,#sop,#lor,#gre,#gmat,#form{scroll-margin-top:150px;}
+@media (max-width:812px){ .g-subnav{top:60px;} }
+.g-subnav a{
+  font-weight:600;font-size:14px;padding:8px 15px;border-radius:999px;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink);
+  box-shadow:var(--shadow);transition:.15s;text-decoration:none;
+}
+.g-subnav a:hover{border-color:var(--brand-2);color:var(--brand-2);text-decoration:none;transform:translateY(-1px);}
+.g-subnav a.is-active{background:var(--brand);color:#fff;border-color:var(--brand);}
+
+/* Two-column comparison layout that stacks on small screens */
+.g-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:18px 0;}
+.g-col-title{
+  font-family:"Times New Roman",Times,serif;font-weight:700;font-size:19px;
+  color:var(--brand);margin:0 0 4px;padding-bottom:8px;border-bottom:2px solid var(--brand);
+}
+@media (max-width:720px){ .g-cols{grid-template-columns:1fr;gap:16px;} }
+
+/* Grouped mini-card used for tree / flowchart style content */
+.g-card{
+  border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:10px;
+  background:var(--bg);padding:14px 18px;margin:14px 0;
+}
+.g-card > h4{
+  margin:0 0 6px;font-size:16px;font-weight:700;color:var(--brand);
+  font-family:"Times New Roman",Times,serif;
+}
+.g-card p{margin:6px 0;color:var(--doc-ink);}
+.g-card ul{margin:6px 0;padding-left:20px;}
+.g-card ul li{margin:5px 0;color:var(--doc-ink);}
+
+/* Quote / senior testimonial */
+.g-quote{
+  border-left:3px solid var(--brand);background:var(--accent-soft);
+  border-radius:0 10px 10px 0;padding:14px 18px;margin:18px 0;
+  color:var(--doc-ink);font-style:italic;line-height:1.6;
+}
+.g-quote cite{
+  display:block;margin-top:10px;font-style:normal;font-weight:700;
+  color:var(--brand);font-size:14px;
+}

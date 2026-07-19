@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Application Process — Grad Corner, UG Wiki. The GRE, the GMAT, and filling out the application form." />
+  <meta name="author" content="Undergraduate Academic Council, IIT Bombay" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ugac.gymkhana.iitb.ac.in/UG-Wiki/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Application Process - Grad Corner - UG Wiki" />
+  <meta property="og:description" content="The GRE, the GMAT, and filling out the application form." />
+  <meta property="og:site_name" content="UG Wiki, IIT Bombay" />
+  <title>Application Process - Grad Corner - UG Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/grad.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand" onclick="go('home')" title="UG Wiki - Home">
+      <img class="logo" src="assets/ug-wiki-logo.png" alt="UG Wiki" />
+      <span class="divider"></span>
+      <div><b>UG Wiki</b></div>
+    </div>
+    <div class="nav-right">
+      <div class="search" id="search">
+        <svg class="search-ic" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="searchInput" type="text" placeholder="Search the wiki…" autocomplete="off"
+               oninput="runSearch(this.value)" onfocus="runSearch(this.value)" onkeydown="searchKey(event)" />
+        <div class="search-results" id="searchResults" role="listbox"></div>
+      </div>
+      <nav class="links" id="navlinks">
+        <a href="index.html" data-nav="home" onclick="go('home',event)">Home</a>
+        <a href="resources.html" data-nav="resources" onclick="go('resources',event)">Resources</a>
+        <a href="idddp.html" data-nav="idddp" onclick="go('idddp',event)">IDDDP Corner</a>
+        <a href="grad.html" data-nav="grad" onclick="go('grad',event)">Grad Corner</a>
+        <a href="contact.html" data-nav="contact" onclick="go('contact',event)">Our Team</a>
+      </nav>
+      <button class="icon-btn" id="themeBtn" title="Toggle dark / light mode" onclick="toggleTheme()">🌙</button>
+      <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page active" id="page-grad-application">
+
+    <div class="quick" style="justify-content:flex-start;margin-bottom:18px;">
+      <a href="grad.html">← Back to Grad Corner</a>
+    </div>
+
+    <div class="pagehead">
+      <span class="g-eyebrow">5 · Application Process</span>
+      <h1>Application Process</h1>
+    </div>
+
+    <nav class="g-subnav">
+      <a href="#gre" class="is-active">GRE</a>
+      <a href="#gmat">GMAT</a>
+      <a href="#form">Application Form</a>
+    </nav>
+
+    <div class="block" id="gre" style="margin-top:0">
+      <h2>Graduate Record Examination (GRE)</h2>
+
+      <h3>What is the GRE?</h3>
+      <ul>
+        <li>Taken by prospective graduate and business school applicants worldwide.</li>
+        <li>Used for admission into master's, specialized master's in business, MBA &amp; doctoral programs.</li>
+        <li>Scores are used by admissions or fellowship panels alongside undergraduate records, recommendation letters, and other qualifications for graduate-level study.</li>
+      </ul>
+
+      <h3>When and where can it be taken?</h3>
+      <ul>
+        <li>Available at more than 1,000 test centers in over 160 countries.</li>
+        <li>Computer-delivered tests are available continuously through the year in most regions.</li>
+        <li>The test can be taken once every 21 days, up to 5 times within any continuous rolling 12-month period (365 days).</li>
+        <li>Even if you cancel your scores, this restriction applies.</li>
+        <li>The paper-delivered GRE General Test can be taken as often as it is offered.</li>
+      </ul>
+
+      <h3>Who accepts it?</h3>
+      <ul>
+        <li>Accepted at thousands of graduate schools, including business and law schools.</li>
+        <li>Accepted by departments and divisions within these institutions.</li>
+      </ul>
+      <p>For the entire list: <a href="https://www.ets.org/gre/revised_general/scores/send/aidi_fellowships" target="_blank" rel="noopener">ets.org/gre/revised_general/scores/send/aidi_fellowships</a></p>
+
+      <h3>What does it include?</h3>
+      <p>The GRE General Test measures four primary skills:</p>
+      <ul>
+        <li><b>Verbal Reasoning:</b> Assesses reading comprehension, vocabulary usage, and the ability to analyze and evaluate written content.</li>
+        <li><b>Quantitative Reasoning:</b> Measures basic math skills, including arithmetic, algebra, geometry, and data analysis.</li>
+        <li><b>Critical Thinking:</b> Assesses the ability to think logically and evaluate arguments.</li>
+        <li><b>Analytical Writing:</b> Tests the ability to articulate and support complex ideas in writing, with a focus on clarity, coherence, and logic.</li>
+      </ul>
+
+      <div class="g-card">
+        <h4>Verbal Reasoning measures the ability to…</h4>
+        <ul>
+          <li>Analyze and draw conclusions from discourse — reason from incomplete data; identify the author's assumptions and/or perspective; understand multiple levels of meaning, such as literal, figurative, and author's intent.</li>
+          <li>Understand the meaning of individual words, sentences, and entire texts; relationships among words and among concepts.</li>
+          <li>Select important points — distinguish major from minor or irrelevant points; summarize text; understand the structure of a text.</li>
+        </ul>
+      </div>
+      <div class="g-card">
+        <h4>Analytical Writing measures the ability to…</h4>
+        <ul>
+          <li>Articulate complex ideas clearly and effectively.</li>
+          <li>Support ideas with relevant reasons and examples.</li>
+          <li>Sustain a well-focused, coherent discussion.</li>
+          <li>Control the elements of standard written English.</li>
+        </ul>
+      </div>
+      <div class="g-card">
+        <h4>Quantitative Reasoning</h4>
+        <ul>
+          <li>Includes an on-screen calculator.</li>
+          <li>Measures the ability to understand, interpret, and analyze quantitative information.</li>
+          <li>Solve problems using mathematical models.</li>
+          <li>Apply basic skills and elementary concepts of arithmetic, algebra, geometry, and data analysis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block" id="gmat">
+      <h2>Graduate Management Admission Test (GMAT)</h2>
+      <p>Required for MBA admissions abroad. It judges the analytical abilities of the candidates.</p>
+
+      <h3>When and where can it be taken?</h3>
+      <p>Details for the GMAT Focus Edition:</p>
+      <ul>
+        <li><b>Structure:</b> 3 sections (64 questions), completed in the order of your choosing — Quantitative Reasoning, Verbal Reasoning, Data Insights. All 3 sections are weighted equally towards your total score.</li>
+        <li><b>Duration:</b> 2 hours, 15 minutes.</li>
+        <li><b>Exam Attempts:</b> 5 attempts permitted in a rolling 12-month period and 8 attempts in a lifetime across both exam versions.</li>
+        <li><b>Total Score Scale:</b> 205–805.</li>
+      </ul>
+
+      <h3>Quantitative Reasoning</h3>
+      <p>This section consists of 21 Problem-Solving questions which evaluate your foundational knowledge of algebra and arithmetic, focusing on your ability to apply this knowledge to solve problems.</p>
+
+      <h3>Verbal Reasoning</h3>
+      <p>Verbal Reasoning has 23 questions that assess your capacity to read and comprehend written material and your ability to reason and evaluate arguments. It comprises Reading Comprehension and Critical Reasoning questions.</p>
+
+      <h3>Data Insights</h3>
+      <p>This segment comprises 20 questions and evaluates your ability to interpret data from tables, graphs, and multi-source reasoning. It combines Data Sufficiency and Integrated Reasoning style questions.</p>
+    </div>
+
+    <div class="block" id="form">
+      <h2>Application Form and Other Relevant Documents</h2>
+      <p>This is the key step — other steps don't make sense without this. An application form usually consists of the following sections:</p>
+
+      <div class="g-card"><h4>Degree Program</h4><p>This section asks for the program that you are applying to and the term that you are applying for (Fall/Spring semester).</p></div>
+      <div class="g-card"><h4>Biographical Information</h4><p>This section requires the basic details of the candidate, which include the name, family name, date of birth, guardian's details, contact details, citizenship details, ethnicity details, and languages spoken.</p></div>
+      <div class="g-card"><h4>Academic History</h4><p>Here you have to fill out the details about your education. This includes details about your institution, your major, your degree type, your performance parameters, etc. Some universities also ask for your GPA scaled down from out of 10.0 to out of 4.0. Other than that, it also asks about any disciplinary misconduct from your past.</p></div>
+      <div class="g-card"><h4>Employment History</h4><p>Here you are supposed to list down your employment history (jobs and internships) along with your designation and a brief description of your work.</p></div>
+      <div class="g-card"><h4>Area of Interest</h4><p>Here you enter the field that you are interested in and the research work that you are willing to pursue. Usually, you are supposed to enter three choices, ranked according to your preference. Apart from this, you are supposed to provide names of a certain number of faculty members whom you would like to make your master's advisor.</p></div>
+      <div class="g-card"><h4>Financial Information</h4><p>Here you are asked about your tentative mode of paying your tuition fees and other expenses. There might be a section for scholarships if they are offered by the program.</p></div>
+      <div class="g-card"><h4>Essays</h4><p>You are supposed either to upload files in one of the mentioned formats and follow all the other guidelines, or to write the essays in the provided text boxes, answering the respective questions.</p></div>
+      <div class="g-card"><h4>Letters of Recommendation</h4><p>In this section, enter the required information regarding your recommenders. Once you submit the details of a recommender, a link is sent to their email address.</p></div>
+      <div class="g-card"><h4>Test Scores</h4><p>Here you are supposed to enter your GRE and TOEFL scores. Please note that the scores entered by you are only nominal and do not carry any weightage in themselves. Your scores have to be sent via ETS to the university.</p></div>
+      <div class="g-card"><h4>Additional Information</h4><p>There is some miscellaneous information that universities ask, like whether you have been a student at the university earlier, or if some of your relatives have been associated with the university. You are also asked to name the other universities that you have applied to.</p></div>
+      <div class="g-card"><h4>Review</h4><p>This is where the information that you have entered is summarized for your review. Read it carefully to ensure that you haven't made any mistakes before submitting it. You can navigate to the previous sections to make necessary changes.</p></div>
+      <div class="g-card"><h4>Payment and Submitting the Form</h4><p>The application fee typically ranges from USD 75 (about INR 5,600) to USD 125 (about INR 9,300). This section shows the payment modes that a university accepts. This transaction involves international payments, so make sure that the account you are using has the service available.</p></div>
+    </div>
+
+    <div class="quick" style="justify-content:space-between;margin-top:26px;">
+      <a href="grad-profile.html">← Previous: Building Your Profile</a>
+      <a href="grad.html" class="primary">Back to Grad Corner</a>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-cols">
+      <div>
+        <div class="foot-logos">
+          <img src="assets/ugac-logo.png" alt="Undergraduate Academic Council" />
+          <img src="assets/sss-logo.png" alt="Student Support Services" />
+        </div>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/studentsupportservices_iitb?igsh=aWJrbmd6eGtmaHVo" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.facebook.com/sss.iitb/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="mailto:sss1.iitb@gmail.com" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-contact">
+        <div class="name">Contact Us</div>
+        <div class="role">Ananya Gedela<br>Institute Secretary, Academic Affairs<br>Head, Student Support Services</div>
+        <div class="meta">
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+            <a href="mailto:isaa.sss.iitb@gmail.com">isaa.sss.iitb@gmail.com</a>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>6362901001</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="disc-btn" id="discBtn" title="Disclaimer" aria-label="Disclaimer">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+    <line x1="12" y1="9" x2="12" y2="13"></line>
+    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+  </svg>
+</button>
+
+<div class="disc-overlay" id="discOver">
+  <div class="disc-modal">
+    <button class="disc-close">&times;</button>
+    <div class="disc-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+        <line x1="12" y1="9" x2="12" y2="13"></line>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      <span>Disclaimer</span>
+    </div>
+    <p>Information on this website is only a guideline for the students to help them with the choices they make and also in the various important features of the Institute academic system.</p>
+    <p>It may happen that the actual details of courses or rules mentioned on this website may face an amendment over time. Please confirm the rules/details from relevant authorities before making any decisions.</p>
+  </div>
+</div>
+
+<script src="assets/search_index.js"></script>
+<script src="assets/main.js"></script>
+<script>
+  // Highlight the active sub-nav tab based on scroll position.
+  (function () {
+    var ids = ["gre", "gmat", "form"];
+    var sections = ids.map(function (id) { return document.getElementById(id); });
+    var links = document.querySelectorAll(".g-subnav a");
+    function onScroll() {
+      var pos = window.scrollY + 140;
+      var current = sections[0];
+      sections.forEach(function (sec) { if (sec && sec.offsetTop <= pos) current = sec; });
+      links.forEach(function (link) {
+        link.classList.toggle("is-active", current && link.getAttribute("href") === "#" + current.id);
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+</body>
+</html>

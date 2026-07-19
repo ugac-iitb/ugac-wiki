@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Building Your Profile — Grad Corner, UG Wiki. CVs, Statements of Purpose (SOP), and Letters of Recommendation (LOR)." />
+  <meta name="author" content="Undergraduate Academic Council, IIT Bombay" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ugac.gymkhana.iitb.ac.in/UG-Wiki/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Building Your Profile - Grad Corner - UG Wiki" />
+  <meta property="og:description" content="CVs, Statements of Purpose, and Letters of Recommendation." />
+  <meta property="og:site_name" content="UG Wiki, IIT Bombay" />
+  <title>Building Your Profile - Grad Corner - UG Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/grad.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand" onclick="go('home')" title="UG Wiki - Home">
+      <img class="logo" src="assets/ug-wiki-logo.png" alt="UG Wiki" />
+      <span class="divider"></span>
+      <div><b>UG Wiki</b></div>
+    </div>
+    <div class="nav-right">
+      <div class="search" id="search">
+        <svg class="search-ic" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="searchInput" type="text" placeholder="Search the wiki…" autocomplete="off"
+               oninput="runSearch(this.value)" onfocus="runSearch(this.value)" onkeydown="searchKey(event)" />
+        <div class="search-results" id="searchResults" role="listbox"></div>
+      </div>
+      <nav class="links" id="navlinks">
+        <a href="index.html" data-nav="home" onclick="go('home',event)">Home</a>
+        <a href="resources.html" data-nav="resources" onclick="go('resources',event)">Resources</a>
+        <a href="idddp.html" data-nav="idddp" onclick="go('idddp',event)">IDDDP Corner</a>
+        <a href="grad.html" data-nav="grad" onclick="go('grad',event)">Grad Corner</a>
+        <a href="contact.html" data-nav="contact" onclick="go('contact',event)">Our Team</a>
+      </nav>
+      <button class="icon-btn" id="themeBtn" title="Toggle dark / light mode" onclick="toggleTheme()">🌙</button>
+      <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page active" id="page-grad-profile">
+
+    <div class="quick" style="justify-content:flex-start;margin-bottom:18px;">
+      <a href="grad.html">← Back to Grad Corner</a>
+    </div>
+
+    <div class="pagehead">
+      <span class="g-eyebrow">4 · Building Your Profile</span>
+      <h1>Building Your Profile</h1>
+    </div>
+
+    <nav class="g-subnav">
+      <a href="#cv" class="is-active">CVs</a>
+      <a href="#sop">Statement of Purpose</a>
+      <a href="#lor">Letters of Recommendation</a>
+    </nav>
+
+    <div class="block" id="cv" style="margin-top:0">
+      <h2>CVs</h2>
+      <p>Your CV is your first opportunity to market yourself as a perfect candidate. It includes the details of your education, your industrial and corporate exploits, your internships, projects and publications, your awards and honours, and other things that are relevant to your application, or make your application look stronger in general. This is your marketing document to a potential employer.</p>
+
+      <h3>An academic CV should majorly contain the following:</h3>
+      <ul>
+        <li>Contact Information</li>
+        <li>Educational Details and Personal Profiles</li>
+        <li>Jobs and Internships</li>
+        <li>Projects and Publications</li>
+        <li>Awards and Honours</li>
+        <li>Teaching Experiences</li>
+        <li>Positions of Responsibility</li>
+        <li>Language and Skills</li>
+        <li>Extra-Curriculars containing social service and volunteering work</li>
+      </ul>
+
+      <h3>CV vs Resume</h3>
+      <p>The major difference between a CV and a resume are their purpose, layout, and length. A CV is a highly descriptive document about the subject's career and it can run for more than two or three pages. A resume is a summary of the candidate's skills and experience. A resume is tailored to the position applied for whereas a CV is a static document that remains unaltered for any position. A CV is expected to follow a chronological order of the subject's education, other experiences, and work. A resume, on the other hand, can be shuffled in a way suiting the purpose of the applicant.</p>
+
+      <h3>General Tips for Making a CV</h3>
+      <p>These are some general tips to make a CV based on experiences of seniors from IIT Bombay:</p>
+      <p>Mention your academic achievements, awards, publications, and projects at the top of your CV in the same order. Research interests should be added to the top of your CV and should be tailored according to the university or lab you are applying to.</p>
+      <p>Use action words to describe your projects. For example, if my project is titled 'Numerical Simulation of Fuel Cells', then I would describe it in bullet points as: <em>Constructed</em> a model using MATLAB; <em>Parametrized</em> the model and optimized for mass flow rate.</p>
+      <p>Add links to your relevant public profiles and homepages if you have any. Also, try and hyperlink important texts like names of professors, companies you have worked for, and other relevant details.</p>
+      <p>Try mentioning social service and volunteering activities in your extracurriculars. Teaching experiences are also given importance. Prefer LaTeX over any other software to make your CV as it is given importance in the arena of research. Every country has its own unique etiquette to make a CV, use that when you apply for universities in that country.</p>
+      <p>Get your CVs reviewed by as many experienced people as possible to get a holistic view. For MS applications, it is recommended to stick to a 2-page CV, focusing on your research and course projects. Unless otherwise impressive, stick with projects related to the field you are applying to.</p>
+    </div>
+
+    <div class="block" id="sop">
+      <h2>Statement of Purpose (SOP)</h2>
+      <p>The SOP is a very crucial part simply because it carries the most weightage. A typical SOP consists of a thousand words describing your academic life and its merits in a concise and compelling narrative. SOP content should broadly consist of academic achievements, motivation, research areas, career goals, university-specific interests, and conclusions. However, the tricky part is not to sound too repetitive — your SOP should be unique and not overlap much with your CV.</p>
+
+      <h3>General tips to keep in mind before writing your SOP:</h3>
+      <ul>
+        <li>You should start at least a month before, since a good SOP takes a significant amount of time and many iterations.</li>
+        <li>Make a generalized SOP that you can edit for different universities.</li>
+        <li>It is strongly recommended to NOT look at other SOPs before your draft is ready.</li>
+        <li>Language consistency is important, but at the same time keep in mind that the professor reading your SOP should not find it difficult to understand. Hence, keep it simple!</li>
+        <li>Your SOP should be unique and not just an extended version of your CV.</li>
+        <li>Explore everything about the department and professors you are applying to; it will help align your essay with the curators' interest.</li>
+      </ul>
+
+      <p>The generally adopted writing procedure is quite simple. List down all the possible things you can include in your SOP and sort them in some chronological order. Shortlist those points which are the strongest in your profile and build your SOP around them. Firstly, explain all the events which led to the completion of the stronger points and what the outcome of it was. Then explain how these events made you decide the specific field or course of action you have opted for.</p>
+      <p>There are certain things that the universities seek in your SOP, such as your interests and experiences that have motivated you towards the career path, what it is that sets you apart from other candidates, why you have chosen this university and its specific program, and what value you would add to the university and the students who come to study there.</p>
+    </div>
+
+    <div class="block" id="lor">
+      <h2>Letters of Recommendation (LORs)</h2>
+
+      <h3>What is it?</h3>
+      <p>Letters of Recommendation (LoR) constitute an important aspect of the application process that sets it apart from placements. By definition, a recommendation is an evaluation of a candidate's potential as a graduate student by a person who is acquainted well enough with the candidate (by way of guiding them through projects or coursework). The recommender is supposed to advocate for your case and present you as a worthy candidate based on their experience of working with you. Most applications usually require three letters of recommendation, out of which two are supposed to be academic LoRs. However, you may be expected to submit more or fewer depending on the university.</p>
+
+      <h3>What purpose does it serve?</h3>
+      <p>Recommendations act as a third eye for the universities, helping them gauge a candidate from the viewpoint of a person who holds a position similar to theirs, and hence should be able to evaluate a candidate on relevant scales. Make sure that you get recommendations from all the project guides listed in your resume. Listing a project on your resume automatically gives it high significance, and not having the concerned person's recommendation might appear a little out of place.</p>
+
+      <h3>Whom to approach?</h3>
+      <p>Your LoRs should testify to your SOP. So, for academic LoRs, usually two, you can approach your BTP/DDP guide (the people under whose guidance one happens to have worked the most), a professor who knows you professionally and with whom you have done a course project (the longer the period of the project, the better it is), the instructor of the course in which you performed exceedingly well, or your faculty advisor. For the third LoR, you have the option of going for an academic or a non-academic LoR. If you have done an industrial or a corporate internship, request your mentor or manager for an LoR. Try to get the LoR from the professor at the university you are applying to, provided you interned with them or have worked with them in some way. You can also approach your seminar guide, summer project guide, SLP guide, university intern guide, R&amp;D project advisor, HoD, and other relevant professors for recommendations.</p>
+      <p>One myth is that the LoR of a more renowned professor earns you more credit regardless of how well they know you. The truth is that an LoR from a professor you have worked with and who can write a more detailed and personalized LoR for you is better for your application.</p>
+
+      <div class="g-quote">
+        "I approached some of my course professors, the MTP supervisor, and the project supervisor for the LoRs. I shared my program list with the referees beforehand on a spreadsheet with deadlines to make them aware of where I was going to apply."
+        <cite>— Harsimran Kaur, Vanderbilt University</cite>
+      </div>
+
+      <h3>How to approach?</h3>
+      <p>Prepare a packet for each recommender containing: your statement of purpose; a summary of every research project you worked on and with whom (including any published paper or technical report); a sheet listing all engineering classes you have taken with the names of professors and grades; a list of extracurricular activities and awards/competitions; your recent photo, so that the professor remembers whom the packet belongs to; and clear directions (e.g., please send to &lt;university address&gt; by DD/MM/YYYY). Put an earlier date than the real deadline, just to be on the safe side. Ask the professor to send a confirmation email stating that they have sent the LoR to the university. Then, check with the school to confirm that they have received a letter from each of your recommenders. Remember to thank your recommender — it takes a lot of work to write a decent recommendation letter, and you may need more letters in the future.</p>
+
+      <h3>What exactly is an LOR? — Summary</h3>
+      <div class="g-card">
+        <h4>What exactly is an LOR?</h4>
+        <p>A formal recommendation by someone (usually professors, teachers, or supervisors) who is familiar with the applicant and their work (projects/coursework). Usually 3 required — at least 2 academic.</p>
+      </div>
+      <div class="g-card">
+        <h4>Purpose?</h4>
+        <p>Helps universities assess you from a professional perspective; it helps validate an applicant's strengths, achievements, and suitability.</p>
+      </div>
+      <div class="g-card">
+        <h4>Who to approach?</h4>
+        <p><b>Academic:</b> BTP/DDP/SLP/project supervisors or co-supervisors; professors of coursework (in courses where you have top performance or a course project); faculty advisor.</p>
+        <p><b>Non-academic:</b> internship mentors, R&amp;D project advisor, industry manager — prioritize those who know you.</p>
+      </div>
+      <div class="g-card">
+        <h4>How to approach?</h4>
+        <p>Select a recommender; if possible, try to keep at least a month's notice, preferably meet them in person, otherwise mail them. Provide comprehensive information about the programs, along with the requirements, mention the deadline, and the SOP you will be submitting.</p>
+      </div>
+    </div>
+
+    <div class="quick" style="justify-content:space-between;margin-top:26px;">
+      <a href="grad-univ-hunt.html">← Previous: The Univ Hunt</a>
+      <a href="grad-application.html" class="primary">Next: Application Process →</a>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-cols">
+      <div>
+        <div class="foot-logos">
+          <img src="assets/ugac-logo.png" alt="Undergraduate Academic Council" />
+          <img src="assets/sss-logo.png" alt="Student Support Services" />
+        </div>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/studentsupportservices_iitb?igsh=aWJrbmd6eGtmaHVo" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.facebook.com/sss.iitb/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="mailto:sss1.iitb@gmail.com" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-contact">
+        <div class="name">Contact Us</div>
+        <div class="role">Ananya Gedela<br>Institute Secretary, Academic Affairs<br>Head, Student Support Services</div>
+        <div class="meta">
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+            <a href="mailto:isaa.sss.iitb@gmail.com">isaa.sss.iitb@gmail.com</a>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>6362901001</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="disc-btn" id="discBtn" title="Disclaimer" aria-label="Disclaimer">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+    <line x1="12" y1="9" x2="12" y2="13"></line>
+    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+  </svg>
+</button>
+
+<div class="disc-overlay" id="discOver">
+  <div class="disc-modal">
+    <button class="disc-close">&times;</button>
+    <div class="disc-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+        <line x1="12" y1="9" x2="12" y2="13"></line>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      <span>Disclaimer</span>
+    </div>
+    <p>Information on this website is only a guideline for the students to help them with the choices they make and also in the various important features of the Institute academic system.</p>
+    <p>It may happen that the actual details of courses or rules mentioned on this website may face an amendment over time. Please confirm the rules/details from relevant authorities before making any decisions.</p>
+  </div>
+</div>
+
+<script src="assets/search_index.js"></script>
+<script src="assets/main.js"></script>
+<script>
+  // Highlight the active sub-nav tab based on scroll position.
+  (function () {
+    var ids = ["cv", "sop", "lor"];
+    var sections = ids.map(function (id) { return document.getElementById(id); });
+    var links = document.querySelectorAll(".g-subnav a");
+    function onScroll() {
+      var pos = window.scrollY + 140;
+      var current = sections[0];
+      sections.forEach(function (sec) { if (sec && sec.offsetTop <= pos) current = sec; });
+      links.forEach(function (link) {
+        link.classList.toggle("is-active", current && link.getAttribute("href") === "#" + current.id);
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+</body>
+</html>

@@ -20,6 +20,13 @@ var pages = [
   'idddp-links',
   'idddp-reviews',
 
+  'grad',
+  'grad-getting-started',
+  'grad-research-interests',
+  'grad-univ-hunt',
+  'grad-profile',
+  'grad-application',
+
   'contact'
 ];
   var pendingAnchor = null;
@@ -70,6 +77,12 @@ var pages = [
     'idddp-retagging': 'idddp-retagging.html',
     'idddp-links': 'idddp-links.html',
     'idddp-reviews': 'idddp-reviews.html',
+    'grad': 'grad.html',
+    'grad-getting-started': 'grad-getting-started.html',
+    'grad-research-interests': 'grad-research-interests.html',
+    'grad-univ-hunt': 'grad-univ-hunt.html',
+    'grad-profile': 'grad-profile.html',
+    'grad-application': 'grad-application.html',
     'contact': 'contact.html'
   };
 
@@ -804,10 +817,11 @@ var pages = [
     else if(path.indexOf('fast-track-degree.html') >= 0) page = 'resources';
     else if(path.indexOf('rejoining-procedure.html') >= 0) page = 'resources';
     else if(path.indexOf('idddp') >= 0) page = 'idddp';
+    else if(path.indexOf('grad') >= 0) page = 'grad';
     else if(path.indexOf('contact.html') >= 0) page = 'contact';
     else if(path.indexOf('content.html') >= 0) page = 'content';
-    
-    var navPage = page.startsWith('idddp-') ? 'idddp' : page;
+
+    var navPage = page.startsWith('idddp-') ? 'idddp' : (page.startsWith('grad') ? 'grad' : page);
     setActiveNav(navPage);
   }
 
